@@ -2,18 +2,31 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import pages.HomePage;
+import pages.LoginPage;
+import utilities.ConfigReader;
+import utilities.Driver;
 
 public class US01_Ismail {
-    @Given("Ziyaretci verilen {string} ile siteye giris yapar")
-    public void ziyaretci_verilen_ile_siteye_giris_yapar(String string) {
+    HomePage homePage = new HomePage();
+    @Given("The visitor enters the site with the given {string}")
+    public void the_visitor_enters_the_site_with_the_given(String Url) {
+        Driver.getDriver().get(ConfigReader.getProperty(Url));
+    }
+    @Then("Verifies that the visitor has accessed the site")
+    public void verifies_that_the_visitor_has_accessed_the_site() {
+        String expectedUrl ="https://qa.loantechexper.com/";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
 
     }
-    @Then("Ziyaretcinin siteye eristigi dogrulanir")
-    public void ziyaretcinin_siteye_eristigi_dogrulanir() {
-
+    @Given("Verifies that the homepage is visible")
+    public void verifies_that_the_homepage_is_visible() {
+        Assert.assertTrue(homePage.loanTechLogoElement.isDisplayed());
     }
-    @Then("Ziyaretci sayfayi kapatır")
-    public void ziyaretci_sayfayi_kapatir() {
-
+    @Then("Close the page")
+    public void Close_the_page() {
+        Driver.closeDriver();
     }
 }
