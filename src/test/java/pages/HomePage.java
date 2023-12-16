@@ -22,5 +22,17 @@ public HomePage(){
 @FindBy(xpath= "//h3[@class = 'text-capitalize text-center mt-0 mb-4']")
     public WebElement WelcomeToLoantechExpertTextElement;
 
+@FindBy (xpath = "//a[normalize-space()='Login']")
+    public WebElement LoginIcon;
+
+@FindBy (xpath = "//input[@id='username']")
+    public WebElement usernameTextBox;
+
+@FindBy (xpath = "//input[@id='password']")
+    public WebElement passwordTextBox;
+
+@FindBy (xpath = "//button[normalize-space()='Login']")
+    public WebElement LoginButton;
+
 
 }

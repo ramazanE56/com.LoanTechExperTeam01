@@ -34,4 +34,7 @@ public class LoginPage {
     @FindBy(xpath = "//li[@data-value='France']")
     public WebElement countryDropDownSelectedElement;
 
+    @FindBy (xpath = "//a[@href='javascript:void(0)']")
+    public WebElement cookiesAccept;
+
 }
