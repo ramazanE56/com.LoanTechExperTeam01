@@ -1,4 +1,5 @@
 package utilities;
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -385,5 +386,17 @@ public class ReusableMethods {
 
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
+    }
+//faker classından minumum 6 karakterli username üreten method
+    public static String fakerUsernameMinValue(int x){
+        Faker faker = new Faker();
+        String username ="";
+
+        do {
+            username = faker.name().username();
+        } while (username.length() < x);
+
+        System.out.println("Username : " + username);
+        return username;
     }
 }
