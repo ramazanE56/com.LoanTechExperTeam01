@@ -9,6 +9,7 @@ public class DashBoardPage {
     public DashBoardPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
     @FindBy(xpath ="//input[@name='firstname']")
     public WebElement firsnameBoxElement;
 
@@ -37,6 +38,32 @@ public class DashBoardPage {
     @FindBy(xpath = "//a[@href='javascript:void(0)']")
     public WebElement AllowYaziElementi;
 
+
+
+
+    @FindBy (xpath = "//div[@id='dashboard-sidebar']//li[10]")
+    public WebElement changePasswordButton;
+
+    @FindBy (xpath = "//div[@class='mb-4']")
+    public WebElement changePasswordText;
+
+    @FindBy (xpath = "//input[@id='current_password']")
+    public WebElement currentPasswordTextBox;
+
+    @FindBy (xpath = "//input[@id='password']")
+    public  WebElement newPasswordTextBox;
+
+    @FindBy (xpath = "//input[@id='password_confirmation']")
+    public WebElement confirmPasswordTextBox;
+
+    @FindBy (xpath = "//button[normalize-space()='Submit']")
+    public WebElement changePasswordSubmitButton;
+
+    @FindBy (xpath = "//p[@class='iziToast-message slideIn']")
+    public  WebElement changeMessageWarningMessage;
+
+    @FindBy (xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public  WebElement changeMessageSuccefullyMessage;
 
 
 }

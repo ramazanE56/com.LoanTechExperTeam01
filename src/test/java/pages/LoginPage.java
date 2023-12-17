@@ -35,6 +35,7 @@ public class LoginPage {
     public WebElement countryDropDownSelectedElement;
 
 
+
     @FindBy(xpath = "(//i[@class='bx bxs-hide'])[1]")
     public WebElement passwordBoxEyeIconElement;
 
@@ -70,6 +71,10 @@ public class LoginPage {
 
 @FindBy(css = ".iziToast-message")
     public WebElement registrationSuccessfullyElement;
+
+
+    @FindBy (xpath = "//a[@href='javascript:void(0)']")
+    public WebElement cookiesAccept;
 
 
 }
