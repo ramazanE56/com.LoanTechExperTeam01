@@ -8,8 +8,7 @@ Feature:US_29 As an administrator, I want to have a Rejected Loans page in the p
     Then  Verify that the admin is on the homepage
     And   Close the page
 
-    Scenario: TC_02 Rejected loans (with SN, Loan No.|Plan,
-              User, Amount, Installment Amount, Installment, Created | Next Installment, Status information)
-              should be displayed in the Rejected Loans Table on the page.
+  Scenario: TC_02 Rejected loans (with SN, Loan No.|Plan,
+  User, Amount, Installment Amount, Installment, Created | Next Installment, Status information)
+  should be displayed in the Rejected Loans Table on the page.
 
-      Given As
