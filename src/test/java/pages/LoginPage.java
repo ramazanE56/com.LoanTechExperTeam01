@@ -76,5 +76,8 @@ public class LoginPage {
     @FindBy (xpath = "//a[@href='javascript:void(0)']")
     public WebElement cookiesAccept;
 
+    @FindBy (xpath = "(//a[@class='btn btn--md btn--base fw-bold w-100'])[2]")
+    public WebElement loginButtonElement;
+
 
 }
