@@ -34,4 +34,42 @@ public class LoginPage {
     @FindBy(xpath = "//li[@data-value='France']")
     public WebElement countryDropDownSelectedElement;
 
+
+    @FindBy(xpath = "(//i[@class='bx bxs-hide'])[1]")
+    public WebElement passwordBoxEyeIconElement;
+
+    @FindBy(id = "agree")
+    public WebElement iAgreeTikElement;
+
+    @FindBy(xpath = "//input[@name='firstname']")
+    public WebElement firstnameBoxElement;
+
+    @FindBy(xpath = "//input[@name='lastname']")
+    public WebElement lastnameBoxElement;
+
+    @FindBy(xpath = "//input[@name='address']")
+    public WebElement addressBoxElement;
+
+    @FindBy(xpath = "//input[@name='state']")
+    public WebElement stateBoxElement;
+
+    @FindBy(xpath = "//input[@name='zip']")
+    public WebElement zipBoxElement;
+
+    @FindBy(xpath = "//input[@name='city']")
+    public WebElement cityBoxElement;
+
+    @FindBy(xpath = "//h4[@class='text-capitalize text-center mb-4 mt-0']")
+    public WebElement pleaseComplateYourProfileTextElement;
+
+    @FindBy(xpath = "(//button[@type='submit'])[1]")
+    public WebElement submitButtonElement;
+
+    @FindBy(id = "recaptcha")
+    public WebElement registerButtonElement;
+
+@FindBy(css = ".iziToast-message")
+    public WebElement registrationSuccessfullyElement;
+
+
 }
