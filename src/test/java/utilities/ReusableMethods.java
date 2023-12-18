@@ -6,6 +6,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
 import java.awt.*;
+<<<<<<< HEAD
+=======
+
+
+import java.awt.Point;
+>>>>>>> main
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.InputEvent;
@@ -99,7 +105,7 @@ public class ReusableMethods {
 
     //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeToWaitInSec));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -392,18 +398,137 @@ public class ReusableMethods {
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
     }
-//faker classından minumum 6 karakterli username üreten method
-    public static String fakerUsernameMinValue(int x){
+//faker classından minumum 6 karakterli username üreten method(6 değişken)
+public static String fakerUsernameMinValue(int x) {
+    Faker faker = new Faker();
+    String username;
+    do {
+        username = faker.regexify("[a-z0-9]{" + x + "}");
+    } while (!isValidUsername(username));
+    System.out.println("Username: " + username);
+    return username;
+}
+
+    public static boolean isValidUsername(String username) {
+        // Özel karakter ve büyük harf içermemesi gerekiyor
+        return !username.matches(".*[A-Z].*") && !username.matches(".*[^a-z0-9].*");
+    }
+<<<<<<< HEAD
+
+
+=======
+    //faker classından max 14 karakterli username üreten method(14 değişken)
+    public static String fakerPhoneNumberMaxValue(int x){
         Faker faker = new Faker();
-        String username ="";
+        StringBuilder phoneNumber = new StringBuilder();
+        while (phoneNumber.length() < x) {
+            phoneNumber.append(faker.random().nextInt(10));
+        }
+        String phoneNumberString = phoneNumber.toString();
+        System.out.println("PhoneNumber : " + phoneNumberString);
+        return phoneNumberString;
+    }
+    public static String passwordUnique(int x) {
+        if (x < 6 || x > 10) {
+            throw new IllegalArgumentException("Şifre uzunluğu 6 ile 10 arasında olmalıdır.");
+        }
 
+        Faker faker = new Faker();
+        String password;
         do {
-            username = faker.name().username();
-        } while (username.length() < x);
-
-        System.out.println("Username : " + username);
-        return username;
+            password = faker.internet().password(6, 10, true, true, true);
+        } while (!isValidPassword(password));
+        System.out.println("Password: " + password);
+        return password;
     }
 
+    public static boolean isValidPassword(String password) {
+        // En az bir büyük harf, bir sayı, bir küçük harf ve bir özel karakter içermesi gerekiyor
+        boolean hasUppercase = false;
+        boolean hasLowercase = false;
+        boolean hasDigit = false;
+        boolean hasSpecialChar = false;
+        for (char c : password.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                hasUppercase = true;
+            } else if (Character.isLowerCase(c)) {
+                hasLowercase = true;
+            } else if (Character.isDigit(c)) {
+                hasDigit = true;
+            } else {
+                hasSpecialChar = true;
+            }
+        }
+        return hasUppercase && hasLowercase && hasDigit && hasSpecialChar;
+    }
 
+    //mouse'un bulunduğu noktanın koordinatını alma methodu
+    public static void coordidanateFind() {
+            wait(2);
+            Point point = MouseInfo.getPointerInfo().getLocation();
+            int x = (int) point.getX();
+            int y = (int) point.getY();
+            System.out.println("Mouse coordinates: " + x + ", " + y);
+
+    }
+    //resim yükleme methodu
+
+    public static void photoUpdateInPc(int chooseFilex,int chooseFiley,int searchBarx,int searchBary , String photoLocateInPc, int photox, int photoy,int openx,int openy ) throws AWTException, InterruptedException {
+        Point point2 = new Point(chooseFilex,chooseFiley);
+        Robot robot = new Robot();
+        robot.mouseMove(point2.x, point2.y);
+        wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        wait(1);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        wait(1);
+        // C: arama çubuğu koordinatı
+        Point point = new Point(searchBarx,searchBary);
+        robot.mouseMove(point.x, point.y); // Farenin konumunu ayarla
+        wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        wait(1);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        wait(1);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.ENTER).perform();
+        // Ctrl+V tuş kombinasyonunu kullanarak dosya yolunu yapıştır
+        StringSelection stringSelection = new StringSelection(photoLocateInPc);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        // Enter tuşunu kullanarak dosya yolunu onayla
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        // gelen logoya tıklama işlemi
+        Point point1 = new Point(photox,photoy);// logo konumu koordinatı
+        robot.mouseMove(point1.x, point1.y); // Farenin konumunu ayarla
+        wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        wait(2);
+        Point point3 = new Point(openx,openy);// logo konumu koordinatı
+        robot.mouseMove(point3.x, point3.y); // Farenin konumunu ayarla
+        wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        wait(2);
+
+
+    }
+
+    public static void coordinateClick(int x,int y) throws AWTException {
+        Point point = new Point(x,y);
+        Robot robot = new Robot();
+        robot.mouseMove(point.x, point.y); // Farenin konumunu ayarla
+        wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        wait(1);
+    }
+
+>>>>>>> main
 }
