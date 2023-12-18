@@ -1,0 +1,138 @@
+package stepdefinitions;
+
+import io.cucumber.java.en.Given;
+import pages.HomePage;
+import utilities.ConfigReader;
+import utilities.Driver;
+
+public class US13_MehmetK {
+    HomePage homePage = new HomePage();
+
+    //TC01
+    @Given("Verify that the Login page is a form")
+    public void verify_that_the_login_page_is_a_form() {
+
+    }
+    @Given("Verify that the Username texbox is Visible and active")
+    public void verify_that_the_username_texbox_is_visible_and_active() {
+
+    }
+    @Given("Verify that the Password texbox is Visible and active")
+    public void verify_that_the_password_texbox_is_visible_and_active() {
+
+    }
+    @Given("Verify that the Remember Me link is Visible and active")
+    public void verify_that_the_remember_me_link_is_visible_and_active() {
+
+    }
+    @Given("Verify that the Forgot Password link is Visible and active")
+    public void verify_that_the_forgot_password_link_is_visible_and_active() {
+
+    }
+    @Given("Verify that the Login button is Visible and active")
+    public void verify_that_the_login_button_is_visible_and_active() {
+
+    }
+    @Given("send the registered username to username text box")
+    public void send_the_registered_username_to_username_text_box() {
+
+    }
+    @Given("send the registered password to password text box")
+    public void send_the_registered_password_to_password_text_box() {
+
+    }
+
+    @Given("Verify that the username textbox is filled with the registered username")
+    public void verify_that_the_username_textbox_is_filled_with_the_registered_username() {
+
+    }
+    @Given("Verify that the password textbox fields is filled with the registered password")
+    public void verify_that_the_password_textbox_fields_is_filled_with_the_registered_password() {
+
+    }
+    @Given("Verify that the message warning appears when incorrect entry is made")
+    public void Verify_that_the_message_warning_appears_when_incorrect_entry_is_made() {
+
+    }
+    @Given("Click the login button")
+    public void click_the_login_button() {
+
+    }
+    @Given("Verify that the Dashboard page is opened")
+    public void verify_that_the_dashboard_page_is_opened() {
+
+    }
+
+
+
+    //TC02
+
+
+
+    @Given("Click the Forgot password link element")
+    public void click_the_Forgot_password_link_element() {
+
+    }
+    @Given("verify that Recovery page open when when you click on Forgot button")
+    public void verify_that_Recovery_page_open_when_when_you_click_on_Forgot_button() {
+
+    }
+
+
+    @Given("Click the Try to send again link element")
+    public void click_the_try_to_send_again_link_element() {
+
+    }
+    @Given("Verify that the user password reset page opens again when the Try to send again link element is clicked")
+    public void verify_that_the_user_password_reset_page_opens_again_when_the_try_to_send_again_link_element_is_clicked() {
+
+    }
+
+    @Given("send the Username or email address registered in the textBox")
+    public void send_the_username_or_email_address_registered_in_the_text_box() {
+
+    }
+    @Given("Verify that Password reset email sent successfully message appears when the Submit button is clicked")
+    public void verify_that_password_reset_email_sent_successfully_message_appears_when_the_submit_button_is_clicked() {
+
+    }
+    @Given("send Username or email address registered in the textBox")
+    public void send_username_or_email_address_registered_in_the_text_box() {
+
+    }
+    @Given("click on the summit button")
+    public void click_on_the_summit_button() {
+
+    }
+    @Given("Verify that Password reset email sent successfully appears when the Submit button is clicked")
+    public void verify_that_password_reset_email_sent_successfully_appears_when_the_submit_button_is_clicked() {
+
+    }
+    @Given("Enter the digit digit verification code sent to the e-mail address in the textBox")
+    public void enter_the_digit_digit_verification_code_sent_to_the_e_mail_address_in_the_text_box() {
+
+    }
+    @Given("click the submit button")
+    public void click_the_submit_button() {
+
+    }
+
+    //TC03
+
+
+    @Given("verify that The Register Now Link element on the login page visible")
+    public void verify_that_the_register_now_link_element_on_the_login_page_visible() {
+
+    }
+    @Given("Click the Register Now link element.")
+    public void click_the_register_now_link_element() {
+
+    }
+
+    @Given("verify that The Register page open.")
+    public void verify_that_the_register_page_open() {
+
+    }
+
+
+}
