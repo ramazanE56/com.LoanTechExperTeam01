@@ -34,4 +34,9 @@ public class LoginPage {
     @FindBy(xpath = "//li[@data-value='France']")
     public WebElement countryDropDownSelectedElement;
 
+    @FindBy(xpath = "//input[@name='username']")
+    public WebElement userNameElement;
+
+    @FindBy(xpath = "//button[@class='btn btn--base btn--xxl w-100 text-capitalize xl-text']")
+    public WebElement userLoginButtonElement;
 }
