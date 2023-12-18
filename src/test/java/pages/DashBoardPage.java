@@ -34,4 +34,16 @@ public class DashBoardPage {
     @FindBy (xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
     public  WebElement changeMessageSuccefullyMessage;
 
+    @FindBy (xpath = "//div[@id='dashboard-sidebar']//li[5]")
+    public WebElement withdrawButton;
+
+    @FindBy (xpath = "//h3[@class='mb-2']")
+    public WebElement withdrawMoneyText;
+
+    @FindBy (xpath = "//label[@for='method_code']")
+    public WebElement methodText;
+
+    @FindBy (xpath = "//*[@name='method_code']")
+    public WebElement dropDownSelector;
+
 }
