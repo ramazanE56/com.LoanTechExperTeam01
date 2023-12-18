@@ -47,6 +47,6 @@ Feature: I would like to have a page to register as a visitor
     * Click on the Get Started Button Link on the Home Page.
     * A unique username with at least 6 characters is entered in the Username box.
     * Valid e-mail information containing the @ sign is entered into the e-mail text box
-      * 
+
 
 
