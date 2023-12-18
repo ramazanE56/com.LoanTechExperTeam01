@@ -126,5 +126,20 @@ public class DashBoardPage {
     @FindBy (xpath = "//*[@name='method_code']")
     public WebElement dropDownSelector;
 
+    @FindBy (xpath = "//input[@name='amount']")
+    public WebElement amountTextBox;
+
+    @FindBy (xpath = "//ul[@class='list-group text-center']")
+    public WebElement limitTable;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement withdrawSubmitButton;
+
+    @FindBy (xpath = "//h5[normalize-space()='Withdraw Via Method 5 Updated']")
+    public WebElement method5UpdatedText;
+
+    @FindBy (xpath = "//button[normalize-space()='Submit']")
+    public WebElement methodUpdatedSubmitButton;
+
 
 }

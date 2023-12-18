@@ -9,6 +9,7 @@ import pages.DashBoardPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.Arrays;
 import java.util.List;
@@ -60,5 +61,46 @@ public class US17_Omer {
 
         Assert.assertTrue(f.contains("Method 5 Updated"));
 
+    }
+    @Given("Select the Method5 Updated on Method Dropdown menu")
+    public void select_the_method5_updated_on_method_dropdown_menu() {
+
+        WebElement testDropDown = Driver.getDriver().findElement(By.xpath("//*[@name='method_code']"));
+        Select dropdown = new Select(testDropDown);
+        ReusableMethods.wait(2);
+        dropdown.selectByValue("9");
+        ReusableMethods.wait(2);
+
+
+    }
+    @Given("Write the {int} USD On Amount textbox,")
+    public void write_the_usd_on_amount_textbox(int num) {
+
+        ReusableMethods.wait(2);
+        dashBoardPage.amountTextBox.sendKeys("350");
+        ReusableMethods.wait(2);
+
+    }
+    @Given("Verify that after the amount value limit text will be visible")
+    public void verify_that_after_the_amount_value_limit_text_will_be_visible() {
+
+        ReusableMethods.wait(2);
+        Assert.assertTrue(dashBoardPage.limitTable.isDisplayed());
+        List<WebElement> t = Driver.getDriver().findElements(By.xpath("//ul[@class='list-group text-center']"));
+        for(WebElement optionss: t)
+            System.out.println(optionss.getText());
+
+    }
+    @Given("Click the Submit button on withdraw section")
+    public void click_the_submit_button_on_withdraw_section() {
+
+        dashBoardPage.withdrawSubmitButton.submit();
+
+    }
+    @Given("Verify that Withdraw Via Method5 Updated section is displayed")
+    public void verify_that_withdraw_via_method5_updated_section_is_displayed() {
+
+        Assert.assertTrue(dashBoardPage.method5UpdatedText.isDisplayed());
+        System.out.println(dashBoardPage.method5UpdatedText.getText());
     }
 }
