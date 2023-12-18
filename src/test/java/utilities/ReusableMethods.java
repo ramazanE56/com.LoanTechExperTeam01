@@ -6,9 +6,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
 import java.awt.*;
+<<<<<<< HEAD
+=======
 
 
 import java.awt.Point;
+>>>>>>> main
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.InputEvent;
@@ -410,6 +413,10 @@ public static String fakerUsernameMinValue(int x) {
         // Özel karakter ve büyük harf içermemesi gerekiyor
         return !username.matches(".*[A-Z].*") && !username.matches(".*[^a-z0-9].*");
     }
+<<<<<<< HEAD
+
+
+=======
     //faker classından max 14 karakterli username üreten method(14 değişken)
     public static String fakerPhoneNumberMaxValue(int x){
         Faker faker = new Faker();
@@ -523,4 +530,5 @@ public static String fakerUsernameMinValue(int x) {
         wait(1);
     }
 
+>>>>>>> main
 }
