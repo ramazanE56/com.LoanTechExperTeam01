@@ -5,17 +5,17 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
 
   Scenario: TC01: The 'Active Users' link should appear and be active under the 'Manage Users' link
                   in the Nawbar on the Dashboard page.
-    * Launch browser
-    * The visitor enters the site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+
+    * The visitor enters the admin site with the given "UrlAdmin"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * Close the page
 
   Scenario: TC02: When the 'Active Users' link is clicked, the 'Active Users List' and list titles should be displayed.
-    * Launch browser
-    * The visitor enters the site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+
+    * The visitor enters the admin site with the given "UrlAdmin"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -23,9 +23,9 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
 
   Scenario: TC03: To access information about any user selected from the list, the 'Details' button must be visible and active.
                   when clicked, it should redirect to the 'User Detail - Username' page.
-    * Launch browser
-    * The visitor enters the site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+
+    * The visitor enters the admin site with the given "UrlAdmin"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -38,9 +38,9 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
                   Other private information about the user (if any) should be displayed and updated on the editing screen.
                   The validity of the updated information should be checked. For example, it should be checked whether
                   the email address is in the correct format. Required fields cannot be left blank.
-    * Launch browser
-    * The visitor enters the site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+
+    * The visitor enters the admin site with the given "UrlAdmin"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -55,9 +55,9 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
 
   Scenario: TC05: When the changes are approved, the user profile information in the system must be updated.
                   The user should be shown a notification that the changes were successfully saved.
-    * Launch browser
-    * The visitor enters the site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+
+    * The visitor enters the admin site with the given "UrlAdmin"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -70,9 +70,9 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
   Scenario: TC06: When an unexpected error occurs in the system, a clear error message should be displayed to the user.
                   In case of incorrect entries (invalid e-mail, missing mandatory fields, etc.), the user should be informed
                   with appropriate error messages.
-    * Launch browser
-    * The visitor enters the site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+
+    * The visitor enters the admin site with the given "UrlAdmin"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed

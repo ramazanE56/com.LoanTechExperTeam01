@@ -39,4 +39,6 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[@class='btn btn--base btn--xxl w-100 text-capitalize xl-text']")
     public WebElement userLoginButtonElement;
+
+
 }

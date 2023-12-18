@@ -7,14 +7,8 @@ import utilities.Driver;
 
 public class US45_Suphi {
 
-    @Given("The visitor enters the site with the given {string}")
-    public void the_visitor_enters_the_site_with_the_given(String UrlAdmin) {
-        Driver.getDriver().get(ConfigReader.getProperty(UrlAdmin));
-    }
-    @Given("Launch browser")
-    public void launch_browser() {
 
-    }
+
 
     @Given("The admin logs in to the admin dashboard page with admin name and admin password")
     public void the_admin_logs_in_to_the_admin_dashboard_page_with_admin_name_and_admin_password() {
@@ -27,10 +21,6 @@ public class US45_Suphi {
     @Given("Click on Active Users link under Manage Users link and go to Active Users page")
     public void click_on_active_users_link_under_manage_users_link_and_go_to_active_users_page() {
 
-    }
-    @Given("Close the page")
-    public void close_the_page() {
-        Driver.closeDriver();
     }
 
     @When("User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed")

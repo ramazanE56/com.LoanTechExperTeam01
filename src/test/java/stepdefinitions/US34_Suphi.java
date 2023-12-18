@@ -7,14 +7,11 @@ import utilities.Driver;
 
 public class US34_Suphi {
 
-    @Given("The visitor enters the site with the given {string}")
+    @Given("The visitor enters the admin site with the given {string}")
     public void the_visitor_enters_the_site_with_the_given(String UrlAdmin) {
         Driver.getDriver().get(ConfigReader.getProperty(UrlAdmin));
     }
-    @Given("Launch browser")
-    public void launch_browser() {
 
-    }
 
     @Given("The admin logs in to the admin dashboard page with {string} and {string}")
     public void the_admin_logs_in_to_the_admin_dashboard_page_with_admin_name_and_admin_password(String adminNameSuphi, String passwordAdmin) {
@@ -27,11 +24,6 @@ public class US34_Suphi {
     public void click_on_the_admin_icon_in_the_upper_right_corner_of_the_admin_dashboard_page() {
 
     }
-    @Given("Close the page")
-    public void close_the_page() {
-        Driver.closeDriver();
-    }
-
 
     @When("The visibility of Admin, Profile, Password, Logout links is verified")
     public void theVisibilityOfAdminProfilePasswordLogoutLinksIsVerified() {
@@ -48,7 +40,7 @@ public class US34_Suphi {
         
     }
 
-    @When("It is confirmed that the changes made have been saved successfully by the text {string} in the upper right corner")
+    @When("It is confirmed that the changes made have been saved successfully by the text Profile updated successfully in the upper right corner")
     public void ıtIsConfirmedThatTheChangesMadeHaveBeenSavedSuccessfullyByTheTextProfileUpdatedSuccessfullyInTheUpperRightCorner() {
         
     }

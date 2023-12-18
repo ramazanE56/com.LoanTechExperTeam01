@@ -73,6 +73,7 @@ public HomePage(){
 
 
 // -------------------------------------------------------
+    // -------------------------------------------------------
     /* SUPHİ */
 
     @FindBy(xpath = "//nav[@class='navbar navbar-expand-lg navbar-light']")
@@ -101,6 +102,9 @@ public HomePage(){
 
     @FindBy(xpath = "//button[@data-planname='Basic Loan 1']")
     public WebElement basicLoan1ApplyNowElement;
+
+    @FindBy(xpath = "//h3[@class='text-center mt-3']")
+    public WebElement applyNowWorks;
 
     @FindBy(xpath = "(//a[@class='btn btn--md btn--base fw-bold w-100'])[2]")
     public WebElement loginButtonElement;
