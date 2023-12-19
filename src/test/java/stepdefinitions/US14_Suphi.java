@@ -10,6 +10,8 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.awt.*;
+
 public class US14_Suphi {
 
     LoginPage loginPage = new LoginPage();
@@ -79,8 +81,14 @@ public class US14_Suphi {
     }
 
     @When("The new file is selected and uploaded")
-    public void theNewFileIsSelectedAndUploaded() {
+    public void theNewFileIsSelectedAndUploaded() throws InterruptedException, AWTException {
         ReusableMethods.wait(1);
+        ReusableMethods.photoUpdateInPc(1164,566,446,59,"C:\\Users\\atili\\IdeaProjects\\com.LoanTechExperTeam01\\src\\test\\java\\utilities",346,172,597,447);
+        ReusableMethods.coordinateClick(346,172);
+        ReusableMethods.coordinateClick(597,447);
+
+        dashBoardPage.submitButtonElement.click();
+
         dashBoardPage.profileUpdatedSuccessfullyElement.isDisplayed();
         
     }
