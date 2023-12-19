@@ -84,7 +84,46 @@ public HomePage(){
     public WebElement getStartedPage;
 
 
+// -------------------------------------------------------
+    // -------------------------------------------------------
+    /* SUPHİ */
 
+    @FindBy(xpath = "//nav[@class='navbar navbar-expand-lg navbar-light']")
+    public WebElement homePageHeaderElement;
+
+    @FindBy(xpath = "//a[text()='Plans']")
+    public WebElement plansLinkElement;
+
+    @FindBy(xpath = "//h2[@class='hero__content-title text-capitalize t-text-white']")
+    public WebElement loanPlansPageTitleElement;
+
+    @FindBy(xpath = "//a[@class='t-link breadcrumbs__link text-uppercase t-text-white t-link--primary']")
+    public WebElement loanPlansPageHomeLinkElement;
+
+    @FindBy(xpath = "//h1[@class='hero__content-title text-capitalize t-text-white']")
+    public WebElement goHomePageVerifyElement;
+
+    @FindBy(xpath = "(//a[@class='t-link t-link--primary t-text-white text-capitalize'])[1]")
+    public WebElement importantLinkLoanPlansElement;
+
+    @FindBy(xpath = "//button[@id='pills-basic-loan-tab']")
+    public WebElement basicLoanTitleElement;
+
+    @FindBy(xpath = "//h4[text()='Basic Loan 1']")
+    public WebElement basicLoan1Element;
+
+    @FindBy(xpath = "//button[@data-planname='Basic Loan 1']")
+    public WebElement basicLoan1ApplyNowElement;
+
+    @FindBy(xpath = "//h3[@class='text-center mt-3']")
+    public WebElement applyNowWorks;
+
+    @FindBy(xpath = "(//a[@class='btn btn--md btn--base fw-bold w-100'])[2]")
+    public WebElement loginButtonElement;
+
+
+
+// -------------------------------------------------------
 
 
 
