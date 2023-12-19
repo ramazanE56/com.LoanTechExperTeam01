@@ -21,24 +21,24 @@ Feature: As a visitor, I would like to have menu titles on the top bar of the Ho
     * Verify that the Get Started Button Link is Visible on the and active on the top bar of the home page
     * close page
 
-  Scenario:  TC_03: Verify that you can switch to the relevant page when you click Home, About, Plans, Blogs, Contact, Login Icon, Get Started Icon on the top bar of the home page.
+  Scenario:  TC_03: Verify that you can go to home page when you click logo
     * Click the logo on the top bar of the home page
     * Verify that go to the home page when you click on the logo on the top bar of the home page
     * close page
 
   Scenario:  TC_04: Verify that you can switch to the relevant page when you click Home, About, Plans, Blogs, Contact, Login Icon, Get Started Icon on the top bar of the home page
-    * Click "Home" on  top bar of the home page
-    * Verify that the Home page is opened when click the "Home" on  top bar of the home page
-    * click the "About" on  top bar of the home page
-    * Verify that the About page is opened when click the "About" on  top bar of the home page
-    * click the "Plans" on  top bar of the home page
-    * Verify that the Plans page is opened when click the "Plans" on  top bar of the home page
-    * click the "blogs" on  top bar of the home page
-    * Verify that the Blogs page is opened when click the "blogs" on  top bar of the home page
-    * click the "Contact" on  top bar of the home page
-    * Verify that the Contact page is opened when click the "Contact" on  top bar of the home page
-    * click the "Login Icon" on  top bar of the home page
-    * Verify that the Login page is opened when click the "Login Icon" on  top bar of the home page
-    * click the "Get Started" on  top bar of the home page
-    * Verify that the Register page is opened when click the "Get Started" on  top bar of the home page
+    * Click Home on  top bar of the home page
+    * Verify that the Home page is opened when click the Home on  top bar of the home page
+    * click the About on  top bar of the home page
+    * Verify that the About page is opened when click the About on  top bar of the home page
+    * click the Plans on  top bar of the home page
+    * Verify that the Plans page is opened when click the Plans on  top bar of the home page
+    * click the blogs on  top bar of the home page
+    * Verify that the Blogs page is opened when click the blogs on  top bar of the home page
+    * click the Contact on  top bar of the home page
+    * Verify that the Contact page is opened when click the Contact on  top bar of the home page
+    * click the Login Icon on  top bar of the home page
+    * Verify that the Login page is opened when click the Login Icon on  top bar of the home page
+    * click the Get Started on  top bar of the home page
+    * Verify that the Register page is opened when click the Get Started on  top bar of the home page
     * close page

@@ -1,4 +1,4 @@
-
+@wip
 Feature: As a registered user, I want to be able to access the login page from the home page in order to log in to my own panel
 
   Background:Users use these steps to log in to the site.
@@ -12,8 +12,8 @@ Feature: As a registered user, I want to be able to access the login page from t
     * Verify that the Remember Me link is Visible and active
     * Verify that the Forgot Password link is Visible and active
     * Verify that the Login button is Visible and active
-    * send the registered username to username text box
-    * send the registered password to password text box
+    * send the registered "username" to username text box
+    * send the registered "sifre" to password text box
     * Verify that the username textbox is filled with the registered username
     * Verify that the password textbox fields is filled with the registered password
     * Verify that the message warning appears when incorrect entry is made

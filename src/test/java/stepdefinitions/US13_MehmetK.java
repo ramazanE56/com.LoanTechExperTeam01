@@ -1,65 +1,119 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
+import pages.LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+
+import static org.junit.Assert.assertTrue;
+
 public class US13_MehmetK {
     HomePage homePage = new HomePage();
+    LoginPage loginPage=new LoginPage();
+    Actions actions = new Actions(Driver.getDriver());
 
     //TC01
+    @Given("click the Login on  top bar of the home page")
+    public void click_the_Login_on__top_bar_of_the_home_page() throws InterruptedException {
+        homePage.loginButtonElement.click();
+        Thread.sleep(3000);
+
+    }
     @Given("Verify that the Login page is a form")
     public void verify_that_the_login_page_is_a_form() {
+        Assert.assertTrue(loginPage.loginformu.isDisplayed());
+        String formAdi=loginPage.loginformu.getText();
+        System.out.println(formAdi);
+
 
     }
     @Given("Verify that the Username texbox is Visible and active")
     public void verify_that_the_username_texbox_is_visible_and_active() {
+        assertTrue(loginPage.userNameBoxElement.isDisplayed());
+
+
 
     }
     @Given("Verify that the Password texbox is Visible and active")
     public void verify_that_the_password_texbox_is_visible_and_active() {
+        assertTrue(loginPage.passwordElement.isDisplayed());
 
     }
     @Given("Verify that the Remember Me link is Visible and active")
     public void verify_that_the_remember_me_link_is_visible_and_active() {
+        assertTrue(loginPage.rememberCheckbox.isDisplayed());
 
     }
     @Given("Verify that the Forgot Password link is Visible and active")
     public void verify_that_the_forgot_password_link_is_visible_and_active() {
+        assertTrue(loginPage.forgetPassword.isDisplayed());
 
     }
     @Given("Verify that the Login button is Visible and active")
     public void verify_that_the_login_button_is_visible_and_active() {
+        assertTrue(loginPage.userLoginButtonElement.isDisplayed());
 
     }
-    @Given("send the registered username to username text box")
-    public void send_the_registered_username_to_username_text_box() {
+    @Given("send the registered {string} to username text box")
+    public void send_the_registered_to_username_text_box(String userName) throws InterruptedException {
+        loginPage.userNameBoxElement.sendKeys("mehmetkahraman");
+        Thread.sleep(1000);
 
     }
-    @Given("send the registered password to password text box")
-    public void send_the_registered_password_to_password_text_box() {
+    @Given("send the registered {string} to password text box")
+    public void send_the_registered_to_password_text_box(String password) {
+        loginPage.passwordElement.sendKeys("Loan.742");
 
     }
 
     @Given("Verify that the username textbox is filled with the registered username")
     public void verify_that_the_username_textbox_is_filled_with_the_registered_username() {
+        Assert.assertTrue(loginPage.userNameText.isDisplayed());
+        System.out.println(loginPage.userNameText.getText());
 
     }
     @Given("Verify that the password textbox fields is filled with the registered password")
     public void verify_that_the_password_textbox_fields_is_filled_with_the_registered_password() {
+        Assert.assertTrue(loginPage.userPasswordText.isDisplayed());
+        System.out.println(loginPage.userPasswordText.getText());
 
     }
     @Given("Verify that the message warning appears when incorrect entry is made")
-    public void Verify_that_the_message_warning_appears_when_incorrect_entry_is_made() {
+    public void Verify_that_the_message_warning_appears_when_incorrect_entry_is_made() throws InterruptedException {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(1000);
+        loginPage.userLoginSubmit.click();
+        Thread.sleep(1000);
+        String message=loginPage.messageWrong.getText();
+        System.out.println(message);
+        Assert.assertTrue(loginPage.messageWrong.isDisplayed());
+        Thread.sleep(3000);
 
     }
+
     @Given("Click the login button")
-    public void click_the_login_button() {
+    public void click_the_login_button() throws InterruptedException {
+
+        loginPage.passwordElement.sendKeys("Loan.741");
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        loginPage.userLoginSubmit.click();
+        Thread.sleep(1000);
+
 
     }
+
+
     @Given("Verify that the Dashboard page is opened")
     public void verify_that_the_dashboard_page_is_opened() {
+
+        String expectedUrl ="https://qa.loantechexper.com/user/dashboard";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
 
     }
 
