@@ -8,7 +8,7 @@ Feature: US14: As a registered user, I want to be able to access and update my p
 
     * The visitor enters the site with the given "Url"
     * Click the Login button and go to the user login page
-    * The user logs in to the user dashboard page with "userNameSuphi" and "userPassword"
+    * The user logs in to the user dashboard page with "userNameSuphi" and "password"
     * Click on the Profile link to go to the page where profile information can be edited
     * Close the page
 
@@ -16,7 +16,7 @@ Feature: US14: As a registered user, I want to be able to access and update my p
 
     * The visitor enters the site with the given "Url"
     * Click the Login button and go to the user login page
-    * The user logs in to the user dashboard page with "userNameSuphi" and "userPassword"
+    * The user logs in to the user dashboard page with "userNameSuphi" and "password"
     * Click on the Profile link to go to the page where profile information can be edited
     * User name, e-mail address, phone number, country information should be visible
     * Close the page
@@ -25,7 +25,7 @@ Feature: US14: As a registered user, I want to be able to access and update my p
 
     * The visitor enters the site with the given "Url"
     * Click the Login button and go to the user login page
-    * The user logs in to the user dashboard page with "userNameSuphi" and "userPassword"
+    * The user logs in to the user dashboard page with "userNameSuphi" and "password"
     * Click on the Profile link to go to the page where profile information can be edited
     * Firstname and lastname are edited
     * Close the page
@@ -34,7 +34,7 @@ Feature: US14: As a registered user, I want to be able to access and update my p
 
     * The visitor enters the site with the given "Url"
     * Click the Login button and go to the user login page
-    * The user logs in to the user dashboard page with "userNameSuphi" and "userPassword"
+    * The user logs in to the user dashboard page with "userNameSuphi" and "password"
     * Click on the Profile link to go to the page where profile information can be edited
     * Click on Choose File button in Image section
     * The new file is selected and uploaded
@@ -44,7 +44,7 @@ Feature: US14: As a registered user, I want to be able to access and update my p
 
     * The visitor enters the site with the given "Url"
     * Click the Login button and go to the user login page
-    * The user logs in to the user dashboard page with "userNameSuphi" and "userPassword"
+    * The user logs in to the user dashboard page with "userNameSuphi" and "password"
     * Click on the Profile link to go to the page where profile information can be edited
     * Non-digit characters are entered in the zip code section
     * Enter digit characters in the Zip code section and save the changes by clicking the submit button
@@ -54,7 +54,7 @@ Feature: US14: As a registered user, I want to be able to access and update my p
 
     * The visitor enters the site with the given "Url"
     * Click the Login button and go to the user login page
-    * The user logs in to the user dashboard page with "userNameSuphi" and "userPassword"
+    * The user logs in to the user dashboard page with "userNameSuphi" and "password"
     * Click on the Profile link to go to the page where profile information can be edited
     * The user makes the necessary changes in the profile settings section and saves the changes by clicking submit
     * Profile updated successfully appears when the changes are saved

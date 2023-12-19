@@ -1,7 +1,7 @@
 Feature: US34: As an administrator, I want to be able to access and update my profile information.
 
   Background:Users use these steps to log in to the site.
-   // * The visitor enters the site with the given "UrlAdmin"
+
 
   Scenario: TC01: After logging in to the admin dashboard, the admin icon should appear in the upper right corner.
 
@@ -23,6 +23,7 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
 
     * The visitor enters the admin site with the given "UrlAdmin"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+    * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the profile link
     * Name, email, image information is updated and saved
     * It is confirmed that the changes made have been saved successfully by the text Profile updated successfully in the upper right corner
@@ -33,7 +34,7 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
 
     * The visitor enters the admin site with the given "UrlAdmin"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
-    * Click on the profile link
+    * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the password link and go to the password setting page
     * In the Change password section, used Password, New Password and Confirm Password information must be entered
     * It is confirmed that the changes made have been saved successfully by the text Profile updated successfully in the upper right corner
@@ -43,7 +44,9 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
 
     * The visitor enters the admin site with the given "UrlAdmin"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
+    * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the profile link
+    * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the logout link
     * It is verified that the admin page is exited
     * Close the page
