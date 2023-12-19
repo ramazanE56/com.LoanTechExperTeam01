@@ -5,14 +5,14 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
 
   Scenario: TC01: After logging in to the admin dashboard, the admin icon should appear in the upper right corner.
 
-    * The visitor enters the admin site with the given "UrlAdmin"
+    * The visitor enters the admin site with the given "adminUrl"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the admin icon in the upper right corner of the admin dashboard page
     * Close the page
 
   Scenario: TC02: When clicking on the admin icon, profile, password, logout links should appear.
 
-    * The visitor enters the admin site with the given "UrlAdmin"
+    * The visitor enters the admin site with the given "adminUrl"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the admin icon in the upper right corner of the admin dashboard page
     * The visibility of Admin, Profile, Password, Logout links is verified
@@ -21,7 +21,7 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
   Scenario: TC03: Clicking on the profile link should take you to the Profile Information page and
                   information updates should be possible.
 
-    * The visitor enters the admin site with the given "UrlAdmin"
+    * The visitor enters the admin site with the given "adminUrl"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the profile link
@@ -32,7 +32,7 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
   Scenario: TC04: Clicking on the password link should take you to the password setting page and
                   you should be able to update the password.
 
-    * The visitor enters the admin site with the given "UrlAdmin"
+    * The visitor enters the admin site with the given "adminUrl"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the password link and go to the password setting page
@@ -42,7 +42,7 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
 
   Scenario: TC05: When the Logout link is clicked, you must successfully leave the page.
 
-    * The visitor enters the admin site with the given "UrlAdmin"
+    * The visitor enters the admin site with the given "adminUrl"
     * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the profile link

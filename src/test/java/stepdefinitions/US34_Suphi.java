@@ -15,8 +15,8 @@ public class US34_Suphi {
         AdminLoginPage adminLoginPage=new AdminLoginPage();
         AdminDashBoardPage adminDashBoardPage=new AdminDashBoardPage();
     @Given("The visitor enters the admin site with the given {string}")
-    public void the_visitor_enters_the_site_with_the_given(String UrlAdmin) {
-        Driver.getDriver().get(ConfigReader.getProperty(UrlAdmin));
+    public void the_visitor_enters_the_site_with_the_given(String adminUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(adminUrl));
     }
 
 
