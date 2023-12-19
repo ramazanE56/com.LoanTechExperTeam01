@@ -141,5 +141,24 @@ public class DashBoardPage {
     @FindBy (xpath = "//button[normalize-space()='Submit']")
     public WebElement methodUpdatedSubmitButton;
 
+    @FindBy (xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement withdrawSuccesAlertMessage;
+
+    @FindBy (xpath = "//a[@class='btn btn--base btn--smd']")
+    public WebElement withdrawMoneyButton;
+
+    @FindBy (xpath = "//div[@id='transactionAccordion']")
+    public WebElement historyTable;
+
+    @FindBy (xpath = "//h3[normalize-space()='Withdraw History']")
+    public WebElement withdrawHistoryText;
+
+    @FindBy (xpath = "//a[normalize-space()='Withdraw Log']")
+    public WebElement withdrawLogButton;
+
+    @FindBy (xpath = "//div[@class='accordion-collapse collapse show']")
+    public WebElement transactionTable;
+
+
 
 }

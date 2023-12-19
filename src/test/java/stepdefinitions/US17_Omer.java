@@ -103,4 +103,86 @@ public class US17_Omer {
         Assert.assertTrue(dashBoardPage.method5UpdatedText.isDisplayed());
         System.out.println(dashBoardPage.method5UpdatedText.getText());
     }
+    @Given("Verify that submit button is visible and active")
+    public void verify_that_submit_button_is_visible_and_active() {
+
+        Assert.assertTrue(dashBoardPage.methodUpdatedSubmitButton.isDisplayed());
+        Assert.assertTrue(dashBoardPage.methodUpdatedSubmitButton.isEnabled());
+
+    }
+
+    @Given("Click the Submit button on withdraw method section")
+    public void click_the_submit_button_on_withdraw_method_section() {
+
+        ReusableMethods.wait(2);
+        dashBoardPage.withdrawSubmitButton.click();
+        ReusableMethods.wait(1);
+
+    }
+
+    @Given("Verify that Withdraw request sent successfully message is appeared")
+    public void verify_that_withdraw_request_sent_successfully_message_is_appeared() {
+
+        System.out.println(dashBoardPage.withdrawSuccesAlertMessage.getText());
+        Assert.assertTrue(dashBoardPage.withdrawSuccesAlertMessage.isDisplayed());
+        Assert.assertTrue(dashBoardPage.withdrawMoneyButton.isDisplayed());
+
+    }
+    @Given("Verify that Withdraw History page is visible")
+    public void verify_that_withdraw_history_page_is_visible() {
+
+        System.out.println(dashBoardPage.withdrawHistoryText.getText());
+        Assert.assertTrue(dashBoardPage.withdrawHistoryText.isDisplayed());
+        List<WebElement> table = Driver.getDriver().findElements(By.xpath("//div[@id='transactionAccordion']"));
+        for (WebElement t: table){
+            System.out.println(t.getText());
+        }
+
+    }
+    @Given("Click the table name on Withdraw History page")
+    public void click_the_table_name_on_withdraw_history_page() {
+
+        Assert.assertTrue(dashBoardPage.historyTable.isDisplayed());
+
+    }
+    @Given("Verify that the charge-after charge-conversion-status is visible for each transaction")
+    public void verify_that_the_charge_after_charge_conversion_status_is_visible_for_each_transaction() {
+
+        for (int i = 1; i <= 10; i++) {
+            String xpath = "(//div[@class='accordion-item transaction-item'])[" + i + "]";
+            WebElement verified = Driver.getDriver().findElement(By.xpath(xpath));
+            verified.click();
+
+            for (int j = 10; j > 1; j--) {
+                String tableXpath = "//div[@id='c-" + j + "']";
+                WebElement verified2 =Driver.getDriver().findElement(By.xpath(tableXpath));
+                System.out.println(verified2.getText());
+                ReusableMethods.wait(1);
+                Assert.assertTrue(dashBoardPage.transactionTable.isDisplayed());
+            }
+        }
+    }
+    @Given("Click the Withdraw Money button on withdraw History page")
+    public void click_the_withdraw_money_button_on_withdraw_history_page() {
+
+        dashBoardPage.withdrawMoneyButton.click();
+    }
+    @Given("Click the Withdraw Log button on withdraw Money page")
+    public void click_the_withdraw_log_button_on_withdraw_money_page() {
+
+        dashBoardPage.withdrawLogButton.click();
+
+    }
+    @Given("Verify that Withdraw History text is visible")
+    public void verify_that_withdraw_history_text_is_visible() {
+
+        Assert.assertTrue(dashBoardPage.withdrawHistoryText.isDisplayed());
+
+    }
+    @Given("Verify that Withdraw Money text is visible")
+    public void verify_that_withdraw_money_text_is_visible() {
+
+        Assert.assertTrue(dashBoardPage.withdrawMoneyText.isDisplayed());
+    }
+
 }

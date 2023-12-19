@@ -1,6 +1,6 @@
 Feature: US_17 As a registered user, I would like to have a page to manage my payment transactions.
 
-  Background:   Background:Users use these steps to log in to the site.
+  Background: Users use these steps to log in to the site.
     * The visitor enters the site with the given "Url"
     * Accept the cookies on page
     * Login with registered user information
@@ -36,13 +36,53 @@ Feature: US_17 As a registered user, I would like to have a page to manage my pa
 
      Scenario: TC_05 The Submit button should be clickable and the text "Withdraw request sent successfully" should be displayed.
 
+       * Click the withdraw button
+       * Select the Method5 Updated on Method Dropdown menu
+       * Write the 350 USD On Amount textbox,
+       * Click the Submit button on withdraw section
+       * Verify that submit button is visible and active
+       * Click the Submit button on withdraw method section
+       * Verify that Withdraw request sent successfully message is appeared
+
      Scenario: TC_06 The withdrawal made on the Withdraw History page must be visible in the accordion table.
+
+       * Click the withdraw button
+       * Select the Method5 Updated on Method Dropdown menu
+       * Write the 350 USD On Amount textbox,
+       * Click the Submit button on withdraw section
+       * Click the Submit button on withdraw method section
+       * Verify that Withdraw History page is visible
 
      Scenario: TC_07 Charge-After Charge-Conversion-Status values should be displayed in a selected withdrawal transaction in the accordion table.
 
+       * Click the withdraw button
+       * Select the Method5 Updated on Method Dropdown menu
+       * Write the 350 USD On Amount textbox,
+       * Click the Submit button on withdraw section
+       * Click the Submit button on withdraw method section
+       * Click the table name on Withdraw History page
+       * Verify that the charge-after charge-conversion-status is visible for each transaction
+
      Scenario: TC_08 When you click on the "Withdraw Money" button on the Withdraw History page, you should go to the "Withdraw Money" page.
 
+       * Click the withdraw button
+       * Select the Method5 Updated on Method Dropdown menu
+       * Write the 350 USD On Amount textbox,
+       * Click the Submit button on withdraw section
+       * Click the Submit button on withdraw method section
+       * Click the Withdraw Money button on withdraw History page
+       * Verify that Withdraw Money text is visible
+
      Scenario: TC_09 When you click on the "Withdraw Log" button on the "Withdraw Money" page, you should go to the Withdraw History page.
+
+       * Click the withdraw button
+       * Select the Method5 Updated on Method Dropdown menu
+       * Write the 350 USD On Amount textbox,
+       * Click the Submit button on withdraw section
+       * Click the Submit button on withdraw method section
+       * Click the Withdraw Money button on withdraw History page
+       * Click the Withdraw Log button on withdraw Money page
+       * Verify that Withdraw History text is visible
 
 
 
