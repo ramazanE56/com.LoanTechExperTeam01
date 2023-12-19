@@ -7,6 +7,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.asserts.SoftAssert;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -16,8 +17,6 @@ public class Hooks {
 
     @After
     public void tearDown(Scenario scenario){
-
-
         if (scenario.isFailed()) {
             // Alert çıktığında ekran görüntüsü almak için bekleme süresi ekleyin
             ReusableMethods.wait(1);
