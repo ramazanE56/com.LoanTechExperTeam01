@@ -3,15 +3,15 @@
 
     Background: In this step, the registered user reaches the user home page by entering his username and password.
 
-      Given The given "url" is entered into the browser and press enter.
+      Given The given "Url" is entered into the browser and press enter.
       And The user click on the login button.
       And The user enters "usernameHalit" username.
-      And The user enters "userPassword" password.
+      And The user enters "password" password.
       And The user clicks on the login button.
       And The user clicks on the home page logo.
 
 
-      @TC_001
+    @TC_001
     Scenario: TC_01 Loan cards should be displayed under the Plans link in the top bar of the homepage.
 
       Given The Plans button is active and visible in the home page header section.
@@ -44,11 +44,11 @@
     Scenario: A value within the digit minimum and maximum value range must be entered in the Amount text box.
             The arrow keys on the page must be active.
 
-    Given Click the Plans button in the header section of the home page.
-    And Click on the Basic Loan button.
-    And Click the Apply Now button.
-    And Amount are entered within the range of minimum and maximum values.
-    And Verify that the arrow keys are visible and active.
+      Given Click the Plans button in the header section of the home page.
+      And Click on the Basic Loan button.
+      And Click the Apply Now button.
+      And Amount are entered within the range of minimum and maximum values.
+      And Verify that the arrow keys are visible and active.
 
     @TC_005
     Scenario: When the 'Confirm' button is clicked, you should be transferred to the 'Application Form' page.

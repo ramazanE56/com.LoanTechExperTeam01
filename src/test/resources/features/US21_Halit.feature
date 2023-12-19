@@ -4,10 +4,10 @@
 
     Background: In this step, the registered user reaches the user home page by entering his username and password.
 
-      Given The given "url" is entered into the browser and press enter.
+      Given The given "Url" is entered into the browser and press enter.
       And The user click on the login button.
       And The user enters "usernameHalit" username.
-      And The user enters "userPassword" password.
+      And The user enters "password" password.
       And The user clicks on the login button.
       And The user clicks on the home page logo.
 
