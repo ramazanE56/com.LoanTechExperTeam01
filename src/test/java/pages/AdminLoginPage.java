@@ -10,6 +10,7 @@ public class AdminLoginPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+
     @FindBy(xpath = "//input[@*='username']")
     public WebElement adminUserNameBoxElement;
 
@@ -18,4 +19,16 @@ public class AdminLoginPage {
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement adminLoginButtonElement;
-}
+
+
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement adminUserNameBox;
+
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement adminPasswordBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement adminLoginButton;
+
+    }
+

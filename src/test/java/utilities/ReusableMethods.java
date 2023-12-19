@@ -9,6 +9,7 @@ import java.awt.*;
 
 
 
+
 import java.awt.Point;
 
 import java.awt.datatransfer.Clipboard;
@@ -413,6 +414,7 @@ public static String fakerUsernameMinValue(int x) {
         return !username.matches(".*[A-Z].*") && !username.matches(".*[^a-z0-9].*");
     }
 
+
     //faker classından max 14 karakterli username üreten method(14 değişken)
     public static String fakerPhoneNumberMaxValue(int x){
         Faker faker = new Faker();
@@ -525,6 +527,23 @@ public static String fakerUsernameMinValue(int x) {
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
         wait(1);
     }
+// girilen min max aralığında random sayı üreten methodlar.
+    public static int minMaxRandomAmountCreate(int minAmount, int maxAmount) {
+        int min = minAmount;
+        int max = maxAmount;
+        Random random = new Random();
+        int randomNumber = random.nextInt(max - min + 1) + min;
+        return randomNumber;
+    }
+    public static String minMaxRandomAmountCreate(String minAmount, String maxAmount) {
+        int min = Integer.parseInt(minAmount);
+        int max = Integer.parseInt(maxAmount);
+        Random random = new Random();
+        int randomNumberInt = random.nextInt(max - min + 1) + min;
+        String randomNumber = String.valueOf(randomNumberInt);
+        return randomNumber;
+    }
+
 
 
 }
