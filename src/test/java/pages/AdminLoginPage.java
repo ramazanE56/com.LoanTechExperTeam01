@@ -1,12 +1,8 @@
 package pages;
-
-import io.cucumber.java.en.Given;
-import io.cucumber.java.zh_cn.假如;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
-
 public class AdminLoginPage {
     public AdminLoginPage(){
 
@@ -78,12 +74,22 @@ public class AdminLoginPage {
     @FindBy(xpath = "//*[@name='remark']")
     public WebElement remarkTransaction;
 
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement adminUserNameBox;
 
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement adminPasswordBox;
 
-
-
-
-
-
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement adminLoginButton;
 
 }
+
+
+
+
+
+
+
+
+
