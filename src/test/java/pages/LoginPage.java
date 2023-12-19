@@ -76,7 +76,7 @@ public class LoginPage {
     @FindBy(id = "recaptcha")
     public WebElement registerButtonElement;
 
-@FindBy(css = ".iziToast-message")
+    @FindBy(css = ".iziToast-message")
     public WebElement registrationSuccessfullyElement;
 
 
@@ -85,6 +85,7 @@ public class LoginPage {
 
     @FindBy (xpath = "(//a[@class='btn btn--md btn--base fw-bold w-100'])[2]")
     public WebElement loginButtonElement;
+
 
     @FindBy(xpath = "//*[@class='auth-form__content section']")
     public WebElement loginformu;
@@ -105,7 +106,6 @@ public class LoginPage {
     public WebElement userNameText;
     @FindBy(xpath = "//*[@placeholder='Your password']")
     public WebElement userPasswordText;
-
 
 
 

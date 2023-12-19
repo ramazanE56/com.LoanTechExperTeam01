@@ -1,13 +1,13 @@
 Feature: US45: As an administrator, I want to be able to edit the profile information of a user I choose.
 
   Background:Users use these steps to log in to the site.
-    //* The visitor enters the site with the given "Url"
+
 
   Scenario: TC01: The 'Active Users' link should appear and be active under the 'Manage Users' link
                   in the Nawbar on the Dashboard page.
 
     * The visitor enters the admin site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * Close the page
@@ -15,7 +15,7 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
   Scenario: TC02: When the 'Active Users' link is clicked, the 'Active Users List' and list titles should be displayed.
 
     * The visitor enters the admin site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -25,7 +25,7 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
                   when clicked, it should redirect to the 'User Detail - Username' page.
 
     * The visitor enters the admin site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -40,7 +40,7 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
                   the email address is in the correct format. Required fields cannot be left blank.
 
     * The visitor enters the admin site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -57,7 +57,7 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
                   The user should be shown a notification that the changes were successfully saved.
 
     * The visitor enters the admin site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
@@ -72,7 +72,7 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
                   with appropriate error messages.
 
     * The visitor enters the admin site with the given "UrlAdmin"
-    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "password"
+    * The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"
     * Click on the Manage Users link
     * Click on Active Users link under Manage Users link and go to Active Users page
     * User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed
