@@ -27,7 +27,7 @@ public class AdminLoginPage {
     @FindBy(xpath = "(//*[@type='search'])[2]")
     public WebElement searchBox;
 
-    @FindBy(xpath = "//*[text()='User Detail - mehmethalit']")
+    @FindBy(xpath = "//*[@class='page-title']")
     public WebElement userDetailPage;
 
     @FindBy(xpath = "//*[text()='User']")
@@ -47,7 +47,7 @@ public class AdminLoginPage {
 
     @FindBy(xpath = "(//*[@class='page-link'])[11]")
     public WebElement secondPage;
-    @FindBy(xpath = "//*[@class='bodywrapper__inner']")
+    @FindBy(xpath = "//tr")
     public WebElement activeUserList;
     @FindBy(xpath = "(//*[text()='View All'])[1]")
     public WebElement viewAllIcon;
@@ -56,7 +56,7 @@ public class AdminLoginPage {
     @FindBy(xpath = "//*[text()='User']")
     public WebElement titleTransactionUser;
     @FindBy(xpath = "//*[text()='TRX']")
-    public WebElement titleTransactionTRX;
+    public WebElement titleTransactionTRX; //
     @FindBy(xpath = "//*[text()='Transacted']")
     public WebElement titleTransactionTransacted;
     @FindBy(xpath = "//*[text()='Amount']")
@@ -65,14 +65,30 @@ public class AdminLoginPage {
     public WebElement titleTransactionBalance;
     @FindBy(xpath = "//*[text()='Details']")
     public WebElement titleTransactionDetails;
+    @FindBy(xpath = "//*[@id='search']")
+    public WebElement searcTransaction;
+    @FindBy(xpath = "//*[@id='trx_type']")
+    public WebElement typeTransaction;
+    @FindBy(xpath = "//*[@id='remark']")
+    public WebElement remarkTransaction;
     @FindBy(xpath = "//*[@name='date']")
     public WebElement dateTransaction;
-    @FindBy(xpath = "//*[@name='search']")
-    public WebElement searcTransaction;
-    @FindBy(xpath = "//*[@name='trx_type']")
-    public WebElement typeTransaction;
-    @FindBy(xpath = "//*[@name='remark']")
-    public WebElement remarkTransaction;
+    @FindBy(xpath = "(//*[@data-date='1'])[1]")
+    public WebElement dateStart;
+    @FindBy(xpath = "//*[@data-date='20']")
+    public WebElement dateFinish;
+    @FindBy(xpath = "(//*[text()=' Filter'])[2]")
+    public WebElement filterIcon;
+
+    @FindBy(xpath = "//*[@id='date']")
+    public WebElement adminUserNameBoxElement;
+
+    @FindBy(xpath = "//input[@*='password']")
+    public WebElement adminPasswordBoxElement;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement adminLoginButtonElement;
+
 
     @FindBy(xpath = "//input[@type='text']")
     public WebElement adminUserNameBox;
@@ -83,13 +99,19 @@ public class AdminLoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement adminLoginButton;
 
+    // TC_07>US_37
+    @FindBy(xpath = "(//*[@class='flex-fill'])[1]")
+    public WebElement addBalance;
+    @FindBy(xpath = "(//*[@class='modal-header'])[1]")
+    public WebElement addBalancePage;
+    @FindBy(xpath = "//*[@id='amount']")
+    public WebElement addBalanceAmount;
+    @FindBy(xpath = "//*[@id='remark']")
+    public WebElement addBalanceRemark;
+    @FindBy(xpath = "//*[@id='remark']")
+    public WebElement addBalanceSubmit;
+
+
 }
-
-
-
-
-
-
-
 
 

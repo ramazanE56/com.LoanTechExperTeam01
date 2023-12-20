@@ -5,6 +5,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import pages.HomePage;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import java.awt.*;
+
 public class US23_Halit {
     HomePage homePage = new HomePage();
     JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -60,9 +63,14 @@ public class US23_Halit {
         ReusableMethods.wait(2);
     }
     @Given("Verify that the arrow keys are visible and active.")
-    public void verify_that_the_arrow_keys_are_visible_and_active() {
-
-
+    public void verify_that_the_arrow_keys_are_visible_and_active() throws AWTException {
+        // Mouse coordinates: 811, 489 arrow up
+        ReusableMethods.coordinateClick(812,489);
+        ReusableMethods.wait(1);
+        ReusableMethods.coordinateClick(812,489);
+        ReusableMethods.wait(1);
+        // Mouse coordinates: 812, 508 arrrow down
+        ReusableMethods.coordinateClick(812,508);
 
     }
 
@@ -98,7 +106,6 @@ public class US23_Halit {
         Assert.assertTrue(homePage.mesaggeText.isDisplayed());
         System.out.println(homePage.mesaggeText.getText());
         ReusableMethods.wait(1);
-
 
     }
 

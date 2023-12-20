@@ -57,3 +57,34 @@
         * The Remark box appears and confirms that it is active.
         * The Date box appears and confirms that it is active.
         * The filter icon appears and confirms that it is active.
+
+      @wip
+      Scenario: TC_07 The 'Add Balance' Button should be visible and active on the Active Users Page. When
+      clicked, it should direct you to the Add Balance page.
+        * The administrator clicks Active Users button
+        * The administrator clicks  the Details button.
+        * The Add Balance button appears and confirms that it is active.
+        * The administrator clicks Add Balance button.
+        * It is verified that the Add Balance page is opened.
+
+      @wip
+      Scenario: TC_08 The Amount and Remark text boxes on the Add Balance page should be visible and
+          characters should be entered.
+
+        * The administrator clicks Active Users button
+        * The administrator clicks  the Details button.
+        * The administrator clicks Add Balance button.
+        * Amount text box appears and it is verified that characters can be entered.
+        * Remark text box appears and it is verified that characters can be entered.
+      @wip
+      Scenario: The 'Submit Button' on the page must be visible and active. When clicked, the text
+      '$x added successfully' should be displayed.
+
+        * The administrator clicks Active Users button
+        * The administrator clicks  the Details button.
+        * The administrator clicks Add Balance button.
+        * The amount is entered in the Amount text box.
+        * A description is entered in the Remark text box.
+        * The Submit button appears and confirms that it is active.
+        * The administrator clicks Submit button.
+        * It is verified that the text $ 1 added successfully is seen.
