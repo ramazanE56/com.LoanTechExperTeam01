@@ -214,7 +214,7 @@ assertEquals(" Under the Application Form tetx Box has Test Loan text but dont h
     @Given("Verify that Apply appears")
     public void verify_that_apply_appears() {
         dashBoardPage.applyElement.click();
-
+ReusableMethods.wait(1);
     }
 
 }
