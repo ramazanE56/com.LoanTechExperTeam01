@@ -1,6 +1,6 @@
 
 Feature:The visitor must be able to register to the site and fill out his/her profile information.
-  @e2e
+
   Scenario: E2E01 : The visitor must be able to register to the site and fill out his/her profile information.
     * The visitor enters the site with the given "Url"
     * Click on the Get Started Button Link on the Home Page.
