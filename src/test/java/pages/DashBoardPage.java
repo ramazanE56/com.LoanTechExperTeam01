@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -80,13 +81,11 @@ public class DashBoardPage {
     @FindBy(xpath ="//input[@name='address']")
     public WebElement addressBoxElement;
 
-    @FindBy(xpath ="(//input[@class='form-control form--control'])[6]")
-    public WebElement chooseFileElement;
 
     @FindBy(xpath ="//button[@type='submit']")
     public WebElement submitButtonElement;
     @FindBy(xpath = "//a[@href='javascript:void(0)']")
-    public WebElement AllowYaziElementi;
+    public WebElement allowTextElement;
 
 
 
@@ -115,6 +114,102 @@ public class DashBoardPage {
     @FindBy (xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
     public  WebElement changeMessageSuccefullyMessage;
 
+    @FindBy (xpath = "//a[@href='https://qa.loantechexper.com/user/loan/plans']")
+    public  WebElement takeLoanTabElement;
+
+    @FindBy (xpath = "//*[text()='Loan Plans']")
+    public  WebElement loanPlansTextElement;
+
+    @FindBy (id = "pills-car-loan-tab")
+    public  WebElement carLoanButtonElement;
+
+    @FindBy (xpath = "(//*[text()='Personel Finance Loan'])[1]")
+    public  WebElement personalFinanceLoanTextElement;
+
+    @FindBy (xpath = "(//*[text()='Take Maximum'])[3]")
+    public  WebElement takeMaximumTextElement;
+
+
+    @FindBy (xpath = "(//*[text()='Apply Now                                        '])[3]")
+    public  WebElement applyNowButtonElement;
+
+    @FindBy (xpath = "(//*[text()='Apply Now                                        '])[6]")
+    public  WebElement basicLoanapplyNowButtonElement;
+
+    @FindBy (xpath = "(//*[text()='Take Minimum'])[3]")
+    public  WebElement takeMinimumElement;
+
+    @FindBy (xpath = "//*[text()='$2,000.00']")
+    public  WebElement $200000TextElement;
+
+    @FindBy (xpath = "(//*[text()='Per Installment'])[3]")
+    public  WebElement perInstallmentTextElement;
+
+    @FindBy (xpath = "(//*[text()='6%'])[2]")
+    public  WebElement text6PerElement;
+
+    @FindBy (xpath = "(//*[text()='Installment Interval'])[3]")
+    public  WebElement InstallmentIntervalTxtElement;
+
+    @FindBy (xpath = "(//span[@class='plan-feature-list-amount'])[8]")
+    public  WebElement days20TxtElement;
+
+    @FindBy (xpath = "(//*[text()=' Total Installment'])[3]")
+    public  WebElement totalInstallmentTxtElement;
+
+    @FindBy (xpath = "(//*[text()='20'])[1]")
+    public  WebElement text20TxtElement;
+
+    @FindBy (xpath = "//h5[@id='exampleModalLabel']")
+    public  WebElement applyForPersonalLoanTxtElement;
+
+    @FindBy (xpath = "//h5[text()='Application Form']")
+    public  WebElement applicationFormTxtElement;
+
+    @FindBy (xpath = "//input[@placeholder='Enter An Amount']")
+    public  WebElement enterAnAmountBoxElement;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public  WebElement confirmButtonElement;
+
+    @FindBy (xpath = "(//button[@class='nav-link '])[2]")
+    public  WebElement basicLoanButtonElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[1]")
+    public  WebElement planNameTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[2]")
+    public  WebElement loanAmountTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[3]")
+    public  WebElement totalInstallmenttTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[4]")
+    public  WebElement perInstallmenttTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[5]")
+    public  WebElement youllNeedToPayTxtElement;
+
+    @FindBy (css = "div[class='card-body'] h4")
+    public  WebElement applicationFeeTxtElement;
+
+    @FindBy (xpath = "(//*[text()='Apply Now                                        '])[7]")
+    public  WebElement applyNowTestLoanTxtElement;
+
+    @FindBy (xpath = "//p[@class='caption-list-two p-3 bg--light']")
+    public  WebElement underTheApplicationFormTxtBoxElement;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public  WebElement applyElement;
+
+
+
+
+
+    public static WebElement webElementVariable(String amount) {
+        WebElement element =  Driver.getDriver().findElement(By.xpath("//*[contains(text(),'" + amount + "')]"));
+        return element;
+    }
 
 
 
