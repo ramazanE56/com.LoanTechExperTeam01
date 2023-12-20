@@ -113,7 +113,7 @@ Feature: I would like to have a page to register as a visitor
       * The Submit Button should be visible
       * Submit Button must be clickable
       * Close the page
-
+  @e2e
     Scenario: TC13 : It must be verified that the registration process can be completed by filling in the mandatory fields in the form (firstname/lastname/address textboxes).
       * Click on the Get Started Button Link on the Home Page.
       * A unique username with at least 6 characters is entered in the Username box.

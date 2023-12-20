@@ -84,7 +84,7 @@ Feature: US18 : As a registered user, I want to have a page where I can see my C
       * Click on the Confirm button
       * Verify that Application Form text is visible
       * Close the page
-  @wip
+
     Scenario: T07 :  Plan Name, Loan Amount, Total Installment, Per Installment, You'll Need To Pay, Application Fee" fields became visible under the heading "You are applying to take loan (Be Sure Before Confirm)
       * Click on the login button
       * The registered "usernameIsmail" is entered in the Username Or Email box.
