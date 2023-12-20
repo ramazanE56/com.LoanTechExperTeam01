@@ -462,7 +462,7 @@ public static String fakerUsernameMinValue(int x) {
 
     //mouse'un bulunduğu noktanın koordinatını alma methodu
     public static void coordidanateFind() {
-            wait(2);
+            wait(5);
             Point point = MouseInfo.getPointerInfo().getLocation();
             int x = (int) point.getX();
             int y = (int) point.getY();
@@ -543,6 +543,7 @@ public static String fakerUsernameMinValue(int x) {
         String randomNumber = String.valueOf(randomNumberInt);
         return randomNumber;
     }
+
 
 
 

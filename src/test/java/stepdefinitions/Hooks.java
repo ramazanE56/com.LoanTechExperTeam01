@@ -7,7 +7,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.testng.asserts.SoftAssert;
+
 import utilities.Driver;
 import utilities.ReusableMethods;
 
