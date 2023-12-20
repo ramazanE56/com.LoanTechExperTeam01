@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.testng.asserts.SoftAssert;
+
 import pages.DashBoardPage;
 import pages.LoginPage;
 import utilities.ConfigReader;
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class US18_Ismail {
-    SoftAssert softAssert = new SoftAssert();
+
 
     LoginPage loginPage = new LoginPage();
     DashBoardPage dashBoardPage = new DashBoardPage();
@@ -53,6 +53,7 @@ public class US18_Ismail {
 
     @Given("Verify that Loan Plans appears")
     public void verify_that_loan_plans_appears() {
+        ReusableMethods.wait(1);
         assertTrue(dashBoardPage.loanPlansTextElement.isDisplayed());
     }
 
@@ -66,13 +67,13 @@ public class US18_Ismail {
 
     @Given("Verify that Apply Now is visible")
     public void verify_that_apply_now_is_visible() {
-        softAssert.assertTrue(dashBoardPage.applyNowButtonElement.isDisplayed());
+        assertTrue(dashBoardPage.applyNowButtonElement.isDisplayed());
     }
 
 
     @Given("Verify that {string} is visible")
     public void verify_that_$_is_visible(String amount) {
-        softAssert.assertTrue(dashBoardPage.takeMaximumTextElement.isEnabled());
+        assertTrue(dashBoardPage.takeMaximumTextElement.isEnabled());
 
     }
     @Given("Verify this {string} is visible")
@@ -87,53 +88,53 @@ public class US18_Ismail {
 
     @Given("Verify that the Apply Now button is clickable")
     public void verify_that_the_apply_now_button_is_clickable() {
-        softAssert.assertTrue(dashBoardPage.applyNowButtonElement.isEnabled());
+        assertTrue(dashBoardPage.applyNowButtonElement.isEnabled());
 
     }
 
     @Given("Verify that Personal Finance Loan is visible")
     public void verify_that_personal_finance_loan_is_visible() {
-        softAssert.assertTrue(dashBoardPage.personalFinanceLoanTextElement.isDisplayed());
+        assertTrue(dashBoardPage.personalFinanceLoanTextElement.isDisplayed());
     }
 
     @Given("Verify that Take Maximum is visible")
     public void verify_that_take_maximum_is_visible() {
-        softAssert.assertTrue(dashBoardPage.takeMaximumTextElement.isDisplayed());
+        assertTrue(dashBoardPage.takeMaximumTextElement.isDisplayed());
     }
 
     @Given("Verify that Take Minimum is visible")
     public void verify_that_take_minimum_is_visible() {
-        softAssert.assertTrue(dashBoardPage.takeMinimumElement.isDisplayed());
+        assertTrue(dashBoardPage.takeMinimumElement.isDisplayed());
     }
 
     @Given("Verify that the {string} is visible")
     public void verify_that_the_is_visible(String string) {
-        softAssert.assertTrue(dashBoardPage.$200000TextElement.isDisplayed());
+        assertTrue(dashBoardPage.$200000TextElement.isDisplayed());
     }
 
     @Given("Verify that Per Installment is visible")
     public void verify_that_per_installment_is_visible() {
-        softAssert.assertTrue(dashBoardPage.perInstallmentTextElement.isDisplayed());
+        assertTrue(dashBoardPage.perInstallmentTextElement.isDisplayed());
     }
 
     @Given("Verify that Installment Interval is visible")
     public void verify_that_installment_interval_is_visible() {
-        softAssert.assertTrue(dashBoardPage.perInstallmentTextElement.isDisplayed());
+        assertTrue(dashBoardPage.perInstallmentTextElement.isDisplayed());
     }
 
     @Given("Verify that {int} Days is visible")
     public void verify_that_days_is_visible(Integer int1) {
-        softAssert.assertTrue(dashBoardPage.days20TxtElement.isDisplayed());
+        assertTrue(dashBoardPage.days20TxtElement.isDisplayed());
     }
 
     @Given("Verify that Total Installment is visible")
     public void verify_that_total_installment_is_visible() {
-        softAssert.assertTrue(dashBoardPage.totalInstallmentTxtElement.isDisplayed());
+        assertTrue(dashBoardPage.totalInstallmentTxtElement.isDisplayed());
     }
 
     @Given("Verify that {int} is visible")
     public void verify_that_is_visible(Integer int1) {
-        softAssert.assertTrue(dashBoardPage.text20TxtElement.isDisplayed());
+        assertTrue(dashBoardPage.text20TxtElement.isDisplayed());
     }
     @Given("Click on the Apply Now button")
     public void click_on_the_apply_now_button() {
@@ -150,14 +151,75 @@ public class US18_Ismail {
     }
     @Given("Verify that Confirm text is visible")
     public void verify_that_confirm_text_is_visible() {
-
+        assertTrue(dashBoardPage.confirmButtonElement.isDisplayed());
     }
     @Given("Click on the Confirm button")
     public void click_on_the_confirm_button() {
+        dashBoardPage.confirmButtonElement.click();
+    }
+
+    @Given("Click on the basic loan button")
+    public void click_on_the_basic_loan_button() {
+dashBoardPage.basicLoanButtonElement.click();
+    }
+    @Given("Verify that Application Form text is visible")
+    public void verify_that_application_form_text_is_visible() {
+assertTrue(dashBoardPage.applicationFormTxtElement.isDisplayed());
+    }
+
+    @Given("Click on the basic Loan Apply Now button")
+    public void click_on_the_basic_loan_apply_now_button() {
+dashBoardPage.basicLoanapplyNowButtonElement.click();
+    }
+
+    @Given("Verify that Plan Name appears")
+    public void verify_that_plan_name_appears() {
+assertTrue(dashBoardPage.planNameTxtElement.isDisplayed());
+    }
+    @Given("Verify that Loan Amount appears")
+    public void verify_that_loan_amount_appears() {
+assertTrue(dashBoardPage.loanAmountTxtElement.isDisplayed());
 
     }
-    @After
-    public void tearDown() {
-        softAssert.assertAll();
+    @Given("Verify that Total Installment appears")
+    public void verify_that_total_installment_appears() {
+assertTrue(dashBoardPage.totalInstallmenttTxtElement.isDisplayed());
+
     }
+    @Given("Verify that Per Installment appears")
+    public void verify_that_per_installment_appears() {
+assertTrue(dashBoardPage.perInstallmenttTxtElement.isDisplayed());
+
+    }
+    @Given("Verify that You'll Need To Pay appears")
+    public void verify_that_you_ll_need_to_pay_appears() {
+assertTrue(dashBoardPage.youllNeedToPayTxtElement.isDisplayed());
+
+    }
+    @Given("Verify that Application Fee text is visible")
+    public void verify_that_application_fee_text_is_visible() {
+assertTrue(dashBoardPage.applicationFeeTxtElement.isDisplayed());
+
+    }
+
+    @Given("Click on the Test Loan Apply Now button")
+    public void click_on_the_test_loan_apply_now_button() {
+dashBoardPage.applyNowTestLoanTxtElement.click();
+    }
+    @Given("Verify that Application Form appears")
+    public void verify_that_application_form_appears() {
+assertTrue(dashBoardPage.applicationFormTxtElement.isDisplayed());
+    }
+    @Given("Verify that Test Loan is written in the box under Application Form")
+    public void verify_that_test_loan_is_written_in_the_box_under_application_form() {
+String actualResult = dashBoardPage.underTheApplicationFormTxtBoxElement.getText();
+String expectedResult = "Test Loan";
+assertEquals(" Under the Application Form tetx Box has Test Loan text but dont here Test Loan",expectedResult,actualResult);
+    }
+    @Given("Verify that Apply appears")
+    public void verify_that_apply_appears() {
+        dashBoardPage.applyElement.click();
+
+    }
+
 }

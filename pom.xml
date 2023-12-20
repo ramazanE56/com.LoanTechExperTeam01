@@ -103,11 +103,7 @@
             <artifactId>allure-cucumber7-jvm</artifactId>
             <version>2.19.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.8.0</version>
-        </dependency>
+
     </dependencies>
 
 
@@ -147,14 +143,17 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <testFailureIgnore>true</testFailureIgnore>  <!-- senaryo fail olursa çalışmaya devam et -->
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
+
                         <include>**/runners/*Paralel*.java</include>
+
                     </includes>
                 </configuration>
             </plugin>
+
+            <!-- parale test için -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -179,18 +178,17 @@
                 <configuration>
                     <parallel>classes</parallel>
                     <forkMode>perthread</forkMode>
-                    <threadCount>3</threadCount>
+                    <threadCount>2</threadCount>    <!-- aynıanda 2 browser çalıştırılacağı anlamına gelir -->
                     <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
                     <argLine>-XX:MaxPermSize=256m</argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <forkCount>0</forkCount>
-
+                    <forkCount>3</forkCount>
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
                         <include>**/runners/*Paralel*.java</include>
+
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -219,5 +217,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>
