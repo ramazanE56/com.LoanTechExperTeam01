@@ -14,13 +14,17 @@ import org.junit.runner.RunWith;
         monochrome = true,// raporların konsolda okunaklı çıkması için
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@e2e",
-        dryRun = false
+
+        tags = "@wip",
+        dryRun =false
+
+
 
 
 
 
 )
+
 public class Runner {
 
     /*

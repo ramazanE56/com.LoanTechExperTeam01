@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class DashBoardPage {
     public DashBoardPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -208,6 +210,49 @@ public class DashBoardPage {
         WebElement element =  Driver.getDriver().findElement(By.xpath("//*[contains(text(),'" + amount + "')]"));
         return element;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // ***************ÜMİT***********************//
+
+    // DashBoardPage->
+
+    @FindBy(xpath = "(//h5[@class='text-secondary'])[1]")
+    public WebElement successfulDepositsYText;
+
+    @FindBy(xpath = "(//*[@class='text--secondary my-4'])[1]")
+    public WebElement successfulDepositsAmount;
+
+    @FindBy(xpath = "(//h5[@class='text-secondary'])[2]")
+    public WebElement successfulWithdrawalsText;
+
+    @FindBy(xpath = "(//*[@class='text--secondary my-4'])[2]")
+    public WebElement successfulWithdrawalsAmount;
+    @FindBy(xpath = "(//h5[@class='text-secondary'])[3]")
+    public WebElement totalLoanText;
+
+    @FindBy(xpath = "(//*[@class='text--secondary my-4'])[3]")
+    public WebElement totalLoanAmount;
+
+    @FindBy(xpath = " /html/body/div[3]/div/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/p/small")
+    public WebElement totalLoanNumber;
 
 
 }
