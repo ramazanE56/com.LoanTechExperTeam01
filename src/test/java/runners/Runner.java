@@ -14,14 +14,12 @@ import org.junit.runner.RunWith;
         monochrome = true,// raporların konsolda okunaklı çıkması için
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-
         tags = "@wip",
-        dryRun =false
+        dryRun = true
+
 
 
 //"cucumber-report-generator:target/cucumber-report.xlsx"
-
-
 
 )
 

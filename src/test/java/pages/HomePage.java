@@ -82,6 +82,30 @@ public HomePage(){
     public WebElement userGetStartedButton;
     @FindBy(xpath = "//*[text()='ACCOUNT BALANCE']")
     public WebElement getStartedPage;
+    @FindBy(xpath = "//*[@id='pills-basic-loan-tab']")
+    public WebElement basicLoanCard;
+    @FindBy(xpath = "(//*[@class='plan-name'])[5]")
+    public WebElement titleBasicLoan1;
+    @FindBy(xpath = "(//*[@class='plan-name'])[6]")
+    public WebElement titleCarLoan;
+    @FindBy(xpath = "(//*[@class='plan-name'])[7]")
+    public WebElement titleTestLoan;
+    @FindBy(xpath = "//body[1]/div[3]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/button[1]")
+    public WebElement applyNowButton;
+    @FindBy(xpath = "//*[@class='modal-header']")
+    public WebElement basicLoan1Page;
+    @FindBy(xpath = "//*[@name='amount']")
+    public WebElement amountBox;
+    @FindBy(xpath = "//input[@type='number']")
+    public WebElement concainerType;
+    @FindBy (xpath = "(//*[@type='submit'])[2]")
+    public WebElement comfirmButton;
+    @FindBy (xpath = "//*[text()='Application Form']")
+    public WebElement applicationFormButton;
+    @FindBy (xpath = "//*[@type='submit']")
+    public WebElement applyButton;
+    @FindBy (xpath = "//*[text()='Loan application submitted successfully']")
+    public WebElement mesaggeText;
 
 
 // -------------------------------------------------------
