@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="21" time="276.253">
+    <testcase classname="US07: I would like to have a page where I, as a visitor, can access and select Loan Plans" name="TC01: The visitor should be able to access the 'Loan Plans' page by clicking on Plans from the Home menu title" time="14.212">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click on the Plans link in the menu header................................passed
+* When going to the Plans link, it is verified that the Loan Plans page is accessed.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US07: I would like to have a page where I, as a visitor, can access and select Loan Plans" name="TC02:  The visitor should be able to see the 'Loan Plans' link under the Important Link heading" time="9.028">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Go to the end of the homepage.............................................passed
+* Click on the Loan Plans link under the Important Link heading and confirm that you are on the Loan Plans page.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US07: I would like to have a page where I, as a visitor, can access and select Loan Plans" name="TC03: Loan Plan Cards should be displayed under the Basic Loan heading on the Loan Plans Page," time="15.557">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click on the Plans link in the menu header................................passed
+* Select Basic Loan and see Loan Plan Cards under the Basic Loan heading....passed
+* Click on the Apply Now button under one of the plans and verify that it works.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US07: I would like to have a page where I, as a visitor, can access and select Loan Plans" name="TC04: When you click on the Home \ Loan Plans links on the Loan Plans Page, you can go to the relevant pages." time="14.684">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click on the Plans link in the menu header................................passed
+* On the Loan Plans page, click on the Home link from the Home - Loan Plans options and go to the Home page.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US14: As a registered user, I want to be able to access and update my profile information." name="TC01: The user should be able to view and edit their profile information from the user dashboard page" time="12.795">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click the Login button and go to the user login page......................passed
+* The user logs in to the user dashboard page with "userNameSuphi" and "password".passed
+* Click on the Profile link to go to the page where profile information can be edited.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US14: As a registered user, I want to be able to access and update my profile information." name="TC02: The user should be able to see and edit card information on the Profile Settings page." time="14.848">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click the Login button and go to the user login page......................passed
+* The user logs in to the user dashboard page with "userNameSuphi" and "password".passed
+* Click on the Profile link to go to the page where profile information can be edited.passed
+* User name, e-mail address, phone number, country information should be visible.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US14: As a registered user, I want to be able to access and update my profile information." name="TC03: Information in the Profile Card section should be editable in Profile Settings." time="14.321">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click the Login button and go to the user login page......................passed
+* The user logs in to the user dashboard page with "userNameSuphi" and "password".passed
+* Click on the Profile link to go to the page where profile information can be edited.passed
+* Firstname and lastname are edited.........................................passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US14: As a registered user, I want to be able to access and update my profile information." name="TC04: The user should be able to select and upload new files from the image section of the profile settings." time="31.337">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click the Login button and go to the user login page......................passed
+* The user logs in to the user dashboard page with "userNameSuphi" and "password".passed
+* Click on the Profile link to go to the page where profile information can be edited.passed
+* Click on Choose File button in Image section..............................passed
+* The new file is selected and uploaded.....................................passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US14: As a registered user, I want to be able to access and update my profile information." name="TC05: In the Zip Code section in the profile settings section, characters other than digits should not be entered." time="14.036">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click the Login button and go to the user login page......................passed
+* The user logs in to the user dashboard page with "userNameSuphi" and "password".passed
+* Click on the Profile link to go to the page where profile information can be edited.passed
+* Non-digit characters are entered in the zip code section..................passed
+* Enter digit characters in the Zip code section and save the changes by clicking the submit button.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US14: As a registered user, I want to be able to access and update my profile information." name="TC06: The user can make the necessary changes in the profile settings section and save these changes." time="13.218">
+        <system-out>
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click the Login button and go to the user login page......................passed
+* The user logs in to the user dashboard page with "userNameSuphi" and "password".passed
+* Click on the Profile link to go to the page where profile information can be edited.passed
+* The user makes the necessary changes in the profile settings section and saves the changes by clicking submit.passed
+* Profile updated successfully appears when the changes are saved...........passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US34: As an administrator, I want to be able to access and update my profile information." name="TC01: After logging in to the admin dashboard, the admin icon should appear in the upper right corner." time="7.041">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the admin icon in the upper right corner of the admin dashboard page.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US34: As an administrator, I want to be able to access and update my profile information." name="TC02: When clicking on the admin icon, profile, password, logout links should appear." time="7.001">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the admin icon in the upper right corner of the admin dashboard page.passed
+* The visibility of Admin, Profile, Password, Logout links is verified......passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US34: As an administrator, I want to be able to access and update my profile information." name="TC03: Clicking on the profile link should take you to the Profile Information page and" time="25.88">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the admin icon in the upper right corner of the admin dashboard page.passed
+* Click on the profile link.................................................passed
+* Name, email, image information is updated and saved.......................passed
+* It is confirmed that the changes made have been saved successfully by the text Profile updated successfully in the upper right corner.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US34: As an administrator, I want to be able to access and update my profile information." name="TC04: Clicking on the password link should take you to the password setting page and" time="12.005">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the admin icon in the upper right corner of the admin dashboard page.passed
+* Click on the password link and go to the password setting page............passed
+* In the Change password section, used Password, New Password and Confirm Password information must be entered.passed
+* It is confirmed that the changes made have been saved successfully by the text Password changed successfully in the upper right corner.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US34: As an administrator, I want to be able to access and update my profile information." name="TC05: When the Logout link is clicked, you must successfully leave the page." time="7.383">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the admin icon in the upper right corner of the admin dashboard page.passed
+* Click on the profile link.................................................passed
+* Click on the admin icon in the upper right corner of the admin dashboard page.passed
+* Click on the logout link..................................................passed
+* It is verified that the admin page is exited..............................passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC01: The 'Active Users' link should appear and be active under the 'Manage Users' link" time="7.242">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the Manage Users link............................................passed
+* Click on Active Users link under Manage Users link and go to Active Users page.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC02: When the 'Active Users' link is clicked, the 'Active Users List' and list titles should be displayed." time="7.03">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the Manage Users link............................................passed
+* Click on Active Users link under Manage Users link and go to Active Users page.passed
+* User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC03: To access information about any user selected from the list, the 'Details' button must be visible and active." time="10.075">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the Manage Users link............................................passed
+* Click on Active Users link under Manage Users link and go to Active Users page.passed
+* User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed.passed
+* Click on the Details link under the Action information of an Active User..passed
+* Go to User Details page...................................................passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC04: The selected user's current profile information should be directed to the editing screen." time="11.284">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the Manage Users link............................................passed
+* Click on Active Users link under Manage Users link and go to Active Users page.passed
+* User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed.passed
+* Click on the Details link under the Action information of an Active User..passed
+* Go to User Details page...................................................passed
+* The name and surname information under the heading Information of is reorganized and saved.passed
+* The email address under the Information of heading is rearranged and saved in the correct format (there must be an "@" sign in the email address).passed
+* City information under the Information of heading is reorganized and saved.passed
+* The State information under the Information of heading is reorganized and saved.passed
+* Zip code information under the Information of heading is rearranged and saved.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC05: When the changes are approved, the user profile information in the system must be updated." time="10.325">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the Manage Users link............................................passed
+* Click on Active Users link under Manage Users link and go to Active Users page.passed
+* User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed.passed
+* Click on the Details link under the Action information of an Active User..passed
+* Go to User Details page...................................................passed
+* The information under the Information of heading is rearranged and saved by clicking Submit button.passed
+* Changes are confirmed by the 'User details updated successfully' notification in the upper right corner of the page.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC06: When an unexpected error occurs in the system, a clear error message should be displayed to the user." time="16.447">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the Manage Users link............................................passed
+* Click on Active Users link under Manage Users link and go to Active Users page.passed
+* User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed.passed
+* Click on the Details link under the Action information of an Active User..passed
+* Go to User Details page...................................................passed
+* An attempt is made to enter missing - incorrect address information to the "e_mail" address.passed
+* Please add an "@" sign to the email address. The "@" is missing in the "e_mail" address.' incorrect input notification is displayed.passed
+* Close the page............................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

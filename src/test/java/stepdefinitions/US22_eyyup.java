@@ -44,7 +44,7 @@ public class US22_eyyup {
     public void fill_in_user_information() {
 
 
-        homePage.userName.sendKeys(ConfigReader.getProperty("Username"));
+        homePage.userName.sendKeys(ConfigReader.getProperty("Usernameeyyup"));
         ReusableMethods.wait(2);
         homePage.password.sendKeys(ConfigReader.getProperty("password"));
 
