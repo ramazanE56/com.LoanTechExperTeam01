@@ -17,12 +17,10 @@ public class US18_Ismail {
     }
     @Given("Registered user {string} is entered in the Your Password box.")
     public void registered_user_is_entered_in_the_your_password_box(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @Given("Click on the login button to log in.")
     public void click_on_the_login_button_to_log_in() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 }
