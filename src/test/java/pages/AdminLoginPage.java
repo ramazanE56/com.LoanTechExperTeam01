@@ -80,7 +80,7 @@ public class AdminLoginPage {
     @FindBy(xpath = "(//*[text()=' Filter'])[2]")
     public WebElement filterIcon;
 
-    @FindBy(xpath = "//*[@id='date']")
+    @FindBy(xpath = "//input[@*='username']")
     public WebElement adminUserNameBoxElement;
 
     @FindBy(xpath = "//input[@*='password']")

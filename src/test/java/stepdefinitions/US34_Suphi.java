@@ -49,6 +49,7 @@ public class US34_Suphi {
 
     @When("Click on the profile link")
     public void clickOnTheProfileLink() {
+
         adminDashBoardPage.adminIconProfileElement.click();
         
     }
@@ -115,6 +116,16 @@ public class US34_Suphi {
     @When("It is verified that the admin page is exited")
     public void itIsVerifiedThatTheAdminPageIsExited() {
         adminDashBoardPage.adminLogoutConfirmElement.isDisplayed();
+
+    }
+
+    @When("It is confirmed that the changes made have been saved successfully by the text Password changed successfully in the upper right corner")
+    public void ıtIsConfirmedThatTheChangesMadeHaveBeenSavedSuccessfullyByTheTextPasswordUpdatedSuccessfullyInTheUpperRightCorner() {
+
+        ReusableMethods.wait(1);
+        String expectedResult="Password changed successfully.";
+        String actualResult= adminDashBoardPage.adminPasswordUpdatedElement.getText();
+        Assert.assertEquals(expectedResult,actualResult);
 
     }
 }

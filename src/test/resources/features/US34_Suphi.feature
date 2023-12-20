@@ -38,7 +38,7 @@ Feature: US34: As an administrator, I want to be able to access and update my pr
     * Click on the admin icon in the upper right corner of the admin dashboard page
     * Click on the password link and go to the password setting page
     * In the Change password section, used Password, New Password and Confirm Password information must be entered
-    * It is confirmed that the changes made have been saved successfully by the text Profile updated successfully in the upper right corner
+    * It is confirmed that the changes made have been saved successfully by the text Password changed successfully in the upper right corner
     * Close the page
 
   Scenario: TC05: When the Logout link is clicked, you must successfully leave the page.
