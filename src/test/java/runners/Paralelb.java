@@ -11,11 +11,12 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports1.html",
                 "json:target/json-reports/cucumber1.json",
                 "junit:target/xml-report/cucumber1.xml"},
+        monochrome = true,// raporların konsolda okunaklı çıkması için
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@abc",
+        tags = "@e2e",
         dryRun = false
 )
-public class Paralel1 {
+public class Paralelb {
 
 }

@@ -79,8 +79,6 @@ public class DashBoardPage {
     @FindBy(xpath ="//input[@name='address']")
     public WebElement addressBoxElement;
 
-    @FindBy(xpath ="(//input[@class='form-control form--control'])[6]")
-    public WebElement chooseFileElement;
 
     @FindBy(xpath ="//button[@type='submit']")
     public WebElement submitButtonElement;
@@ -117,7 +115,7 @@ public class DashBoardPage {
     @FindBy (xpath = "//a[@href='https://qa.loantechexper.com/user/loan/plans']")
     public  WebElement takeLoanTabElement;
 
-    @FindBy (tagName = "Loan Plans")
+    @FindBy (xpath = "//*[text()='Loan Plans']")
     public  WebElement loanPlansTextElement;
 
     @FindBy (id = "pills-car-loan-tab")
@@ -132,6 +130,9 @@ public class DashBoardPage {
 
     @FindBy (xpath = "(//*[text()='Apply Now                                        '])[3]")
     public  WebElement applyNowButtonElement;
+
+    @FindBy (xpath = "(//*[text()='Apply Now                                        '])[6]")
+    public  WebElement basicLoanapplyNowButtonElement;
 
     @FindBy (xpath = "(//*[text()='Take Minimum'])[3]")
     public  WebElement takeMinimumElement;
@@ -165,6 +166,41 @@ public class DashBoardPage {
 
     @FindBy (xpath = "//input[@placeholder='Enter An Amount']")
     public  WebElement enterAnAmountBoxElement;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public  WebElement confirmButtonElement;
+
+    @FindBy (xpath = "(//button[@class='nav-link '])[2]")
+    public  WebElement basicLoanButtonElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[1]")
+    public  WebElement planNameTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[2]")
+    public  WebElement loanAmountTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[3]")
+    public  WebElement totalInstallmenttTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[4]")
+    public  WebElement perInstallmenttTxtElement;
+
+    @FindBy (xpath = "(//*[@class='caption'])[5]")
+    public  WebElement youllNeedToPayTxtElement;
+
+    @FindBy (css = "div[class='card-body'] h4")
+    public  WebElement applicationFeeTxtElement;
+
+    @FindBy (xpath = "(//*[text()='Apply Now                                        '])[7]")
+    public  WebElement applyNowTestLoanTxtElement;
+
+    @FindBy (xpath = "//p[@class='caption-list-two p-3 bg--light']")
+    public  WebElement underTheApplicationFormTxtBoxElement;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public  WebElement applyElement;
+
+
 
 
 
