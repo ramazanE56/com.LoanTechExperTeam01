@@ -114,7 +114,7 @@ public class DashBoardPage {
     @FindBy (xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
     public  WebElement changeMessageSuccefullyMessage;
 
-    @FindBy (xpath = "//a[@href='https://qa.loantechexper.com/user/loan/plans']")
+    @FindBy (xpath = "//a[@class='active']")
     public  WebElement takeLoanTabElement;
 
     @FindBy (xpath = "//*[text()='Loan Plans']")
