@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.AdminDashBoardPage;
 import pages.AdminLoginPage;
 import utilities.ConfigReader;
@@ -38,7 +39,7 @@ public class US45_Suphi {
         ReusableMethods.wait(1);
         adminDashBoardPage.searchButtonElement.click();
         ReusableMethods.wait(1);
-        adminDashBoardPage.detailsButtonElement.click();
+
 
     }
 
@@ -56,7 +57,7 @@ public class US45_Suphi {
         adminDashBoardPage.informationLastnameBoxElement.clear();
         adminDashBoardPage.informationLastnameBoxElement.sendKeys("celikoz");
 
-        adminDashBoardPage.informationSubmitButtonElement.click();
+        ReusableMethods.clickWithJS(adminDashBoardPage.informationSubmitButtonElement);
 
         adminDashBoardPage.informationUpdatedConfirmElement.isDisplayed();
 
@@ -79,27 +80,67 @@ public class US45_Suphi {
 
     @When("Zip code information under the Information of heading is rearranged and saved")
     public void zipCodeInformationUnderTheInformationOfHeadingIsRearrangedAndSaved() {
+        ReusableMethods.clickWithJS(adminDashBoardPage.informationZipcodeBoxElement);
+        adminDashBoardPage.informationZipcodeBoxElement.clear();
+        adminDashBoardPage.informationZipcodeBoxElement.sendKeys("123456");
+        ReusableMethods.wait(1);
 
     }
 
     @When("The information under the Information of heading is rearranged and saved by clicking Submit button")
     public void theInformationUnderTheInformationOfHeadingIsRearrangedAndSavedByClickingSubmitButton() {
+        ReusableMethods.clickWithJS(adminDashBoardPage.informationSubmitButtonElement);
 
     }
 
-    @When("Changes are confirmed by the {string} notification in the upper right corner of the page")
-    public void changesAreConfirmedByTheNotificationInTheUpperRightCornerOfThePage(String arg0) {
+    @When("Changes are confirmed by the 'User details updated successfully' notification in the upper right corner of the page")
+    public void changesAreConfirmedByTheNotificationInTheUpperRightCornerOfThePage() {
+        adminDashBoardPage.informationUpdatedConfirmElement.isDisplayed();
 
     }
 
-    @When("An attempt is made to enter missing - incorrect address information to the e-mail address")
-    public void anAttemptIsMadeToEnterMissingIncorrectAddressInformationToTheEMailAddress() {
+    @When("An attempt is made to enter missing - incorrect address information to the {string} address")
+    public void anAttemptIsMadeToEnterMissingIncorrectAddressInformationToTheEMailAddress(String e_mail) {
+        ReusableMethods.wait(1);
+        e_mail="asdf";
+        ReusableMethods.clickWithJS(adminDashBoardPage.informationEmailBoxElement);
+        adminDashBoardPage.informationEmailBoxElement.clear();
+        ReusableMethods.wait(1);
+        adminDashBoardPage.informationEmailBoxElement.sendKeys(e_mail);
+        ReusableMethods.wait(1);
+        ReusableMethods.clickWithJS(adminDashBoardPage.informationSubmitButtonElement);
+
+        String expectedResult="User details updated successfully";
+        String actualResult="";
+
+        Assert.assertNotEquals(expectedResult,actualResult);
 
     }
 
-    @When("{string}The {string} is missing in the {string} address.' incorrect input notification is displayed")
-    public void pleaseAddAnSignToTheEmailAddressTheIsMissingInTheAddressIncorrectInputNotificationIsDisplayed(String arg0, String arg1, String arg2) {
+    @When("Please add an \"@\" sign to the email address. The \"@\" is missing in the {string} address.' incorrect input notification is displayed")
+    public void pleaseAddAnSignToTheEmailAddressTheIsMissingInTheAddressIncorrectInputNotificationIsDisplayed(String e_mail ) {
+        ReusableMethods.wait(1);
+        e_mail="asdf";
+        ReusableMethods.clickWithJS(adminDashBoardPage.informationEmailBoxElement);
+        adminDashBoardPage.informationEmailBoxElement.clear();
+        adminDashBoardPage.informationEmailBoxElement.sendKeys(e_mail);
+        ReusableMethods.wait(1);
+        adminDashBoardPage.informationSubmitButtonElement.click();
 
+        String expectedResult="User details updated successfully";
+        String actualResult="";
+
+        Assert.assertNotEquals(expectedResult,actualResult);
+
+        adminDashBoardPage.informationEmailBoxElement.click();
+        adminDashBoardPage.informationEmailBoxElement.clear();
+        adminDashBoardPage.informationEmailBoxElement.sendKeys("s@c");
+        ReusableMethods.wait(1);
+        adminDashBoardPage.informationSubmitButtonElement.click();
+
+        String expectedResult2="User details updated successfully";
+        String actualResult2=adminDashBoardPage.informationUpdatedConfirmElement.getText();
+        Assert.assertEquals(expectedResult2,actualResult2);
     }
 
 
