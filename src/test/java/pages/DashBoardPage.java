@@ -1,9 +1,9 @@
 package pages;
 
-<<<<<<< HEAD
-=======
+
+
 import org.openqa.selenium.By;
->>>>>>> main
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +16,7 @@ public class DashBoardPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-<<<<<<< HEAD
+
     @FindBy(xpath = "(//span[@class='menu-title'])[2]")
     public WebElement menageUsersLink;
     //eyyup
@@ -132,7 +132,7 @@ public class DashBoardPage {
 
 
 
-=======
+
 
     // -------------------------------------------------------
     /* SUPHİ */
@@ -375,5 +375,5 @@ public class DashBoardPage {
     public WebElement totalLoanNumber;
 
 
->>>>>>> main
+
 }

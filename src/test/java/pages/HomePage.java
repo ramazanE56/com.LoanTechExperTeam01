@@ -13,12 +13,11 @@ public class HomePage {
     @FindBy(xpath = "//img[@alt='viserhyip']")
     public WebElement loanTechLogoElement;
 
-<<<<<<< HEAD
-    @FindBy(xpath = "//a[normalize-space()='Get Started']")
-=======
+
+
+
 @FindBy(xpath= "//a[@class='btn btn--xl xl-text btn--base btn--outline mt-3']")
->>>>>>> main
-    public WebElement getStartedButonElement;
+public WebElement getStartedButonElement;
 
     @FindBy(xpath = "//h2[normalize-space()='Register']")
     public WebElement registerTextElement;

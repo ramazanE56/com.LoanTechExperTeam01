@@ -12,7 +12,7 @@ public class AdminDashBoardPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-<<<<<<< HEAD
+
 @FindBy(xpath = "//input[@name='username']")
     public WebElement adminUserName;
     //eyyup
@@ -107,7 +107,7 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "//h6[@class='page-title']")
     public WebElement alLoansPost;
     //eyyup
-=======
+
 
     // ----- SUPHİ ----- //
     @FindBy(xpath = "//span[text()='Manage Users']")
@@ -317,8 +317,8 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "/html/body/div/div[2]/div/div[2]/div[2]/div/div/div/table/thead")
     public List<WebElement>installmentsHeader;
 
-    @FindBy(xpath ="//*[@class='btn btn-sm btn-outline--primary']")
-    public WebElement backButton;
+
+
 
     @FindBy(xpath ="//h6[@class='page-title']")
     public WebElement allLoansText;
@@ -431,6 +431,6 @@ public class AdminDashBoardPage {
 
     @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
     public WebElement successfulDepositsDetailsButton;
->>>>>>> main
+
 
 }
