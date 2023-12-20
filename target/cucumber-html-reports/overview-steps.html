@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>20 Ara 2023, 14:51</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="3988300">0.003</td>
+              <td class="duration" data-value="3988300">0.003</td>
+              <td class="duration" data-value="3988300">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US01_Ismail.Close_the_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="3110115200">3.110</td>
+              <td class="duration" data-value="3110115200">3.110</td>
+              <td class="duration" data-value="3110115200">3.110</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US01_Ismail.the_visitor_enters_the_site_with_the_given(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="7432156800">7.432</td>
+              <td class="duration" data-value="7432156800">7.432</td>
+              <td class="duration" data-value="7432156800">7.432</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.a_digit_password_containing_at_least_one_uppercase_letter_one_number_lowercase_letter_and_character_is_entered_into_the_password_textbox(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="87766000">0.087</td>
+              <td class="duration" data-value="87766000">0.087</td>
+              <td class="duration" data-value="87766000">0.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.a_unique_phone_number_of_maximum_digits_is_entered_into_the_phone_textbox(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="2136692800">2.136</td>
+              <td class="duration" data-value="2136692800">2.136</td>
+              <td class="duration" data-value="2136692800">2.136</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.a_unique_username_with_at_least_characters_is_entered_in_the_username_box(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="102721300">0.102</td>
+              <td class="duration" data-value="102721300">0.102</td>
+              <td class="duration" data-value="102721300">0.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.address_is_entered_in_the_address_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1163818900">1.163</td>
+              <td class="duration" data-value="1163818900">1.163</td>
+              <td class="duration" data-value="1163818900">1.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.click_on_the_get_started_button_link_on_the_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="413692900">0.413</td>
+              <td class="duration" data-value="413692900">0.413</td>
+              <td class="duration" data-value="413692900">0.413</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.click_on_the_i_agree_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="53760700">0.053</td>
+              <td class="duration" data-value="53760700">0.053</td>
+              <td class="duration" data-value="53760700">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.click_on_the_profile_tab()</td>
+              <td>1</td>
+              <td class="duration" data-value="6326875100">6.326</td>
+              <td class="duration" data-value="6326875100">6.326</td>
+              <td class="duration" data-value="6326875100">6.326</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.click_on_the_register_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="641712000">0.641</td>
+              <td class="duration" data-value="641712000">0.641</td>
+              <td class="duration" data-value="641712000">0.641</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.click_on_the_submit_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="5163709400">5.163</td>
+              <td class="duration" data-value="5163709400">5.163</td>
+              <td class="duration" data-value="5163709400">5.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.click_the_choose_file_button_and_upload_a_profile_photo()</td>
+              <td>1</td>
+              <td class="duration" data-value="18197865400">18.197</td>
+              <td class="duration" data-value="18197865400">18.197</td>
+              <td class="duration" data-value="18197865400">18.197</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.country_is_entered_in_the_city_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1064188300">1.064</td>
+              <td class="duration" data-value="1064188300">1.064</td>
+              <td class="duration" data-value="1064188300">1.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.country_selection_is_made_from_the_country_menu()</td>
+              <td>1</td>
+              <td class="duration" data-value="2770490800">2.770</td>
+              <td class="duration" data-value="2770490800">2.770</td>
+              <td class="duration" data-value="2770490800">2.770</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.dashboard_address_is_entered_in_the_address_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1095652000">1.095</td>
+              <td class="duration" data-value="1095652000">1.095</td>
+              <td class="duration" data-value="1095652000">1.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.dashboard_click_on_the_submit_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="3650217500">3.650</td>
+              <td class="duration" data-value="3650217500">3.650</td>
+              <td class="duration" data-value="3650217500">3.650</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.dashboard_country_is_entered_in_the_city_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1066707100">1.066</td>
+              <td class="duration" data-value="1066707100">1.066</td>
+              <td class="duration" data-value="1066707100">1.066</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.dashboard_name_is_entered_in_the_firstname_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="3106089800">3.106</td>
+              <td class="duration" data-value="3106089800">3.106</td>
+              <td class="duration" data-value="3106089800">3.106</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.dashboard_state_is_entered_in_the_state_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1061261900">1.061</td>
+              <td class="duration" data-value="1061261900">1.061</td>
+              <td class="duration" data-value="1061261900">1.061</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.dashboard_surname_is_entered_in_the_lastname_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1071755200">1.071</td>
+              <td class="duration" data-value="1071755200">1.071</td>
+              <td class="duration" data-value="1071755200">1.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.dashboard_zip_code_entered_in_zip_code_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1066395300">1.066</td>
+              <td class="duration" data-value="1066395300">1.066</td>
+              <td class="duration" data-value="1066395300">1.066</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.name_is_entered_in_the_firstname_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1084124100">1.084</td>
+              <td class="duration" data-value="1084124100">1.084</td>
+              <td class="duration" data-value="1084124100">1.084</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.state_is_entered_in_the_state_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1057372000">1.057</td>
+              <td class="duration" data-value="1057372000">1.057</td>
+              <td class="duration" data-value="1057372000">1.057</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.surname_is_entered_in_the_lastname_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1102388700">1.102</td>
+              <td class="duration" data-value="1102388700">1.102</td>
+              <td class="duration" data-value="1102388700">1.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.the_specified_password_is_entered_in_the_confirm_textbox()</td>
+              <td>1</td>
+              <td class="duration" data-value="78789200">0.078</td>
+              <td class="duration" data-value="78789200">0.078</td>
+              <td class="duration" data-value="78789200">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.valid_e_mail_information_containing_the_sign_is_entered_into_the_e_mail_text_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="288231500">0.288</td>
+              <td class="duration" data-value="288231500">0.288</td>
+              <td class="duration" data-value="288231500">0.288</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.US12_Ismail.zip_code_entered_in_zip_code_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="1056770900">1.056</td>
+              <td class="duration" data-value="1056770900">1.056</td>
+              <td class="duration" data-value="1056770900">1.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>28</td>
+            <td>28</td>
+            <td class="duration">2.337</td>
+            <td class="duration">18.197</td>
+            <td class="duration">1:5.455</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

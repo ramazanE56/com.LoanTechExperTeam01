@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="65.976">
+    <testcase classname="The visitor must be able to register to the site and fill out his/her profile information." name="E2E01 : The visitor must be able to register to the site and fill out his/her profile information." time="65.535">
+        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click on the Get Started Button Link on the Home Page.....................passed
+* A unique username with at least 6 characters is entered in the Username box..passed
+* Valid e-mail information containing the @ sign is entered into the e-mail text box.passed
+* Country selection is made from the Country menu...........................passed
+* A unique phone number of maximum 14 digits is entered into the phone textbox..passed
+* A 6-digit password containing at least one uppercase letter, one number, lowercase letter and character is entered into the Password textbox..passed
+* The specified password is entered in the Confirm textbox..................passed
+* click on the i agree button...............................................passed
+* click on the register button..............................................passed
+* Name is entered in the firstname box......................................passed
+* Surname is entered in the lastname box....................................passed
+* Address is entered in the address box.....................................passed
+* State is entered in the state box.........................................passed
+* zip code entered in zip code box..........................................passed
+* Country is entered in the city box........................................passed
+* Click on the submit button................................................passed
+* Click on the Profile tab..................................................passed
+* dashboard Name is entered in the firstname box............................passed
+* dashboard Surname is entered in the lastname box..........................passed
+* dashboard Address is entered in the address box...........................passed
+* dashboard State is entered in the state box...............................passed
+* dashboard zip code entered in zip code box................................passed
+* dashboard Country is entered in the city box..............................passed
+* Click the Choose File button and upload a profile photo...................passed
+* dashboard Click on the submit button......................................passed
+* Close the page............................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
