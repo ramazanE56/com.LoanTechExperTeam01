@@ -1,10 +1,10 @@
-@MK
+
 Feature: as an admin, create categories and manage all categories.
 
   Scenario: On the Categories page, verify that you can see all categories, create new categories, change them and reach the desired category
-    * Navigate to Admin page "UrlAdmin"
-    * send username registered to username textbox
-    * send password registered to username textbox
+    * Navigate to Admin page "adminUrl"
+    * send "username registered" to username textbox
+    * send "password registered" to password textbox
     * click on the login button
     * verify that Categories link element visible
     * click categories link element

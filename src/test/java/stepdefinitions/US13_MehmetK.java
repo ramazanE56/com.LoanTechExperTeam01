@@ -101,6 +101,7 @@ public class US13_MehmetK {
 
         loginPage.passwordElement.sendKeys("Loan.741");
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(1000);
         loginPage.userLoginSubmit.click();
         Thread.sleep(1000);
 
@@ -124,67 +125,97 @@ public class US13_MehmetK {
 
 
     @Given("Click the Forgot password link element")
-    public void click_the_Forgot_password_link_element() {
+    public void click_the_Forgot_password_link_element() throws InterruptedException {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(1000);
+        loginPage.forgetPassword.click();
 
     }
     @Given("verify that Recovery page open when when you click on Forgot button")
     public void verify_that_Recovery_page_open_when_when_you_click_on_Forgot_button() {
+        String expectedUrl ="https://qa.loantechexper.com/user/password/reset";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        System.out.println(actualUrl);
+        Assert.assertEquals(expectedUrl,actualUrl);
 
     }
 
+    @Given("send the {string} registered in the textBox")
+    public void send_the_registered_in_the_text_box(String username) throws InterruptedException {
+        Thread.sleep(1000);
+        loginPage.resetAccount.sendKeys("mehmetkahraman");
 
-    @Given("Click the Try to send again link element")
-    public void click_the_try_to_send_again_link_element() {
-
-    }
-    @Given("Verify that the user password reset page opens again when the Try to send again link element is clicked")
-    public void verify_that_the_user_password_reset_page_opens_again_when_the_try_to_send_again_link_element_is_clicked() {
-
-    }
-
-    @Given("send the Username or email address registered in the textBox")
-    public void send_the_username_or_email_address_registered_in_the_text_box() {
-
-    }
-    @Given("Verify that Password reset email sent successfully message appears when the Submit button is clicked")
-    public void verify_that_password_reset_email_sent_successfully_message_appears_when_the_submit_button_is_clicked() {
-
-    }
-    @Given("send Username or email address registered in the textBox")
-    public void send_username_or_email_address_registered_in_the_text_box() {
 
     }
     @Given("click on the summit button")
     public void click_on_the_summit_button() {
+        loginPage.submitButton.click();
 
     }
-    @Given("Verify that Password reset email sent successfully appears when the Submit button is clicked")
-    public void verify_that_password_reset_email_sent_successfully_appears_when_the_submit_button_is_clicked() {
+    @Given("Verify that Password reset email sent successfully message appears when the Submit button is clicked")
+    public void verify_that_password_reset_email_sent_successfully_message_appears_when_the_submit_button_is_clicked() {
+        System.out.println(loginPage.succesfullMessage.getText());
+        Assert.assertTrue(loginPage.succesfullMessage.isDisplayed());
 
     }
-    @Given("Enter the digit digit verification code sent to the e-mail address in the textBox")
-    public void enter_the_digit_digit_verification_code_sent_to_the_e_mail_address_in_the_text_box() {
+
+    @Given("Click the Try to send again link element")
+    public void click_the_try_to_send_again_link_element() {
+        loginPage.tryResetAgain.click();
+
+
+    }
+
+    @Given("Verify that the user password reset page opens again when the Try to send again link element is clicked")
+    public void verify_that_the_user_password_reset_page_opens_again_when_the_try_to_send_again_link_element_is_clicked() {
+        String expectedUrl ="https://qa.loantechexper.com/user/password/reset";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        System.out.println(actualUrl);
+        Assert.assertEquals(expectedUrl,actualUrl);
+
+    }
+
+
+
+
+    @Given("Enter the digit digit verification {string} sent to the e-mail address in the textBox")
+    public void enter_the_digit_digit_verification_sent_to_the_e_mail_address_in_the_text_box(String codeSent) {
+        loginPage.code.sendKeys("123456");
 
     }
     @Given("click the submit button")
     public void click_the_submit_button() {
 
+        loginPage.submitButton.click();
     }
 
     //TC03
 
 
     @Given("verify that The Register Now Link element on the login page visible")
-    public void verify_that_the_register_now_link_element_on_the_login_page_visible() {
+    public void verify_that_the_register_now_link_element_on_the_login_page_visible() throws InterruptedException {
+        Assert.assertTrue(loginPage.registerLink.isDisplayed());
+        System.out.println(loginPage.registerLink.getText());
+
+        Thread.sleep(1000);
+
 
     }
     @Given("Click the Register Now link element.")
-    public void click_the_register_now_link_element() {
+    public void click_the_register_now_link_element() throws InterruptedException {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        loginPage.registerLink.click();
+        Thread.sleep(3000);
 
     }
 
     @Given("verify that The Register page open.")
     public void verify_that_the_register_page_open() {
+        String expectedUrl ="https://qa.loantechexper.com/user/register";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        System.out.println(actualUrl);
+        Assert.assertEquals(expectedUrl,actualUrl);
+
 
     }
 

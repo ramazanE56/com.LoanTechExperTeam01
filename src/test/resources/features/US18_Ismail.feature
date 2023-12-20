@@ -45,7 +45,7 @@ Feature: US18 : As a registered user, I want to have a page where I can see my C
       * Click on the Apply Now button
       * Verify that Apply for Personal Finance Loan appears
       * Close the page
-  @wip
+
     Scenario: TC04 : On the "Apply for Personal Finance Loan" page, the "Amount" value "Minimum Amount $2,000.00 -Maximum Amount $5,000.00" should be entered and the "Confirm" button should be visible and active and when clicked, a successful registration should be confirmed.
       * Click on the login button
       * The registered "usernameIsmail" is entered in the Username Or Email box.

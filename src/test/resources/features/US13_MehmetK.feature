@@ -1,4 +1,4 @@
-@wip
+
 Feature: As a registered user, I want to be able to access the login page from the home page in order to log in to my own panel
 
   Background:Users use these steps to log in to the site.
@@ -25,14 +25,14 @@ Feature: As a registered user, I want to be able to access the login page from t
     * click the Login on  top bar of the home page
     * Click the Forgot password link element
     * verify that Recovery page open when when you click on Forgot button
+    * send the "Username or email address" registered in the textBox
+    * click on the summit button
+    * Verify that Password reset email sent successfully message appears when the Submit button is clicked
     * Click the Try to send again link element
     * Verify that the user password reset page opens again when the Try to send again link element is clicked
-    * send the Username or email address registered in the textBox
-    * Verify that Password reset email sent successfully message appears when the Submit button is clicked
-    * send Username or email address registered in the textBox
+    * send the "Username or email address" registered in the textBox
     * click on the summit button
-    * Verify that Password reset email sent successfully appears when the Submit button is clicked
-    * Enter the digit digit verification code sent to the e-mail address in the textBox
+    * Enter the digit digit verification "123456" sent to the e-mail address in the textBox
     * click the submit button
     * Close the page
 

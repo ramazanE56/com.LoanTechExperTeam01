@@ -107,6 +107,26 @@ public class LoginPage {
     @FindBy(xpath = "//*[@placeholder='Your password']")
     public WebElement userPasswordText;
 
+    @FindBy(xpath = "//*[@class='auth-form__input']")
+    public WebElement resetAccount;
+
+    @FindBy(xpath = "(//*[@type='submit'])[1]")
+    public WebElement submitButton;
+
+    @FindBy(xpath = "//*[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement succesfullMessage;
+
+    @FindBy(xpath = "//*[@href='https://qa.loantechexper.com/user/password/reset']")
+    public WebElement tryResetAgain;
+
+    @FindBy(xpath = "//*[@class='form-control overflow-hidden']")
+    public WebElement code;
+
+    @FindBy(xpath = "//*[@class='text-decoration-none']")
+    public WebElement registerLink;
+
+
+
 
 
 

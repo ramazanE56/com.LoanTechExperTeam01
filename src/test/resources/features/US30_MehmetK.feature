@@ -3,14 +3,14 @@ Feature: As an admin, I want to have the All Loans page to display all loans on 
 
 
   Scenario: As an administrator, it has been tested whether all loan features on the "All Loans" page are working
-    * Navigate to Admin page "UrlAdmin"
-    * send username registered to username textbox
-    * send password registered to username textbox
+    * Navigate to Admin page "adminUrl"
+    * send "username registered" to username textbox
+    * send "password registered" to password textbox
     * click on the login button
     * click Loans link element
     * click All Loans link element
     * verify that All Loans Table visible
-    * send the first Loan's number to Loan no's searchbox
+    * send the first Loans "loanNo" to LoanNo searchbox
     * click searchbox icon
     * verify the first loans visible
     * click Date textbox
@@ -38,6 +38,7 @@ Feature: As an admin, I want to have the All Loans page to display all loans on 
     * verify that Total Installment visible on the Installment page
     * verify that Given Installment visible on the Installment page
     * verify that Receivable visible on the Installment page
+    * verify that DelayCharge visible on the Installment page
     * verify that SN visible on the Installment page
     * verify that Installment Date visible on the Installment page
     * verify that Given On visible on the Installment page
@@ -45,6 +46,6 @@ Feature: As an admin, I want to have the All Loans page to display all loans on 
     * verify that Charge visible on the Installment page
     * Click the back button to check if you can return to the AllLoans page
     * Verify that you are back to the All credits page
-    * click the 2 button in the lower right corner of the page on the AllLoans page
+    * click the next button in the lower right corner of the page on the AllLoans page
     * Verify next page visible
     * Close the page
