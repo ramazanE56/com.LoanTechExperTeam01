@@ -1,4 +1,4 @@
-@wip
+
 Feature: as an admin, create categories and manage all categories.
 
   Scenario: On the Categories page, verify that you can see all categories, create new categories, change them and reach the desired category

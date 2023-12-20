@@ -294,10 +294,11 @@ public class US30_MehmetK {
         adminDashBoardPage.nextButton.click();
 
 
+
     }
     @Given("Verify next page visible")
-    public void verify_next_page_visible() {
-
+    public void verify_next_page_visible() throws InterruptedException {
+        Thread.sleep(2000);
 
         String expectedUrl ="https://qa.loantechexper.com/admin/loan/all?page=2";
         String actualUrl=Driver.getDriver().getCurrentUrl();

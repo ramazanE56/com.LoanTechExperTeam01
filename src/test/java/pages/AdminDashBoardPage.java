@@ -330,7 +330,7 @@ public class AdminDashBoardPage {
    // public WebElement backButton;
 
 
-    @FindBy(xpath = "//nav/ul/li[11]")
+    @FindBy(xpath = "//*[@rel='next']")
     public WebElement nextButton;
 
     @FindBy(xpath = "(//*[@class='menu-title'])[12]")
