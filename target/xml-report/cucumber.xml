@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="65.976">
-    <testcase classname="The visitor must be able to register to the site and fill out his/her profile information." name="E2E01 : The visitor must be able to register to the site and fill out his/her profile information." time="65.535">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="66.593">
+    <testcase classname="The visitor must be able to register to the site and fill out his/her profile information." name="E2E01 : The visitor must be able to register to the site and fill out his/her profile information." time="66.108">
         <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
 * Click on the Get Started Button Link on the Home Page.....................passed
 * A unique username with at least 6 characters is entered in the Username box..passed
