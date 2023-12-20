@@ -76,7 +76,8 @@ public class US34_Suphi {
 
     @When("It is confirmed that the changes made have been saved successfully by the text Profile updated successfully in the upper right corner")
     public void ıtIsConfirmedThatTheChangesMadeHaveBeenSavedSuccessfullyByTheTextProfileUpdatedSuccessfullyInTheUpperRightCorner() {
-        String expectedResult="Password changed successfully.";
+        ReusableMethods.wait(1);
+        String expectedResult="Profile updated successfully";
         String actualResult= adminDashBoardPage.adminProfileUpdatedConfirmElement.getText();
         Assert.assertEquals(expectedResult,actualResult);
 

@@ -1,4 +1,5 @@
 
+@suphi
 Feature: US07: I would like to have a page where I, as a visitor, can access and select Loan Plans
 
   Background:Users use these steps to log in to the site.
