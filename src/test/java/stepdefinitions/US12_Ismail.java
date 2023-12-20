@@ -28,11 +28,13 @@ public class US12_Ismail {
 
     @Given("Verify that the Get Started Button Link is Visible on the Home Page")
     public void verify_that_the_get_started_button_link_is_visible_on_the_home_page() {
+        ReusableMethods.wait(2);
         assertTrue(homePage.getStartedButonElement.isDisplayed());
     }
 
     @Given("Click on the Get Started Button Link on the Home Page.")
     public void click_on_the_get_started_button_link_on_the_home_page() {
+        ReusableMethods.wait(2);
         homePage.getStartedButonElement.click();
 
     }
