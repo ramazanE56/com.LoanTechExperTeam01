@@ -298,22 +298,22 @@ public class AdminDashBoardPage {
 
     @FindBy(xpath = "//*[@class='btn btn-sm btn-outline--success']")
     public WebElement installmentButton;
-    @FindBy(xpath = "//li[1]/span[1]")
+    @FindBy(xpath = "(//span[@class='value'])[1]")
     public WebElement loanNumberInstallments;
-    @FindBy(xpath = "//li[2]/span[1]")
+    @FindBy(xpath = "(//span[@class='value'])[2]")
     public WebElement planInstallments;
-    @FindBy(xpath = "//li[3]/span[1]")
+    @FindBy(xpath = "(//span[@class='value'])[3]")
     public WebElement amountInstallments;
-    @FindBy(xpath = "//li[4]/span[1]")
+    @FindBy(xpath = "//span[@class='value text--base']")
     public WebElement perInstallments;
-    @FindBy(xpath = "//li[5]/span[1]")
+    @FindBy(xpath = "(//span[@class='value'])[4]")
     public WebElement totalInstallments;
 
-    @FindBy(xpath = "//li[6]/span[1]")
+    @FindBy(xpath = "(//span[@class='value'])[5]")
     public WebElement givenInstallments;
-    @FindBy(xpath = "//li[7]/span[1]")
+    @FindBy(xpath = "//span[@class='value text--warning']")
     public WebElement receivableInstallments;
-    @FindBy(xpath = "//li[8]/span[1]")
+    @FindBy(xpath = "(//span[@class='value'])[6]")
     public WebElement delayChargeInstallments;
     @FindBy(xpath = "//th[1]")
     public WebElement serialNumber;
