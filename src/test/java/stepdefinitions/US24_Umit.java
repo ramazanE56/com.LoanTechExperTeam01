@@ -52,10 +52,4 @@ public class US24_Umit {
 
     }
 
-    @Then("Close page")
-    public void Close_the_page() {
-        ReusableMethods.wait(1);
-        Driver.closeDriver();
-    }
-
 }

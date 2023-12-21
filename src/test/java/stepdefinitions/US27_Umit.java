@@ -66,13 +66,15 @@ public class US27_Umit {
 
     }
 
-    @Given("The information to be searchis entered for Loan number or Start date-End Date.")
-    public void the_information_to_be_searchis_entered_for_loan_number_or_start_date_end_date() {
+    @Given("The information to be search is entered for Loan number or Start date-End Date.")
+    public void the_information_to_be_search_is_entered_for_loan_number_or_start_date_end_date() {
         adminDashBoardPage.dateSearchBox.click();
         adminDashBoardPage.dateSearchBox.sendKeys("12/18/2023");
         ReusableMethods.wait(2);
         adminDashBoardPage.dateSearchButton.click();
         adminDashBoardPage.dateSearchBox.clear();
+        adminDashBoardPage.dateSearchButton.sendKeys(Keys.ENTER);
+        ReusableMethods.wait(2);
         adminDashBoardPage.loanNoSearchBox.click();
         adminDashBoardPage.loanNoSearchBox.sendKeys("OOUSW4DPGQMF");
         ReusableMethods.wait(2);
@@ -115,6 +117,7 @@ public class US27_Umit {
     @Given("Click on the Details links")
     public void click_on_the_details_links() {
         adminDashBoardPage.detailsButton.click();
+
 
     }
 
@@ -171,19 +174,30 @@ public class US27_Umit {
     @Given("It is confirmed that Running loans came again")
     public void it_is_confirmed_that_running_loans_came_again() {
 
-        String expectedUrl = ConfigReader.getProperty("runningPageUrl");
+        String expectedUrl = "https://qa.loantechexper.com/admin/loan/running";
         String actualUrl = Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(expectedUrl, actualUrl);
+        Assert.assertEquals(expectedUrl,actualUrl);
+
+    }
+    @Given("Enter the loan number to be searched in the search box and search")
+    public void enter_the_loan_number_to_be_searched_in_the_search_box_and_search() {
+        adminDashBoardPage.loanNoSearchBox.click();
+        adminDashBoardPage.loanNoSearchBox.sendKeys("OOUSW4DPGQMF");
+        ReusableMethods.wait(2);
+        adminDashBoardPage.loanNoSearchButton.click();
 
     }
 
+
     @Given("Verify that installments  than {int} continue to be listed")
     public void verify_that_installments_than_continue_to_be_listed(Integer Int) throws AWTException {
+
         jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         ReusableMethods.wait(2);
-        String instNumber = adminDashBoardPage.installmentNumber.getText();
-        if (instNumber.equals("20")) {
-            ReusableMethods.coordinateClick(1231, 651);
+
+        if (adminDashBoardPage.installmentsNextButton.isDisplayed()){
+            ReusableMethods.coordinateClick(1288, 646);
+            ReusableMethods.wait(2);
             System.out.println("the number of installments is greater than 20");
         } else {
             System.out.println("number of installments is less than 20");

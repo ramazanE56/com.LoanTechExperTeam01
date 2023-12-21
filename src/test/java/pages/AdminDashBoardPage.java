@@ -445,7 +445,7 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "(//td[@data-label='S.N.'])[20]")
     public WebElement installmentNumber;
 
-    @FindBy(xpath ="((//*[@class='page-item'])[2]")
+    @FindBy(xpath ="(//*[@class='page-item'])[1]")
     public WebElement installmentsNextButton;
 
     @FindBy(xpath = "//td[normalize-space()='21']")
@@ -532,7 +532,7 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "//div[@class='row justify-content-center']")
     public List<WebElement> approvedDepositsHeader;
 
-    @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+    @FindBy(xpath = "(//*[@class='la la-desktop'])[1]")
     public WebElement approvedDepositsDetailsButton;
 
     @FindBy(xpath = "//h5[@class='mb-20 text-muted']")
