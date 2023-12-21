@@ -155,8 +155,6 @@ public WebElement getStartedButonElement;
 
 
 
-
-
     @FindBy(xpath = "//*[@class='account d-none d-lg-block']")
     public WebElement firstLogin;
     //eyyup
@@ -177,4 +175,5 @@ public WebElement getStartedButonElement;
     @FindBy(xpath = "//a[@href='javascript:void(0)']")
     public WebElement AllowYaziElementi;
     //eyyup
+
 }

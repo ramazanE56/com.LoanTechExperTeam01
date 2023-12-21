@@ -99,7 +99,6 @@ public class AdminDashBoardPage {
     //eyyup
 
     @FindBy(xpath = "//a[@class='btn btn-sm btn-outline--primary']")
-
     public WebElement backButton;
     //eyyup
 
@@ -208,7 +207,7 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "(//input[@type='search'])[2]")
      public WebElement loanNoBox;
 
-    @FindBy(xpath = "//i[@class='la la-search'][1]")
+    @FindBy(xpath = "//button[@class='btn btn--primary']")
     public WebElement loanNoSearchBoxKutusu;
 
     @FindBy(xpath = "(//input[@type='search'])[3]")
@@ -216,6 +215,10 @@ public class AdminDashBoardPage {
 
     @FindBy(xpath = "//button[@class='btn btn--primary input-group-text']")
     public WebElement startDateSearchBoxKutusu;
+
+    @FindBy(xpath = "(//a[@class='btn btn-sm btn-outline--success'])[12]")
+    public WebElement InstallmentButton;
+
 
     @FindBy(xpath = "(//tr[1])[1]")  //satirlar sirayla 2,3,4 vb devam ediyor
     public List<WebElement> pagesTitle;
@@ -228,6 +231,99 @@ public class AdminDashBoardPage {
 
     @FindBy(xpath = "//div[@class='d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center']")
     public WebElement loansDetailsElementi;
+
+   @FindBy(xpath = "//span[text()='Manage Users']")
+    public WebElement manageUserElement;
+
+    @FindBy(xpath = "//span[text()='Active Users']")
+    public WebElement activeUserElement;
+
+    @FindBy(xpath = "//tr[1]")
+    public List<WebElement> activeUserTitles;
+
+    @FindBy(xpath = "(//a[@class='btn btn-sm btn-outline--primary'])[2]")
+    public WebElement activeUserDetailElement;
+
+    @FindBy(xpath = "(//h6)[11]")
+    public WebElement userDetailsUsernameElemets;
+
+    @FindBy(xpath = "//a[@class='btn btn--primary btn--gradi btn--shadow w-100 btn-lg']")
+    public WebElement loginAsAUserButton;
+
+    @FindBy(xpath = "//span[text()='Deposits']")
+    public WebElement depozitsElement;
+
+    @FindBy(xpath = "//span[text()='Successful Deposits']")
+    public WebElement SuccessfulDepozitsElement;
+
+    @FindBy(xpath = "//h6[text()='Successful Deposits']")
+    public WebElement succesfullDepozitTitle;
+
+    @FindBy(xpath = "(//tr)[1]")
+    public List<WebElement>succesfullDepozitTitles;
+
+    @FindBy(xpath = "(//a[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+    public WebElement sucDetailsElement;
+
+    @FindBy(xpath = "//div[@class='card-body']")
+    public List<WebElement>depozitInformationElement;
+
+    @FindBy(xpath = "//span[text()='All Deposits']")
+    public WebElement allLoanslink;
+
+    @FindBy(xpath = "(//input[@type='search'])[2]")
+    public WebElement allLoansSearchBox;
+
+    @FindBy(xpath = "(//input[@type='search'])[2]")
+    public WebElement allLoansStartEndDateBox;
+
+    @FindBy(xpath = "(//div[@class='col-xxl-3 col-sm-6 mb-30'])[1]")
+    public WebElement succesfulDepozitElement;
+
+    @FindBy(xpath = "(//div[@class='col-xxl-3 col-sm-6 mb-30'])[2]")
+    public WebElement pendingDepozitElement;
+
+    @FindBy(xpath = "(//div[@class='col-xxl-3 col-sm-6 mb-30'])[3]")
+    public WebElement rejectedDepozitElement;
+
+    @FindBy(xpath = "(//div[@class='col-xxl-3 col-sm-6 mb-30'])[4]")
+    public WebElement initiatedDepozitElement;
+
+    @FindBy(xpath = "//div[@class='col-md-12']")
+    public List<WebElement> depozitHistoryTbody;
+
+    @FindBy(xpath = "(//a[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+    public WebElement statusPendikDetails;
+
+    @FindBy(xpath = "//button[@class='btn btn-outline--success btn-sm ms-1 confirmationBtn']")
+    public WebElement approveElement;
+
+    @FindBy(xpath = "//button[text()='Yes']")
+    public WebElement yeselement;
+
+    @FindBy(xpath = "//div[@class='card-body']")
+    public List<WebElement>detayTitleElement;
+
+    @FindBy(xpath = "(//td)[21]")
+    public WebElement statuapproveDetail;
+
+    @FindBy(xpath = "//*[@class='iziToast-message slideIn']")
+    public WebElement succesfullWarmElement;
+
+    @FindBy(xpath = "(//a[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+    public WebElement statusapproveDetails;
+
+    @FindBy(xpath = "(//td[text()='Data not found']")
+    public WebElement datafoundElement;
+
+
+    @FindBy(xpath = "(//a[@class='page-link'])[1]")
+    public WebElement ikiyetiklamaElement;
+
+    @FindBy(xpath = "//tbody")
+    public List<WebElement>yirmibirdendevam;
+
+
 
 
 
@@ -246,7 +342,7 @@ public class AdminDashBoardPage {
 
     @FindBy(xpath = "//li[@class='list-group-item'][10]")
     public WebElement statusElementi;
-    @FindBy(xpath = "//tbody")
+    @FindBy(xpath = "(//tr[1])[1]")
     public List<WebElement>installmentsPageTitle;
 
     @FindBy(xpath = "//div[@class='card-body']")
@@ -255,8 +351,128 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "//a[@class='btn btn-sm btn-outline--primary']")
     public WebElement backButonElement;
 
-    @FindBy(xpath = "(//h6)[11]")
-    public WebElement backtoAllLoans;
+
+
+    @FindBy(xpath = "(//*[@class='nav-link'])[15]")
+    public WebElement allLoans;
+
+    @FindBy(xpath = "//*[@class='table-responsive--lg table-responsive']")
+    public WebElement allLoansTable;
+
+    @FindBy(xpath = "//*[@class='fw-bold']")
+    public WebElement firstLoan;
+
+    @FindBy(xpath = "//*[@class='datepicker-here form-control bg--white pe-2']")
+    public WebElement dateSearch;
+
+    @FindBy(xpath = "//*[@class='btn btn--primary input-group-text']")
+    public WebElement dateSearchButton;
+
+    @FindBy(xpath = "//li[1]/span[2]")
+    public WebElement planName;
+    @FindBy(xpath = "//li[2]/span[2]")
+    public WebElement dateOfApplication;
+    @FindBy(xpath = "//li[3]/span[2]")
+    public WebElement loanNumber;
+    @FindBy(xpath = "//li[4]/span[2]")
+    public WebElement Amount;
+    @FindBy(xpath = "//li[5]/span[2]")
+    public WebElement perInstallmen;
+    @FindBy(xpath = "//li[6]/span[2]")
+    public WebElement totalInstallment;
+    @FindBy(xpath = "//li[7]/span[2]")
+    public WebElement givenInstallment;
+    @FindBy(xpath = "//li[8]/span[2]")
+    public WebElement totalPayable;
+
+    @FindBy(xpath = "//li[9]/span[2]")
+    public WebElement profit;
+
+    @FindBy(xpath = "//li[10]/span[2]")
+    public WebElement status;
+    @FindBy(xpath = "//h5[@class='card-title border-bottom pb-2']")
+    public WebElement loanForm;
+
+    @FindBy(xpath = "//*[@class='btn btn-sm btn-outline--success']")
+    public WebElement installmentButton;
+    @FindBy(xpath = "(//span[@class='value'])[1]")
+    public WebElement loanNumberInstallments;
+    @FindBy(xpath = "(//span[@class='value'])[2]")
+    public WebElement planInstallments;
+    @FindBy(xpath = "(//span[@class='value'])[3]")
+    public WebElement amountInstallments;
+    @FindBy(xpath = "//span[@class='value text--base']")
+    public WebElement perInstallments;
+    @FindBy(xpath = "(//span[@class='value'])[4]")
+    public WebElement totalInstallments;
+
+    @FindBy(xpath = "(//span[@class='value'])[5]")
+    public WebElement givenInstallments;
+    @FindBy(xpath = "//span[@class='value text--warning']")
+    public WebElement receivableInstallments;
+    @FindBy(xpath = "(//span[@class='value'])[6]")
+    public WebElement delayChargeInstallments;
+    @FindBy(xpath = "//th[1]")
+    public WebElement serialNumber;
+    @FindBy(xpath = "//th[2]")
+    public WebElement installmentDate;
+    @FindBy(xpath = "//th[3]")
+    public WebElement givenOn;
+    @FindBy(xpath = "//th[4]")
+    public WebElement delay;
+    @FindBy(xpath = "//th[5]")
+    public WebElement charge;
+
+    //@FindBy(xpath = "//*[@class='btn btn-sm btn-outline--primary']")
+   // public WebElement backButton;
+
+
+    @FindBy(xpath = "//*[@rel='next']")
+    public WebElement nextButton;
+
+    @FindBy(xpath = "(//*[@class='menu-title'])[12]")
+    public WebElement categories;
+
+
+    @FindBy(xpath = "//*[@class='page-title']")
+    public WebElement allCategories;
+
+    @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary cuModalBtn'])[1]")
+    public WebElement addNew;
+    @FindBy(xpath = "(//*[@class='form-control'])[1]")
+    public WebElement nameCategories;
+    @FindBy(xpath = "(//*[@class='form-control'])[2]")
+    public WebElement descriptionCategories;
+    @FindBy(xpath = "//*[@class='btn btn--primary h-45 w-100']")
+    public WebElement submitNewCategories;
+    @FindBy(xpath = " //*[@data-label='Name']")
+    public WebElement addedCategoryName;
+    @FindBy(xpath = " //*[@class='form-control bg--white']")
+    public WebElement searchBoxCategories;
+    @FindBy(xpath = "//*[@class='la la-search']")
+    public WebElement searchBoxCategoriesIcon;
+    @FindBy(xpath = "//*[@class='btn btn-sm btn-outline--danger ms-1 confirmationBtn']")
+    public WebElement enebleDisableChange;
+    @FindBy(xpath = "(//*[@class='btn btn--primary'])[2]")
+    public WebElement allertYes;
+
+    @FindBy(xpath = "//*[@class='badge badge--warning']")
+    public WebElement statusCategory;
+
+    @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary cuModalBtn'])[2]")
+    public WebElement editCategory;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -287,8 +503,8 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "//*[@placeholder='Start Date - End Date']")
     public WebElement dateSearchBox;
 
-    @FindBy(xpath = "//*[@class='btn btn--primary input-group-text']")
-    public WebElement dateSearchButton;
+   // @FindBy(xpath = "//*[@class='btn btn--primary input-group-text']")
+    // public WebElement dateSearchButton;
 
     @FindBy(xpath = "//tbody")
     public List<WebElement> searchResultTableElements;
@@ -326,7 +542,7 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "(//td[@data-label='S.N.'])[20]")
     public WebElement installmentNumber;
 
-    @FindBy(xpath ="((//*[@class='page-item'])[2]")
+    @FindBy(xpath ="(//*[@class='page-item'])[1]")
     public WebElement installmentsNextButton;
 
     @FindBy(xpath = "//td[normalize-space()='21']")
@@ -413,7 +629,7 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "//div[@class='row justify-content-center']")
     public List<WebElement> approvedDepositsHeader;
 
-    @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+    @FindBy(xpath = "(//*[@class='la la-desktop'])[1]")
     public WebElement approvedDepositsDetailsButton;
 
     @FindBy(xpath = "//h5[@class='mb-20 text-muted']")
