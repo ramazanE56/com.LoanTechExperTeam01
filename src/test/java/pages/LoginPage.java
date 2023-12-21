@@ -87,5 +87,48 @@ public class LoginPage {
     public WebElement loginButtonElement;
 
 
+    @FindBy(xpath = "//*[@class='auth-form__content section']")
+    public WebElement loginformu;
+
+    @FindBy(xpath = "//*[@type='checkbox']")
+    public WebElement rememberCheckbox;
+
+    @FindBy(xpath = "//*[@class='forgot-pass text-decoration-none']")
+    public WebElement forgetPassword;
+
+    @FindBy(xpath = "//*[@class='btn btn--base btn--xxl w-100 text-capitalize xl-text']")
+    public WebElement userLoginSubmit;
+
+    @FindBy(xpath = "//*[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement messageWrong;
+
+    @FindBy(xpath = "//*[@placeholder='Username or Email']")
+    public WebElement userNameText;
+    @FindBy(xpath = "//*[@placeholder='Your password']")
+    public WebElement userPasswordText;
+
+    @FindBy(xpath = "//*[@class='auth-form__input']")
+    public WebElement resetAccount;
+
+    @FindBy(xpath = "(//*[@type='submit'])[1]")
+    public WebElement submitButton;
+
+    @FindBy(xpath = "//*[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement succesfullMessage;
+
+    @FindBy(xpath = "//*[@href='https://qa.loantechexper.com/user/password/reset']")
+    public WebElement tryResetAgain;
+
+    @FindBy(xpath = "//*[@class='form-control overflow-hidden']")
+    public WebElement code;
+
+    @FindBy(xpath = "//*[@class='text-decoration-none']")
+    public WebElement registerLink;
+
+
+
+
+
+
 
 }

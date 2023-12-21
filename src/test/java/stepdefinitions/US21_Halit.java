@@ -15,9 +15,9 @@ public class US21_Halit {
 
 
     @Given("The given {string} is entered into the browser and press enter.")
-    public void the_given_url_is_entered_into_the_browser_and_press_enter(String url) {
+    public void the_given_url_is_entered_into_the_browser_and_press_enter(String Url) {
 
-        Driver.getDriver().get(ConfigReader.getProperty(url));
+        Driver.getDriver().get(ConfigReader.getProperty(Url));
         ReusableMethods.wait(2);
         homePage.cocies.click();
         ReusableMethods.wait(2);
@@ -36,8 +36,8 @@ public class US21_Halit {
         ReusableMethods.wait(1);
     }
     @Given("The user enters {string} password.")
-    public void the_user_enters_the_valid_password(String userPassword) {
-        homePage.passwordBox.sendKeys(ConfigReader.getProperty(userPassword));
+    public void the_user_enters_the_valid_password(String password) {
+        homePage.passwordBox.sendKeys(ConfigReader.getProperty(password));
         ReusableMethods.wait(1);
 
     }
@@ -157,6 +157,7 @@ public class US21_Halit {
     @Given("It is verified that the Plans page is opened.")
     public void it_is_verified_that_the_plans_page_is_opened() {
         Assert.assertTrue(homePage.plansText.isDisplayed());
+        ReusableMethods.wait(1);
     }
     @Given("Click the Blogs button in the header section of the home page.")
     public void click_the_blogs_button_in_the_header_section_of_the_home_page() {
@@ -165,6 +166,7 @@ public class US21_Halit {
     }
     @Given("It is verified that the Blogs page is opened.")
     public void it_is_verified_that_the_blogs_page_is_opened() {
+
         Assert.assertTrue(homePage.blogsText.isDisplayed());
     }
     @Given("Click the Contact button in the header section of the home page.")
