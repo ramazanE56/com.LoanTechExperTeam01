@@ -9,4 +9,4 @@ Feature: US24: As a user, I should be able to see and manage my payments,
     * Click the Login button and goto the user login page
     * The user logs into the user dashboard page with "userNameUmit" and "password"
     * It is verified that  details appear on the home page
-    * Close page
+    * Close the page
