@@ -4,7 +4,9 @@ import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pages.AdminDashBoardPage;
 import pages.AdminLoginPage;
 import utilities.ConfigReader;
@@ -103,6 +105,7 @@ public class US29_Yetis {
     @Given("Click on the details")
     public void click_on_the_details() {
         adminDashBoardPage.detailsButonu.click();
+       // jse.executeScript("arguments[0].click();", adminDashBoardPage.detailsButonu);
     }
     @Given("It must be verified that the loan details can be accessed on the Details page.")
     public void it_must_be_verified_that_the_loan_details_can_be_accessed_on_the_details_page() {
@@ -155,9 +158,26 @@ public class US29_Yetis {
     public void it_is_confirmed_that_rejected_loans_came_again() {
        Assert.assertTrue(!adminDashBoardPage.rejectedLoanPageTitle.isDisplayed());
 
+
     }
-    @Given("Verify that installments greater than {int} continue to be listed")
-    public void verify_that_installments_greater_than_continue_to_be_listed(Integer int1) {
+
+    @Given("Click on the Insttallment and Verify that installments greater than {int} continue to be listed")
+    public void Click_on_the_Insttallment_and_Verify_that_installments_greater_than_continue_to_be_listed(Integer int1) {
+
+        jse.executeScript("arguments[0].click();", adminDashBoardPage.InstallmentButton);
+        Actions actions=new Actions(Driver.getDriver());
+         actions.sendKeys(Keys.PAGE_DOWN).perform();
+         ReusableMethods.wait(1);
+
+        jse.executeScript("arguments[0].click();", adminDashBoardPage.ikiyetiklamaElement);
+
+
+        List<WebElement> yirmibirdendevam = adminDashBoardPage.yirmibirdendevam;
+        for (WebElement each :yirmibirdendevam
+        ) {
+            System.out.println(each.getText());
+        }
+        ReusableMethods.wait(2);
 
     }
 
