@@ -175,7 +175,7 @@ Feature: As an administrator, I want to be able to see and manage payment plans 
     Then Verify that the status is displayed as Rejected.
     And  Close the web page.
 
-  @123
+
   Scenario: TC013:On the Rejected Withdrawals page, card information should be displayed when the 'Details' button is clicked.
 
     Given Enter the  "UrlAdmin"  in the browser's address bar and press the Enter key.

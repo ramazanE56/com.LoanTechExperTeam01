@@ -120,5 +120,73 @@ Feature: US18 : As a registered user, I want to have a page where I can see my C
       * Close the page
 
 
+      Scenario: TC09 : It should be verified that the "Loan application submitted successfully" message appears when the Apply button is clicked.
+        * Click on the login button
+        * The registered "usernameIsmail" is entered in the Username Or Email box.
+        * Registered user "password" is entered in the Your Password box.
+        * Click on the login button to log in.
+        * Click on the Take Loan button
+        * Click on the basic loan button
+        * Click on the Test Loan Apply Now button
+        * A number between "5000" and "15000" is entered in the Enter An Amount box
+        * Click on the Confirm button
+        * Click on the Apply button under the Application Form Text
+        * Verify that the Loan application submitted successfully message appears
+        * Close the page
+
+    Scenario: TC10 : It must be verified that the transaction made on the My Loans page is visible
+      * Click on the login button
+      * The registered "usernameIsmail" is entered in the Username Or Email box.
+      * Registered user "password" is entered in the Your Password box.
+      * Click on the login button to log in.
+      * Click on the Take Loan button
+      * Click on the basic loan button
+      * Click on the Test Loan Apply Now button
+      * A number between "5000" and "15000" is entered in the Enter An Amount box
+      * Click on the Confirm button
+      * Click on the Apply button under the Application Form Text
+      * Verify that Test_Loan appears
+      * Close the page
+
+
+  Scenario: TC11 : To search for a transaction, the "Search By Loan Number" text box must be visible and active. It must be verified that filtering can be done under the "Loan Status" heading.
+    * Click on the login button
+    * The registered "usernameIsmail" is entered in the Username Or Email box.
+    * Registered user "password" is entered in the Your Password box.
+    * Click on the login button to log in.
+    * Click on the Take Loan button
+    * Click on the basic loan button
+    * Click on the Test Loan Apply Now button
+    * A number between "5000" and "15000" is entered in the Enter An Amount box
+    * Click on the Confirm button
+    * Click on the Apply button under the Application Form Text
+    * Verify that the Search By Loan Number text box is visible
+    * The last created Test_LOan Loan number is entered into the Search By Loan Number text box.
+    * Click on the lens logo
+    * Test_Loan Verifies that the Loan number appears in the table as uniq
+    * Click on the arrow sign in the Loan Status box select "pending" status from the dropdown menu that opens.
+    * It is verified that pending status codes are displayed filtered in the table.
+    * Close the page
+
+    Scenario: TC12 : The "Installments" button must be visible and active for the running process on the My loans page. Clicking the button verifies that the "Loan Installments" page is accessible
+      * Click on the login button
+      * The registered "usernameIsmail" is entered in the Username Or Email box.
+      * Registered user "password" is entered in the Your Password box.
+      * Click on the login button to log in.
+      * Click on the Take Loan button
+      * Click on the basic loan button
+      * Click on the Test Loan Apply Now button
+      * A number between "5000" and "15000" is entered in the Enter An Amount box
+      * Click on the Confirm button
+      * Click on the Apply button under the Application Form Text
+      * Click on the arrow sign in the Loan Status box select "running" status from the dropdown menu that opens.
+      * Click on the running button
+      * Verify that the Installment box is visible in the bar that opens
+      * Verify that the Installment box is clickable
+      * Click on the Installment box
+      * Verify that Loan Installments is displayed on the page that opens
+      * Close the page
+
+
 
 

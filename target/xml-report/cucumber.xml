@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="37.095">
-    <testcase classname="I would like to have a page to register as a visitor" name="TC13 : It must be verified that the registration process can be completed by filling in the mandatory fields in the form (firstname/lastname/address textboxes)." time="35.95">
-        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
-* Click on the Get Started Button Link on the Home Page.....................passed
-* A unique username with at least 6 characters is entered in the Username box..passed
-* Valid e-mail information containing the @ sign is entered into the e-mail text box.passed
-* Country selection is made from the Country menu...........................passed
-* A unique phone number of maximum 14 digits is entered into the phone textbox..passed
-* A 6-digit password containing at least one uppercase letter, one number, lowercase letter and character is entered into the Password textbox..passed
-* The specified password is entered in the Confirm textbox..................passed
-* click on the i agree button...............................................passed
-* click on the register button..............................................passed
-* Name is entered in the firstname box......................................passed
-* Surname is entered in the lastname box....................................passed
-* Address is entered in the address box.....................................passed
-* State is entered in the state box.........................................passed
-* zip code entered in zip code box..........................................passed
-* Country is entered in the city box........................................passed
-* Click on the submit button................................................passed
-* Verify that registration process completed successfully appears...........passed
-* Close the page............................................................passed
-]]></system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.183">
+    <testcase classname="US18 : As a registered user, I want to have a page where I can see my Credit plans and get Credit." name="TC12 : The &quot;Installments&quot; button must be visible and active for the running process on the My loans page. Clicking the button verifies that the &quot;Loan Installments&quot; page is accessible" time="0.263">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click on the login button.................................................passed
+* The registered "usernameIsmail" is entered in the Username Or Email box...passed
+* Registered user "password" is entered in the Your Password box............passed
+* Click on the login button to log in.......................................passed
+* Click on the Take Loan button.............................................passed
+* Click on the basic loan button............................................passed
+* Click on the Test Loan Apply Now button...................................passed
+* A number between "5000" and "15000" is entered in the Enter An Amount box.passed
+* Click on the Confirm button...............................................passed
+* Click on the Apply button under the Application Form Text.................passed
+* Click on the arrow sign in the Loan Status box select "running" status from the dropdown menu that opens..passed
+* Click on the running button...............................................undefined
+* Verify that the Installment box is visible in the bar that opens..........skipped
+* Verify that the Installment box is clickable..............................skipped
+* Click on the Installment box..............................................skipped
+* Verify that Loan Installments is displayed on the page that opens.........skipped
+* Close the page............................................................skipped
+]]>
+        </failure>
     </testcase>
 </testsuite>
