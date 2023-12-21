@@ -162,6 +162,70 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "(//h6)[11]")
     public WebElement backtoAllLoans;
 
+    @FindBy (xpath = "//span[normalize-space()='Manage Users']")
+    public WebElement manageUsersButton;
+
+    @FindBy (xpath = "//input[@id='username']")
+    public WebElement adminUsernameTextBox;
+
+    @FindBy (xpath = "//input[@id='password']")
+    public WebElement adminPasswordTextBox;
+
+    @FindBy (xpath = "//button[normalize-space()='LOGIN']")
+    public WebElement adminLoginButton;
+
+    @FindBy (xpath = "//span[normalize-space()='Notification to All']")
+    public WebElement notificationButton;
+
+    @FindBy (xpath = "//label[normalize-space()='Being Sent']")
+    public WebElement beingSentText;
+
+    @FindBy (xpath = "//label[normalize-space()='Subject']")
+    public WebElement subjectText;
+
+    @FindBy (xpath = "//input[@id='subject']")
+    public WebElement subjectTextBox;
+
+    @FindBy (xpath = "//div[@contenteditable='true']")
+    public WebElement messageTextBox;
+
+    @FindBy (xpath = "//input[@id='batch']")
+    public WebElement perBatchTextBox;
+
+    @FindBy (xpath = "//label[normalize-space()='Per Batch']")
+    public WebElement perBatchText;
+
+    @FindBy (xpath = "//input[@id='cooling_time']")
+    public WebElement coolingPeriodTextBox;
+
+    @FindBy (xpath = "//label[normalize-space()='Cooling Period']")
+    public WebElement coolingPeriodText;
+
+    @FindBy (xpath = "//input[@id='start_form']")
+    public WebElement startFromTextBox;
+
+    @FindBy (xpath = "//label[normalize-space()='Start Form']")
+    public WebElement startFromText;
+
+    @FindBy (xpath = "//button[normalize-space()='Submit']")
+    public WebElement notificationSubmitButton;
+
+    @FindBy (xpath = "//span[@role='combobox']")
+    public WebElement selectUsers;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
