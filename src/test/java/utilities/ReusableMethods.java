@@ -415,6 +415,7 @@ public static String fakerUsernameMinValue(int x) {
     }
 
 
+
     //faker classından max 14 karakterli username üreten method(14 değişken)
     public static String fakerPhoneNumberMaxValue(int x){
         Faker faker = new Faker();

@@ -43,6 +43,8 @@ public class US18_Ismail {
 
     @Given("Click on the Take Loan button")
     public void click_on_the_take_loan_button() {
+        dashBoardPage.allowTextElement.click();
+        ReusableMethods.wait(3);
         dashBoardPage.takeLoanTabElement.click();
     }
 
