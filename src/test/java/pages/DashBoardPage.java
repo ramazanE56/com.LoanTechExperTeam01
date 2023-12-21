@@ -234,7 +234,7 @@ public class DashBoardPage {
     @FindBy (xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
     public  WebElement changeMessageSuccefullyMessage;
 
-    @FindBy (xpath = "//a[@class='active']")
+    @FindBy (css = "a[href='https://qa.loantechexper.com/user/loan/plans']")
     public  WebElement takeLoanTabElement;
 
     @FindBy (xpath = "//*[text()='Loan Plans']")
@@ -313,7 +313,7 @@ public class DashBoardPage {
     @FindBy (css = "div[class='card-body'] h4")
     public  WebElement applicationFeeTxtElement;
 
-    @FindBy (xpath = "(//*[text()='Apply Now                                        '])[7]")
+    @FindBy (xpath = "(//button[@class='btn btn-md btn--xl xl-text w-100 btn--base loanBtn'])[5]")
     public  WebElement applyNowTestLoanTxtElement;
 
     @FindBy (xpath = "//p[@class='caption-list-two p-3 bg--light']")
@@ -373,6 +373,32 @@ public class DashBoardPage {
 
     @FindBy(xpath = " /html/body/div[3]/div/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/p/small")
     public WebElement totalLoanNumber;
+
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement applyButtonUnderTheApplicationFormTextElement;
+
+    @FindBy(xpath = "//p[@class='iziToast-message slideIn']")
+    public WebElement loanApplicationSubmittedSuccessfullyTxtElement;
+
+
+    @FindBy(xpath = "//div[@class='d-flex justify-content-between']")
+    public WebElement TestLoanTakeLoanTextElement;
+
+    @FindBy(xpath = "//input[@placeholder='Search By Loan Number']")
+    public WebElement seachByLoanNumberBoxTextElement;
+
+    @FindBy(xpath = "(//p[@class='text-muted font-size--14px'])[1]")
+    public WebElement firstSeachByLoanNumberElement;
+
+    @FindBy(xpath = "//*[@class='las la-search']")
+    public WebElement lensLogoButtonElement;
+
+    @FindBy(xpath = "(//p[@class='text-muted font-size--14px'])[3]")
+    public WebElement secondSeachByLoanNumberElement;
+
+    @FindBy(xpath = "//select[@name='status']")
+    public WebElement loanStatusArrowElement;
 
 
 

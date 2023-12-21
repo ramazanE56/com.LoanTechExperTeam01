@@ -16,9 +16,12 @@ import org.junit.runner.RunWith;
         glue = "stepdefinitions",
 
 
+        tags = "@123",
+        dryRun =true
 
-        tags = "@wip",
-        dryRun = false
+
+
+
 
 
 
