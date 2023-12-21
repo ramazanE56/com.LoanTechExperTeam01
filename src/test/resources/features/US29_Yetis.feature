@@ -1,5 +1,5 @@
 
-@US29
+
 Feature:US_29 As an administrator, I want to have a Rejected Loans page in the panel to view rejected loans.
 
   Background: You can go to the admin homepage by following these steps.
@@ -61,9 +61,9 @@ Feature:US_29 As an administrator, I want to have a Rejected Loans page in the p
       * Click on Installments
       * press the back button
       * It is confirmed that rejected loans came again
+  @US56
     Scenario: TC_1O Installments greater than 20 must continue to be listed
 
       * Click on reject loans under the loans heading.
-      * Click on Installments
-      * Verify that installments greater than 20 continue to be listed
+      * Click on the Insttallment and Verify that installments greater than 20 continue to be listed
       * Close the page
