@@ -1,6 +1,6 @@
 
 Feature: as an admin, create categories and manage all categories.
-
+  @regression
   Scenario: On the Categories page, verify that you can see all categories, create new categories, change them and reach the desired category
     * Navigate to Admin page "adminUrl"
     * send "username registered" to username textbox
