@@ -381,6 +381,9 @@ public class AdminDashBoardPage {
 
 
 
+
+
+
    // ****************** Ümit ****************** //
 
     //AdminDashboard->Loans->Running Loans
@@ -550,6 +553,77 @@ public class AdminDashBoardPage {
 
     @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
     public WebElement successfulDepositsDetailsButton;
+
+ @FindBy(xpath = "(//*[@class='menu-title'])[33]")
+ public WebElement pendingWithdrawals;
+
+ @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+ public WebElement pendingWithdrawalsDetails;
+ @FindBy(xpath = "(//*[@class='fw-bold'])[2]")
+ public WebElement pendngWithdrawalTrx;
+ @FindBy(xpath = "//*[@class='btn btn-outline--success ms-1 approveBtn']")
+ public WebElement pendingWithdrawalAprove;
+
+ @FindBy(xpath = "//*[@class='form-control pt-3']")
+ public WebElement approveWithdrawalConfirmation;
+
+ @FindBy(xpath = "(//*[@class='btn btn--primary w-100 h-45'])[1]")
+ public WebElement confirmaitonApproveSubmit;
+
+ @FindBy(xpath = "(//*[@class='menu-title'])[34]")
+ public WebElement approvedWithdraval;
+
+ @FindBy(xpath = "//*[@class='badge badge--success']")
+ public WebElement appreved;
+
+
+ @FindBy(xpath = "//*[@href='javascript:void(0)']")
+ public WebElement manageUsers;
+ @FindBy(xpath = "//*[@class='form-control bg--white']")
+ public WebElement activeUserSearch;
+
+ @FindBy(xpath = "//*[@class='la la-search']")
+ public WebElement activeUSersSerachIcon;
+
+ @FindBy(xpath = "//*[@class='btn btn-sm btn-outline--primary']")
+ public WebElement activeUsersDetails;
+
+ @FindBy(xpath = "//*[@class='btn btn--secondary btn--shadow w-100 btn-lg']")
+ public WebElement notifications;
+
+
+ @FindBy(xpath = "//*[@class='btn btn-outline--primary btn-sm']")
+ public WebElement sendMessage;
+
+ @FindBy(xpath = "//*[@class='form-control']")
+ public WebElement subjectMessage;
+ @FindBy(xpath = "/html/body/div/div[2]/div/div[2]/div/div/form/div[1]/div/div[2]/div[2]")
+ public WebElement bodyMessage;
+
+ @FindBy(xpath = "//*[@class='btn w-100 h-45 btn--primary']")
+ public WebElement submitMessage;
+
+ @FindBy(xpath = "//*[@class='navbar-user__name']")
+ public WebElement profileicon;
+
+ @FindBy(xpath = "//*[@class='dropdown-menu__caption']")
+ public WebElement profiles;
+
+ @FindBy(xpath = "(//*[@class='form-control'])[1]")
+ public WebElement superAdmin;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

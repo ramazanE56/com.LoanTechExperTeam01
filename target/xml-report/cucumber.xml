@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="37.095">
-    <testcase classname="I would like to have a page to register as a visitor" name="TC13 : It must be verified that the registration process can be completed by filling in the mandatory fields in the form (firstname/lastname/address textboxes)." time="35.95">
-        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
-* Click on the Get Started Button Link on the Home Page.....................passed
-* A unique username with at least 6 characters is entered in the Username box..passed
-* Valid e-mail information containing the @ sign is entered into the e-mail text box.passed
-* Country selection is made from the Country menu...........................passed
-* A unique phone number of maximum 14 digits is entered into the phone textbox..passed
-* A 6-digit password containing at least one uppercase letter, one number, lowercase letter and character is entered into the Password textbox..passed
-* The specified password is entered in the Confirm textbox..................passed
-* click on the i agree button...............................................passed
-* click on the register button..............................................passed
-* Name is entered in the firstname box......................................passed
-* Surname is entered in the lastname box....................................passed
-* Address is entered in the address box.....................................passed
-* State is entered in the state box.........................................passed
-* zip code entered in zip code box..........................................passed
-* Country is entered in the city box........................................passed
-* Click on the submit button................................................passed
-* Verify that registration process completed successfully appears...........passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="60.603">
+    <testcase classname="E2E_02 E2E testing is performed by following the steps below" name="Registered user creates and submits a new withdrawal value from the withdrawal tab" time="24.421">
+        <system-out>
+            <![CDATA[* The user enters the site with the given "Url".............................passed
+* Click on login button.....................................................passed
+* send registered "username" to username text box...........................passed
+* send registered "sifre" to password text box..............................passed
+* Click on submit button....................................................passed
+* registered user clicks on the withdraw tab................................passed
+* Click the select GetAway..................................................passed
+* Click on the amounth......................................................passed
+* Send 100 to the box.......................................................passed
+* Click on Sumit under the Withdraw Via IT text that appears................passed
 * Close the page............................................................passed
-]]></system-out>
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="E2E_02 E2E testing is performed by following the steps below" name="" time="35.537">
+        <system-out>
+            <![CDATA[* Navigate to Admin page "adminUrl".........................................passed
+* send adminUserName to username textbox....................................passed
+* send adminPasword to password textbox.....................................passed
+* click on the login button.................................................passed
+* Admin clicks on the withdrawals tab.......................................passed
+* Admin selects the pending withdrawals tab.................................passed
+* Admin clicks on the details button of user ismail.........................passed
+* admin copies ismails Trx Number...........................................passed
+* Admin clicks on the approve button........................................passed
+* admin writes ismails Trx Number in the Approve Withdrawal Confirmation box.passed
+* Click on the submit button................................................passed
+* Click on the Approved Withdrawals tab.....................................passed
+* admin verifies that ismails withraw is approved...........................passed
+* admin clicks on the manages users tab.....................................passed
+* admin clicks on the active users tab......................................passed
+* admin writes ismailtemiz in the usernameEmail box and clicks the search button..passed
+* admin clicks on the details button........................................passed
+* admin clicks the Notifications button.....................................passed
+* admin clicks the Send  Notifications button...............................passed
+* admin writes subject in the Subject box...................................passed
+* admin writes Merhaba İsmail ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %1 indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz in the Messagebox.passed
+* Click on the submit button on message page................................passed
+* admin clicks on his name at the top right and clicks on profile...........passed
+* By updating the admin profile name it writes its own name instead of Super Admins.passed
+* Click the Upload File button and upload a profile photo...................passed
+* Close the page............................................................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
