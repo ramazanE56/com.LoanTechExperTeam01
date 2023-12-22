@@ -18,13 +18,19 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepdefinitions",
 
-        tags = "@wip",
-
+        tags = "@abc",
         dryRun =false
+
+
+
+
 
 
 )
 public class Runner {
+
+
+}
 
     /*
         Runner class'i bos bir class'dir
@@ -47,4 +53,5 @@ public class Runner {
         dryRun = false secilmelidir
      */
 
-}
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.818">
+    <testcase classname="I would like to have a page to register as a visitor" name="TC01 : It must be verified that the Get Started Button Link is visible and active on the Home Page." time="17.639">
+        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Verify that the Get Started Button Link is Visible on the Home Page.......passed
+* Click on the Get Started Button Link on the Home Page.....................passed
+* Verify that the register text is visible on the register page.............passed
+* Close the page............................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
