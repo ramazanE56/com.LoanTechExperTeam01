@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.206">
+    <testcase classname="I would like to have a page to register as a visitor" name="TC02 : Verify that the registration form is visible on the registration page" time="14.753">
+        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click on the Get Started Button Link on the Home Page.....................passed
+* Verify that the Welcome To Loantech Expert form title is visible on the Register page.passed
+* Close the page............................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

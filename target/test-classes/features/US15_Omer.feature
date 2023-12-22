@@ -6,7 +6,7 @@ Feature: US_15 As a registered user, I want to be able to access my password inf
     * Accept the cookies on page
     * Login with registered user information
 
-    Scenario: After logging in to the site as a user,
+    Scenario: TC_01 After logging in to the site as a user,
               the 'Change Password' link should be displayed on the user dashboard page
                     and
               when clicked, it should direct you to the "Change Password" page.
@@ -14,7 +14,7 @@ Feature: US_15 As a registered user, I want to be able to access my password inf
       * Verify that the Change Password is visible on dashboard and button is active.
 
 
-    Scenario: Valid password information must be entered in the "Current Password" textbox.
+    Scenario: TC_02 Valid password information must be entered in the "Current Password" textbox.
               New and valid password must be entered in the "Password" text box.
               The password entered in the "Password" text box must be entered in the "Confirm Password" text box.
               If the password entered in the "Confirm Password" text box and the "Password" text box are not the same, a warning message should appear.
@@ -27,7 +27,7 @@ Feature: US_15 As a registered user, I want to be able to access my password inf
       * Verify that the warning message appears
 
 
-    Scenario: When the Submit button is clicked, the message that the update has been completed successfully should be displayed.
+    Scenario: TC_03 When the Submit button is clicked, the message that the update has been completed successfully should be displayed.
 
       * Write a valid password on the Current Password text box
       * Write a new password on the Password text box,

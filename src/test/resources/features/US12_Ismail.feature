@@ -15,7 +15,7 @@ Feature: I would like to have a page to register as a visitor
     * Close the page
 
 
-  @smoke
+  @e2e
   Scenario: TC02 : Verify that the registration form is visible on the registration page
     * Click on the Get Started Button Link on the Home Page.
     * Verify that the Welcome To Loantech Expert form title is visible on the Register page
@@ -141,7 +141,7 @@ Feature: I would like to have a page to register as a visitor
       * Submit Button must be clickable
       * Close the page
 
-      @e2e
+
     Scenario: TC13 : It must be verified that the registration process
               can be completed by filling in the mandatory fields in the form (firstname/lastname/address textboxes).
 
