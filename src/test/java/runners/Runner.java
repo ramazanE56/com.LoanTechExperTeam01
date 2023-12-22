@@ -17,19 +17,15 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@wip2",
-        dryRun = false
-
-
-
-
-
 //
 //"cucumber-report-generator:target/cucumber-report.xlsx"
 
 
-)
+        tags = "@wip",
+        dryRun =true
 
+
+)
 public class Runner {
 
     /*

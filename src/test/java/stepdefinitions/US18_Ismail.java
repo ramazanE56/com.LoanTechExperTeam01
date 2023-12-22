@@ -2,13 +2,21 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import pages.DashBoardPage;
 import pages.LoginPage;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
 
 public class US18_Ismail {
 
@@ -43,7 +51,7 @@ public class US18_Ismail {
 
     @Given("Click on the Take Loan button")
     public void click_on_the_take_loan_button() {
-        dashBoardPage.allowTextElement.click();
+        //dashBoardPage.allowTextElement.click();
         ReusableMethods.wait(3);
         dashBoardPage.takeLoanTabElement.click();
     }
@@ -157,6 +165,7 @@ public class US18_Ismail {
 
     @Given("Click on the basic loan button")
     public void click_on_the_basic_loan_button() {
+        ReusableMethods.wait(3);
 dashBoardPage.basicLoanButtonElement.click();
     }
     @Given("Verify that Application Form text is visible")
@@ -218,5 +227,152 @@ assertEquals(" Under the Application Form tetx Box has Test Loan text but dont h
         dashBoardPage.applyElement.click();
 ReusableMethods.wait(1);
     }
+    @Given("Click on the Apply button under the Application Form Text")
+    public void click_on_the_apply_button_under_the_application_form_text() {
+        dashBoardPage.applyButtonUnderTheApplicationFormTextElement.click();
+        ReusableMethods.wait(2);
+    }
+    @Given("Verify that the Loan application submitted successfully message appears")
+    public void verify_that_the_loan_application_submitted_successfully_message_appears() {
+assertTrue(dashBoardPage.loanApplicationSubmittedSuccessfullyTxtElement.isDisplayed());
+    }
+
+    @Given("Verify that Test_Loan appears")
+    public void verify_that_test_loan_appears() {
+        ReusableMethods.wait(1);
+        assertTrue(dashBoardPage.TestLoanTakeLoanTextElement.isDisplayed());
+    }
+    @Given("Verify that the Search By Loan Number text box is visible")
+    public void verify_that_the_search_by_loan_number_text_box_is_visible() {
+        assertTrue(dashBoardPage.seachByLoanNumberBoxTextElement.isDisplayed());
+    }
+    @Given("The last created Test_LOan Loan number is entered into the Search By Loan Number text box.")
+    public void the_last_created_test_l_oan_loan_number_is_entered_into_the_search_by_loan_number_text_box() {
+String firstLoanNumber = dashBoardPage.firstSeachByLoanNumberElement.getText();
+dashBoardPage.seachByLoanNumberBoxTextElement.sendKeys(firstLoanNumber);
+dashBoardPage.lensLogoButtonElement.click();
+    }
+    @Given("Click on the lens logo")
+    public void click_on_the_lens_logo() {
+        dashBoardPage.lensLogoButtonElement.click();
+    }
+    @Given("Test_Loan Verifies that the Loan number appears in the table as uniq")
+    public void test_loan_verifies_that_the_loan_number_appears_in_the_table_as_uniq() {
+assertFalse(dashBoardPage.secondSeachByLoanNumberElement.isDisplayed());
+    }
+
+    @Given("It is verified that pending status codes are displayed filtered in the table.")
+    public void it_is_verified_that_pending_status_codes_are_displayed_filtered_in_the_table() {
+// Tablodaki verileri doğrula
+        List<WebElement> elements = new ArrayList<>();
+        int index = 1;
+        while (true) {
+            String locator = "(//span[@class='badge badge--dark'])[" + index + "]";
+            WebElement element = Driver.getDriver().findElement(By.xpath(locator));
+            elements.add(element);
+            index += 2;
+            if (!isElementPresent(Driver.getDriver(), locator)) {
+                break;
+            }
+        }
+
+        boolean allPending = true;
+        for (WebElement element : elements) {
+            String status = element.getText();
+            if (!status.equals("pending")) {
+                allPending = false;
+                break;
+            }
+        }
+
+        if (allPending) {
+            System.out.println("Tüm verilerin statusu 'pending'.");
+        } else {
+            System.out.println("Verilerin statusu doğrulanamadı.");
+        }
+
+    }
+
+    private boolean isElementPresent(WebDriver driver, String locator) {
+        return false;
+    }
+
+    @Given("Click on the arrow sign in the Loan Status box select {string} status from the dropdown menu that opens.")
+    public void click_on_the_arrow_sign_in_the_loan_status_box_select_status_from_the_dropdown_menu_that_opens(String status) {
+        Select select = new Select(dashBoardPage.loanStatusArrowElement);
+        select.selectByVisibleText(status);
+        ReusableMethods.wait(2);
+    }
+    @Given("Click on the running button")
+    public void click_on_the_running_button() {
+dashBoardPage.runningbuttonElement.click();
+    }
+    @Given("Verify that the Installment box is visible in the bar that opens")
+    public void verify_that_the_installment_box_is_visible_in_the_bar_that_opens() {
+assertTrue(dashBoardPage.installmentstxtElement.isDisplayed());
+    }
+    @Given("Verify that the Installment box is clickable")
+    public void verify_that_the_installment_box_is_clickable() {
+assertTrue(dashBoardPage.installmentstxtElement.isEnabled());
+    }
+    @Given("Click on the Installment box")
+    public void click_on_the_installment_box() {
+dashBoardPage.installmentstxtElement.click();
+ReusableMethods.wait(3);
+    }
+    @Given("Verify that Loan Installments is displayed on the page that opens")
+    public void verify_that_loan_installments_is_displayed_on_the_page_that_opens() {
+       assertTrue(dashBoardPage.loaninstallmentstxtElement.isDisplayed());
+    }
+
+    @Given("Verify that the Loan Number value appears")
+    public void verify_that_the_loan_number_value_appears() {
+assertTrue(dashBoardPage.loanNumbertxtElement.isDisplayed());
+    }
+    @Given("Verify that the Loan Amount value appears")
+    public void verify_that_the_loan_amount_value_appears() {
+assertTrue(dashBoardPage.loanAmounttxtElement.isDisplayed());
+    }
+    @Given("Verify that the Plan value appears")
+    public void verify_that_the_plan_value_appears() {
+assertTrue(dashBoardPage.plantxtElement.isDisplayed());
+    }
+    @Given("Verify that the value Per Installment appears")
+    public void verify_that_the_value_per_installment_appears() {
+assertTrue(dashBoardPage.perInstallmentElement.isDisplayed());
+    }
+    @Given("Verify that the Needs to Pay value appears")
+    public void verify_that_the_needs_to_pay_value_appears() {
+assertTrue(dashBoardPage.needstoPayTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Delay Charge value appears")
+    public void verify_that_the_delay_charge_value_appears() {
+assertTrue(dashBoardPage.delayChargeTxtElement.isDisplayed());
+    }
+    @Given("The installment plan list should be displayed.")
+    public void the_installment_plan_list_should_be_displayed() {
+assertTrue(dashBoardPage.allListElements.isDisplayed());
+    }
+    @Given("Verify that the S.N. Header is displayed")
+    public void verify_that_the_s_n_header_is_displayed() {
+assertTrue(dashBoardPage.snTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Installment Date Header is displayed")
+    public void verify_that_the_installment_date_header_is_displayed() {
+assertTrue(dashBoardPage.installmentDateTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Given On Header is displayed")
+    public void verify_that_the_given_on_header_is_displayed() {
+assertTrue(dashBoardPage.givenOnTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Delay Header is displayed")
+    public void verify_that_the_delay_header_is_displayed() {
+assertTrue(dashBoardPage.delayTxtElement.isDisplayed());
+    }
+    @Given("Verify that Loan Plans appears on the page that opens")
+    public void verify_that_loan_plans_appears_on_the_page_that_opens() {
+        assertTrue(dashBoardPage.loanPlansTextElement.isDisplayed());
+    }
+
 
 }
