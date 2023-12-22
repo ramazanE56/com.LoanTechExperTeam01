@@ -62,7 +62,7 @@ public class Driver {
 
     public static void closeDriver(){
         if (driver != null){
-            ReusableMethods.wait(2);
+            ReusableMethods.wait(3);
             driver.close();
             driver=null;
         }
@@ -70,7 +70,7 @@ public class Driver {
 
     public static void quitDriver(){
         if (driver != null){
-            ReusableMethods.wait(2);
+            ReusableMethods.wait(3);
             driver.quit();
             driver=null;
         }

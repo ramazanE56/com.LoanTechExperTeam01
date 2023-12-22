@@ -13,7 +13,6 @@ import pages.HomePage;
 import pages.LoginPage;
 import utilities.ConfigReader;
 import utilities.ReusableMethods;
-
 import java.util.Objects;
 
 public class US15_Omer {

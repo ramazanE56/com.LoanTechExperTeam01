@@ -63,11 +63,7 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.6</version>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -84,13 +80,6 @@
             <version>4.13.0</version>
         </dependency>
 
-        <!-- SLF4J -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.32</version>
-        </dependency>
-
         <!-- Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -105,7 +94,12 @@
         </dependency>
 
 
+
+
+
+
     </dependencies>
+
 
 
 
@@ -134,6 +128,7 @@
                             </jsonFiles><classificationFiles>->
                             <param>sample.properties</param>
                             <param>other.properties</param>
+                            <param>cucumber.properties</param>
                         </classificationFiles>
                         </configuration>
                     </execution>
@@ -147,8 +142,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
-                        <include>**/runners/*Paralel*.java</include>
+                        <include>**/runners/*ParalelRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -159,6 +153,10 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+                    <compilerArgs>
+                        <arg>--module-path</arg>
+                        <arg>C:\Program Files\Java\jdk-11.0.21\jmods</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
 
@@ -174,20 +172,19 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <parallel>classes</parallel>
-                    <forkMode>perthread</forkMode>
-                    <threadCount>3</threadCount>
+                    <parallel>methods</parallel>
+
+                    <threadCount>2</threadCount>
                     <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
                     <argLine>-XX:MaxPermSize=256m</argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <forkCount>0</forkCount>
+                    <forkCount>2</forkCount>
 
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
-                        <include>**/runners/*Paralel*.java</include>
+                        <include>**/runners/*ParalelRunner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>

@@ -11,16 +11,29 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"},
+
+
+
+        monochrome = true,// raporların konsolda okunaklı çıkması için
         features = "src/test/resources/features",
         glue = "stepdefinitions",
+
         tags = "@smt",
         dryRun = false
 
 
 
 
+
+
+
+
+
 )
 public class Runner {
+
+
+}
 
     /*
         Runner class'i bos bir class'dir
@@ -43,4 +56,5 @@ public class Runner {
         dryRun = false secilmelidir
      */
 
-}
+
+
