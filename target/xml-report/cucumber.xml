@@ -1,26 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.183">
-    <testcase classname="US18 : As a registered user, I want to have a page where I can see my Credit plans and get Credit." name="TC12 : The &quot;Installments&quot; button must be visible and active for the running process on the My loans page. Clicking the button verifies that the &quot;Loan Installments&quot; page is accessible" time="0.263">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
-* Click on the login button.................................................passed
-* The registered "usernameIsmail" is entered in the Username Or Email box...passed
-* Registered user "password" is entered in the Your Password box............passed
-* Click on the login button to log in.......................................passed
-* Click on the Take Loan button.............................................passed
-* Click on the basic loan button............................................passed
-* Click on the Test Loan Apply Now button...................................passed
-* A number between "5000" and "15000" is entered in the Enter An Amount box.passed
-* Click on the Confirm button...............................................passed
-* Click on the Apply button under the Application Form Text.................passed
-* Click on the arrow sign in the Loan Status box select "running" status from the dropdown menu that opens..passed
-* Click on the running button...............................................undefined
-* Verify that the Installment box is visible in the bar that opens..........skipped
-* Verify that the Installment box is clickable..............................skipped
-* Click on the Installment box..............................................skipped
-* Verify that Loan Installments is displayed on the page that opens.........skipped
-* Close the page............................................................skipped
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="94.72">
+    <testcase classname="E2E_02 E2E testing is performed by following the steps below" name="Registered user creates and submits a new withdrawal value from the withdrawal tab" time="26.819">
+        <system-out>
+            <![CDATA[* The user enters site with the given "Url".................................passed
+* Click on login button.....................................................passed
+* send registered "username" to username text box...........................passed
+* send registered "sifre" to password text box..............................passed
+* Click on submit button....................................................passed
+* registered user clicks on the withdraw tab................................passed
+* Click the select GetAway..................................................passed
+* Click on the amounth......................................................passed
+* Send 100 to the box.......................................................passed
+* Click on Sumit under the Withdraw Via IT text that appears................passed
+* Close the page............................................................passed
 ]]>
-        </failure>
+        </system-out>
+    </testcase>
+    <testcase classname="E2E_02 E2E testing is performed by following the steps below" name="Admin approves pending withdrawal and manage an active users and send message and change some information about profile" time="67.178">
+        <system-out>
+            <![CDATA[* Navigate to Admin page "adminUrl".........................................passed
+* send adminUserName to username textbox....................................passed
+* send adminPasword to password textbox.....................................passed
+* click on the login button.................................................passed
+* Admin clicks on the withdrawals tab.......................................passed
+* Admin selects the pending withdrawals tab.................................passed
+* Admin clicks on the details button of user ismail.........................passed
+* admin copies ismails Trx Number...........................................passed
+* Admin clicks on the approve button........................................passed
+* admin writes ismails Trx Number in the Approve Withdrawal Confirmation box.passed
+* Click on the submit button................................................passed
+* Click on the Approved Withdrawals tab.....................................passed
+* admin verifies that ismails withraw is approved...........................passed
+* admin clicks on the manages users tab.....................................passed
+* admin clicks on the active users tab......................................passed
+* admin writes ismailtemiz in the usernameEmail box and clicks the search button..passed
+* admin clicks on the details button........................................passed
+* admin clicks the Notifications button.....................................passed
+* admin clicks the Send  Notifications button...............................passed
+* admin writes subject in the Subject box...................................passed
+* admin writes Merhaba İsmail ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %1 indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz in the Messagebox.passed
+* Click on the submit button on message page................................passed
+* admin clicks on his name at the top right and clicks on profile...........passed
+* By updating the admin profile name it writes its own name instead of Super Admins.passed
+* Click the Upload File button and upload a profile photo...................passed
+* Close the page............................................................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>

@@ -2,19 +2,57 @@ package pages;
 
 
 
+
 import org.openqa.selenium.By;
+
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+
+import java.nio.file.WatchEvent;
+
 import java.util.List;
+
 
 public class DashBoardPage {
     public DashBoardPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+
+    @FindBy(xpath = "(//*[@class=\"auth-form__input\"])[1]")
+    public WebElement userNameElementi;
+    @FindBy (xpath = "//*[@placeholder=\"Your password\"]")
+    public WebElement userPasswordElementi;
+    @FindBy(xpath = "//*[@class=\"btn btn--base btn--xxl w-100 text-capitalize xl-text\"]")
+    public WebElement loginButtonEmre;
+    @FindBy (xpath = "(//*[@href=\"https://qa.loantechexper.com/user/deposit\"])[2]")
+    public WebElement depositElementi;
+    @FindBy(xpath = "//*[@class=\"mb-2\"]")
+    public WebElement depositMethodsGorunum;
+    @FindBy(xpath = "//*[@class=\"btn btn--base btn--smd\"]")
+    public WebElement depositHistoryElementi;
+    @FindBy(xpath = "//*[@class=\"accordion table--acordion\"]")
+    public WebElement akordiyonElement;
+    @FindBy(xpath = "//*[@class=\"btn btn--base btn--smd\"]")
+    public WebElement depositNowElementi;
+    @FindBy(xpath = "//*[@class=\"form--control form-select\"]")
+    public WebElement selectGatewayElementi;
+    @FindBy(xpath = "//*[@class=\"form-control form--control\"]")
+    public WebElement amountElementi;
+    @FindBy(xpath = "//*[@class=\"list-group\"]")
+    public WebElement limitElement;
+    @FindBy(xpath = "//*[@class=\"btn btn--base w-100 mt-3\"]")
+    public WebElement submitButton;
+    @FindBy(xpath = "//*[@class=\"text-center mt-2\"]")
+    public WebElement youhaveElementi;
+    @FindBy(xpath = "//*[@class=\"btn btn--base w-100\"]")
+    public WebElement payNow;
+    @FindBy(xpath = "//p[@class='iziToast-message slideIn']")
+    public WebElement youHaveDepositElementi;
 
 
     @FindBy(xpath = "(//span[@class='menu-title'])[2]")
@@ -445,6 +483,53 @@ public class DashBoardPage {
 
     @FindBy(xpath = "//select[@name='status']")
     public WebElement loanStatusArrowElement;
+
+    @FindBy(xpath = "(//span[@class='badge badge--primary'])[1]")
+    public WebElement runningbuttonElement;
+
+    @FindBy(xpath = "(//a[@class='btn btn--outline-primary btn--sm '])[1]")
+    public WebElement installmentstxtElement;
+
+    @FindBy(tagName = "h3")
+    public WebElement loaninstallmentstxtElement;
+
+    @FindBy(xpath= "//*[text()='Loan Number']")
+    public WebElement loanNumbertxtElement;
+
+    @FindBy(xpath= "//*[text()='Loan Amount']")
+    public WebElement loanAmounttxtElement;
+
+    @FindBy(xpath= "//*[text()='Plan']")
+    public WebElement plantxtElement;
+
+    @FindBy(xpath= "//*[text()='Per Installment']")
+    public WebElement perInstallmentElement;
+
+    @FindBy(xpath= "//*[text()='Needs to Pay']")
+    public WebElement needstoPayTxtElement;
+
+
+    @FindBy(xpath= "//*[text()='Delay Charge']")
+    public WebElement delayChargeTxtElement;
+
+
+    @FindBy(xpath= "//tbody]")
+    public WebElement allListElements;
+
+    @FindBy(xpath= "//tr/th[1]")
+    public WebElement snTxtElement;
+
+
+    @FindBy(xpath= "//tr/th[2]")
+    public WebElement installmentDateTxtElement;
+
+    @FindBy(xpath= "//tr/th[3]")
+    public WebElement givenOnTxtElement;
+
+    @FindBy(xpath= "//tr/th[4]")
+    public WebElement delayTxtElement;
+
+
 
 
 

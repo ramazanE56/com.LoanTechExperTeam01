@@ -92,13 +92,8 @@
             <artifactId>allure-cucumber7-jvm</artifactId>
             <version>2.19.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-jvm</artifactId>
-            <version>7.15.0</version>
-            <type>pom</type>
-        </dependency>
+
+
 
 
 
@@ -130,7 +125,7 @@
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
                                 <param>**/json-reports/*.json</param>
-                            </jsonFiles><classificationFiles>
+                            </jsonFiles><classificationFiles>->
                             <param>sample.properties</param>
                             <param>other.properties</param>
                             <param>cucumber.properties</param>
@@ -144,17 +139,13 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>  <!-- senaryo fail olursa çalışmaya devam et -->
+                    <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-
-                        <include>**/runners/*Paralel*.java</include>
-
+                        <include>**/runners/*ParalelRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
-
-            <!-- parale test için -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -162,6 +153,10 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+                    <compilerArgs>
+                        <arg>--module-path</arg>
+                        <arg>C:\Program Files\Java\jdk-11.0.21\jmods</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
 
@@ -177,16 +172,19 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <parallel>classes</parallel>
-                    <threadCount>2</threadCount>    <!-- aynıanda 2 browser çalıştırılacağı anlamına gelir -->
-                    <reuseForks>true</reuseForks>
+                    <parallel>methods</parallel>
+
+                    <threadCount>2</threadCount>
+                    <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
+                    <argLine>-Xmx1024m</argLine>
+                    <argLine>-XX:MaxPermSize=256m</argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <forkCount>2</forkCount>
+
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*Paralel*.java</include>
-
+                        <include>**/runners/*ParalelRunner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -215,4 +213,5 @@
             </build>
         </profile>
     </profiles>
+
 </project>

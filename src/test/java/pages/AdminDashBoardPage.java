@@ -13,6 +13,219 @@ public class AdminDashBoardPage {
     }
 
 
+    // AdminDashboard Page (Samet)
+
+    @FindBy (xpath = "//span[text()='Loans']")
+    public WebElement Loanstab;
+
+    @FindBy(xpath = "(//span[@class='menu-title'])[17]")
+    public WebElement DueLoanstab;
+
+    @FindBy(xpath = "//h6[@class='page-title']")
+    public WebElement DueLoansPageYaziElementi;
+
+    @FindBy (xpath = "//div[@class='table-responsive--lg table-responsive']")
+    public WebElement DueLoansTabloElementi;
+
+    @FindBy(xpath = "//span[@class='navbar-user__name']")
+    public WebElement logoutmenu;
+
+    @FindBy (xpath = "(//span[@class='dropdown-menu__caption'])[3]")
+    public WebElement logoutbutton;
+
+    @FindBy(xpath = "//span[text()='Manage Users']")
+    public WebElement ManageUserslink;
+
+    @FindBy(xpath = "//span[text()='Active Users']")
+    public WebElement ActiveUserslink;
+
+    @FindBy(xpath = "//h6[text()='Active Users']")
+    public WebElement ActiveUsersYaziElementi;
+
+    @FindBy(xpath = "(//tr[position()=1])[1]")
+    public WebElement ActiveUsersListTitles;
+
+    @FindBy(xpath="(//tbody/tr[1]/td[6]/div[1]/a[1])[1]" )
+    public WebElement DetailsButton;
+
+    @FindBy(xpath = "//h6[@class='page-title']")
+    public WebElement UserDetail;
+
+    @FindBy(xpath = "(//a[@class='widget-two__btn btn btn-outline--success'])[1]")
+    public WebElement viewAllbutton;
+
+    @FindBy(xpath = "//span[normalize-space()='Deposits']")
+    public WebElement DepositsButton;
+
+    @FindBy(xpath = "//div[@class='col-md-12']")
+    public WebElement DepositHistoryListTitles;
+
+    @FindBy(xpath ="(//a[@class='item-link'])[1]")
+    public WebElement SuccessfulDepositElement;
+
+    @FindBy(xpath = "(//a[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+    public WebElement SuccessfulDetailElement;
+
+    @FindBy(xpath = "//div[@class='col-md-12']")
+    public WebElement SuccessfulDepositsTableElement;
+
+    @FindBy(xpath = "//span[text()='All Deposits']")
+    public  WebElement AllDepositsButton;
+
+    @FindBy(xpath = "//span[normalize-space()='Pending Deposits']")
+    public WebElement PendingDeposits;
+
+    @FindBy(xpath = "(//a[@class='item-link'])[3]")
+    public WebElement RejectedDeposits;
+
+    @FindBy(xpath = "(//a[@class='item-link'])[4]")
+    public WebElement InitiatedDeposits;
+
+    @FindBy(xpath = "//span[text()='Successful Deposits']")
+    public  WebElement SuccessfulDeposits;
+
+    @FindBy(xpath = "//input[@name='search']")
+    public WebElement SuccessfulDepositsSearchBox;
+
+    @FindBy(xpath = "//input[@id='date']")
+    public WebElement SuccessfulDepositsDateSearchBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement SuccessfulDepositsSearchBoxSubmit;
+
+    @FindBy(xpath = "//button[@class='btn btn--primary input-group-text']")
+    public WebElement SuccessfulDepositsDateSearchBoxSubmit;
+
+    @FindBy(xpath = "//h6[@class='page-title']")
+    public WebElement PendingDepositsYaziElementi;
+
+    @FindBy(xpath = "//tbody/tr[1]/td[7]/a[1]")
+    public WebElement PendingDepositsDetailsButton;
+    //tbody/tr[1]/td[7]/a[1]
+
+    @FindBy (xpath = "//tbody/tr[1]/td[7]/a[1]")
+    public WebElement PendingDepositsDetailsButtonSamet;
+
+    @FindBy(xpath = "//h5[@class='card-title mb-50 border-bottom pb-2']")
+    public  WebElement PendingDepositsSuccessfulDetailsPage;
+
+    @FindBy(xpath = "//button[@class='btn btn-outline--success btn-sm ms-1 confirmationBtn']")
+    public WebElement ApprouveButton;
+
+    @FindBy(xpath = "//button[@class='btn btn-outline--danger btn-sm ms-1 rejectBtn']")
+    public WebElement RejectButton;
+
+    @FindBy (xpath = "(//button[@type='submit'])[1]")
+    public  WebElement RejectSubmitbutton;
+
+    @FindBy (xpath = "//input[@id='search']")
+    public WebElement PendingDepositsSearchTextBox;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement PendingDepositsSearchTextSubmitbutton;
+
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    public WebElement PendingDepositsYesButton;
+
+    @FindBy(xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement RequestApprouvedSuccessfully;
+
+    @FindBy(xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement RequestRejectedSuccessfully;
+
+    @FindBy(xpath = "//textarea[@id='message']")
+    public WebElement ReasonforRejectionBox;
+
+    @FindBy(xpath = "//h6[@class='page-title']")
+    public WebElement RequestXUSDTitle;
+
+    @FindBy(xpath = "//div[@class='card-body']")
+    public WebElement DepositCardViaManuel;
+
+/////////
+
+    @FindBy(xpath = "(//a[(text()='Deposit')])[1]")
+    public WebElement UserpageDepositButtonElement;
+
+    @FindBy(xpath = "//input[@name='amount']")
+    public WebElement UserPageAmountElement;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public  WebElement UserDepositSubmitButtonElement;
+
+    @FindBy (xpath = "//select[@name=\"gateway\"]")
+    public  WebElement UserDepositSelectGatewayElement;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement UserDepositPayNowButtonElement;
+
+    @FindBy(xpath = "//a[@class='btn btn--md btn--base fw-bold w-100'][normalize-space()='Login']")
+    public WebElement firstLogin;
+
+    @FindBy(xpath = "//a[@href='javascript:void(0)']")
+    public WebElement AllowYaziElementi;
+
+    @FindBy(xpath = "//tbody/tr[1]/td[7]/a[1]")
+    public  WebElement PendingDepositsDetailsButtonElement;
+
+
+// ---- Arif Emre US49 ----
+    @FindBy(xpath = "//*[@name=\"username\"]")
+    public WebElement userNameElementi;
+    @FindBy(xpath = "//*[@name=\"password\"]")
+    public WebElement adminpasswordElementi;
+    @FindBy(xpath = "//*[@class=\"btn cmn-btn w-100\"]")
+    public WebElement adminLoginElementi;
+    @FindBy(xpath = "(//*[@class=\"menu-title\"])[2]")
+    public WebElement manegeUsersElementi;
+    @FindBy(xpath = "//*[@href=\"https://qa.loantechexper.com/admin/users/with-balance\"]")
+    public WebElement withBalanceElementi;
+    @FindBy(xpath = "//tbody")
+    public WebElement listElement;
+    @FindBy(xpath = "//*[@class=\"form-control bg--white\"]")
+    public WebElement searchBoxElementi;
+    @FindBy(xpath = "(//*[@class=\"btn btn-sm btn-outline--primary\"])[2]")
+    public WebElement detailsElementi;
+    @FindBy(xpath = "//*[@class=\"page-title\"]")
+    public WebElement userDetailElementi;
+
+    // ---- US36 LOCATE ----
+    @FindBy(xpath = "(//*[@class=\"nav-link \"])[3]")
+    public WebElement loanPlansElementi;
+    @FindBy(xpath = "//*[@class=\"bodywrapper__inner\"]")
+    public WebElement loansPlanElementi;
+    @FindBy(xpath = "(//*[tr])[1]")
+    public WebElement trElementi;
+    @FindBy(xpath = "(//*[@class=\"btn btn-sm btn-outline--primary\"])[1]")
+    public WebElement addNewElementi;
+    @FindBy(xpath = "(//*[@class=\"form-control\"])[1]")
+    public WebElement planNameElementi;
+    @FindBy(xpath = "//button[normalize-space()='Submit']")
+    public WebElement submitBElement;
+    @FindBy(xpath = "//p[@class='iziToast-message slideIn']")
+    public WebElement iziElement;
+    @FindBy(xpath = "(//*[@class=\"btn btn-sm btn-outline--primary\"])[2]")
+    public WebElement editElementi;
+    @FindBy(xpath = "(//*[@class=\"card-body\"])[1]")
+    public WebElement cardBody;
+    @FindBy(xpath = "(//*[@class=\"btn btn-sm confirmationBtn btn-outline--danger\"])[1]")
+    public WebElement disable;
+    @FindBy(xpath = "(//*[@class=\"btn btn--primary\"])[2]")
+    public WebElement yes;
+    @FindBy(xpath = "//div[@class='iziToast-texts']")
+    public WebElement disabledelete;
+    @FindBy(xpath = "//p[@class='iziToast-message slideIn']")
+    public WebElement hataMesaj;
+    @FindBy(xpath = "(//*[@class=\"form-control\"])[4]")
+    public WebElement maxAmount;
+    @FindBy(xpath = "//*[@class=\"form-control bg--white\"]")
+    public WebElement searchLoansPlan;
+    @FindBy(xpath = "//*[@style=\"width: 999px; margin: 4px; min-height: 182px; overflow: hidden;\"]")
+    public WebElement instructionboxElement;
+    @FindBy(xpath = "(//*[@class=\"form-control\"])[3]")
+    public WebElement minAmountElement;
+
+
 @FindBy(xpath = "//input[@name='username']")
     public WebElement adminUserName;
     //eyyup
@@ -542,6 +755,9 @@ public class AdminDashBoardPage {
 
 
 
+
+
+
    // ****************** Ümit ****************** //
 
     //AdminDashboard->Loans->Running Loans
@@ -712,6 +928,7 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
     public WebElement successfulDepositsDetailsButton;
 
+
     @FindBy (xpath = "(//li[@class='sidebar-menu-item sidebar-dropdown'])[5]")
     public WebElement withdrawalsButton;
 
@@ -738,6 +955,86 @@ public class AdminDashBoardPage {
 
     @FindBy (xpath = "//a[@href='https://qa.loantechexper.com/admin/withdraw/method/edit/31']")
     public WebElement editButton;
+
+ @FindBy(xpath = "(//*[@class='menu-title'])[33]")
+ public WebElement pendingWithdrawals;
+
+ @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
+ public WebElement pendingWithdrawalsDetails;
+ @FindBy(xpath = "(//*[@class='fw-bold'])[2]")
+ public WebElement pendngWithdrawalTrx;
+ @FindBy(xpath = "//*[@class='btn btn-outline--success ms-1 approveBtn']")
+ public WebElement pendingWithdrawalAprove;
+
+ @FindBy(xpath = "//*[@class='form-control pt-3']")
+ public WebElement approveWithdrawalConfirmation;
+
+ @FindBy(xpath = "(//*[@class='btn btn--primary w-100 h-45'])[1]")
+ public WebElement confirmaitonApproveSubmit;
+
+ @FindBy(xpath = "(//*[@class='menu-title'])[34]")
+ public WebElement approvedWithdraval;
+
+ @FindBy(xpath = "//*[@class='badge badge--success']")
+ public WebElement appreved;
+
+
+ @FindBy(xpath = "//*[@href='javascript:void(0)']")
+ public WebElement manageUsers;
+ @FindBy(xpath = "//*[@class='form-control bg--white']")
+ public WebElement activeUserSearch;
+
+ @FindBy(xpath = "//*[@class='la la-search']")
+ public WebElement activeUSersSerachIcon;
+
+ @FindBy(xpath = "//*[@class='btn btn-sm btn-outline--primary']")
+ public WebElement activeUsersDetails;
+
+ @FindBy(xpath = "//*[@class='btn btn--secondary btn--shadow w-100 btn-lg']")
+ public WebElement notifications;
+
+
+ @FindBy(xpath = "//*[@class='btn btn-outline--primary btn-sm']")
+ public WebElement sendMessage;
+
+ @FindBy(xpath = "//*[@class='form-control']")
+ public WebElement subjectMessage;
+ @FindBy(xpath = "//*[@contenteditable='true']")
+ public WebElement bodyMessage;
+
+ @FindBy(xpath = "//*[@class='btn w-100 h-45 btn--primary']")
+ public WebElement submitMessage;
+
+ @FindBy(xpath = "//*[@class='navbar-user__name']")
+ public WebElement profileicon;
+
+ @FindBy(xpath = "//*[@class='dropdown-menu__caption']")
+ public WebElement profiles;
+
+ @FindBy(xpath = "(//*[@class='form-control'])[1]")
+ public WebElement superAdmin;
+
+ @FindBy(xpath = " //*[@for='profilePicUpload1']")
+ public WebElement photoUpload;
+
+
+
+
+ @FindBy(xpath = "//*[@class='btn btn--primary h-45 w-100']")
+ public WebElement uploadSubmit;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
