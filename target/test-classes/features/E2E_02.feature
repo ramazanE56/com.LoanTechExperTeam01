@@ -1,7 +1,7 @@
 @wip3
 Feature: E2E_02 E2E testing is performed by following the steps below
   Scenario: Registered user creates and submits a new withdrawal value from the withdrawal tab
-    * The user enters the site with the given "Url"
+    * The user enters site with the given "Url"
     * Click on login button
     * send registered "username" to username text box
     * send registered "sifre" to password text box

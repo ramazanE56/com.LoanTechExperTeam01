@@ -35,8 +35,8 @@ public class E2E_03 {
     HomePage homePage=new HomePage();
     Select select;
     String TrxNumber="";
-    @Given("The user enters the site with the given {string}")
-    public void the_visitor_enters_the_site_with_the_given(String Url) {
+    @Given("The user enters site with the given {string}")
+    public void the_visitor_enters_site_with_the_given(String Url) {
         Driver.getDriver().get(ConfigReader.getProperty(Url));
         ReusableMethods.wait(2);
 

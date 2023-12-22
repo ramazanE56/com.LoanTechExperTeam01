@@ -15,11 +15,7 @@ Feature: I would like to have a page to register as a visitor
     * Close the page
 
 
-<<<<<<< HEAD
   @e2e
-=======
-  @smoke
->>>>>>> main
   Scenario: TC02 : Verify that the registration form is visible on the registration page
     * Click on the Get Started Button Link on the Home Page.
     * Verify that the Welcome To Loantech Expert form title is visible on the Register page
@@ -69,6 +65,8 @@ Feature: I would like to have a page to register as a visitor
     * Click on the Get Started Button Link on the Home Page.
     * A unique username with at least 6 characters is entered in the Username box.
     * Valid e-mail information containing the @ sign is entered into the e-mail text box
+
+
     * Country selection is made from the Country menu.
     * It is verified that a unique phone number of up to 14 digits can be entered in the phone textbox.
     * Close the page
@@ -145,11 +143,7 @@ Feature: I would like to have a page to register as a visitor
       * Submit Button must be clickable
       * Close the page
 
-<<<<<<< HEAD
 
-=======
-      @e2e
->>>>>>> main
     Scenario: TC13 : It must be verified that the registration process
               can be completed by filling in the mandatory fields in the form (firstname/lastname/address textboxes).
 
@@ -171,6 +165,7 @@ Feature: I would like to have a page to register as a visitor
       * Click on the submit button
       * Verify that registration process completed successfully appears
       * Close the page
+
 
 
 
