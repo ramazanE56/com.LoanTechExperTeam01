@@ -167,7 +167,7 @@ Feature: US18 : As a registered user, I want to have a page where I can see my C
     * Click on the arrow sign in the Loan Status box select "pending" status from the dropdown menu that opens.
     * It is verified that pending status codes are displayed filtered in the table.
     * Close the page
-@123
+
     Scenario: TC12 : The "Installments" button must be visible and active for the running process on the My loans page. Clicking the button verifies that the "Loan Installments" page is accessible
       * Click on the login button
       * The registered "usernameIsmail" is entered in the Username Or Email box.
