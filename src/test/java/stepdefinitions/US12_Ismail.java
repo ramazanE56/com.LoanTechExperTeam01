@@ -236,10 +236,10 @@ public class US12_Ismail {
     }
     @Given("Name is entered in the firstname box")
     public void name_is_entered_in_the_firstname_box() {
-       // JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
-       // jse.executeScript("arguments[0].scrollIntoView(true)", loginPage.registerButtonElement);
-       // ReusableMethods.wait(2);
-       // jse.executeScript("arguments[0].click();",loginPage.registerButtonElement);
+       JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+       jse.executeScript("arguments[0].scrollIntoView(true)", loginPage.registerButtonElement);
+       ReusableMethods.wait(2);
+       jse.executeScript("arguments[0].click();",loginPage.registerButtonElement);
 
 
         loginPage.firstnameBoxElement.sendKeys(faker.name().name().toUpperCase());

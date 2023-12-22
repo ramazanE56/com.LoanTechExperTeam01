@@ -65,6 +65,8 @@ Feature: I would like to have a page to register as a visitor
     * Click on the Get Started Button Link on the Home Page.
     * A unique username with at least 6 characters is entered in the Username box.
     * Valid e-mail information containing the @ sign is entered into the e-mail text box
+
+
     * Country selection is made from the Country menu.
     * It is verified that a unique phone number of up to 14 digits can be entered in the phone textbox.
     * Close the page
@@ -163,6 +165,7 @@ Feature: I would like to have a page to register as a visitor
       * Click on the submit button
       * Verify that registration process completed successfully appears
       * Close the page
+
 
 
 
