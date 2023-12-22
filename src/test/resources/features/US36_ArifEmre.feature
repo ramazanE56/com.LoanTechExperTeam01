@@ -2,7 +2,7 @@
 Feature: US36 : As an administrator, I want to be able to access the Loan Plans page and manage loan plans transactions
 
   Background:The user uses this step to log in to the site.
-    Given Go to "adminUrl"
+    Given Go to "adminUrlOne"
 
   Scenario: TC01: As an administrator, it is tested that you can access the Loan Plans page, manage loan plan transactions and add a new loan plan.
   * The username box is clicked and the username is entered.

@@ -7,9 +7,10 @@ Feature: US16 : As a registered user, I want to be able to see my deposits and m
   * click cookies
   * wait2
   * Username information is entered
+  * wait2
   * Password information is entered
   * wait2
-  * Click on the login button
+  * Click on the login buttonn
   * Click on the Deposit tab.
   * It appears that the Deposit Methods page has opened.
   * Click on the deposit history tab and the deposit history page opens.
@@ -29,9 +30,10 @@ Feature: US16 : As a registered user, I want to be able to see my deposits and m
     * click cookies
     * wait2
     * Username information is entered
+    * wait2
     * Password information is entered
     * wait2
-    * Click on the login button
+    * Click on the login buttonn
     * Click on the Deposit tab.
     * Click on the Select Gateway menu and select manual.
     * Click on the Amount textbox and enter a value between min and max.
@@ -47,9 +49,10 @@ Feature: US16 : As a registered user, I want to be able to see my deposits and m
     * click cookies
     * wait2
     * Username information is entered
+    * wait2
     * Password information is entered
     * wait2
-    * Click on the login button
+    * Click on the login buttonn
     * Click on the Deposit tab.
     * Click on the deposit history tab and the deposit history page opens.
     * Deposit now is clicked and the deposit methods page opens.

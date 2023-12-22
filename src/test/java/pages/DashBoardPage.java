@@ -28,7 +28,7 @@ public class DashBoardPage {
     @FindBy (xpath = "//*[@placeholder=\"Your password\"]")
     public WebElement userPasswordElementi;
     @FindBy(xpath = "//*[@class=\"btn btn--base btn--xxl w-100 text-capitalize xl-text\"]")
-    public WebElement loginButtonElementi;
+    public WebElement loginButtonEmre;
     @FindBy (xpath = "(//*[@href=\"https://qa.loantechexper.com/user/deposit\"])[2]")
     public WebElement depositElementi;
     @FindBy(xpath = "//*[@class=\"mb-2\"]")

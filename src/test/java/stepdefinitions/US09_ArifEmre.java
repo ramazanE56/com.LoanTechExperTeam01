@@ -20,8 +20,8 @@ public class US09_ArifEmre {
     HomePage homePage = new HomePage();
 
     @Given("The user enters the site with the given {string}")
-    public void the_user_enters_the_site_with_the_given(String Url) {
-       Driver.getDriver().get(ConfigReader.getProperty("Url"));
+    public void the_user_enters_the_site_with_the_given(String UrlOne) {
+       Driver.getDriver().get(ConfigReader.getProperty("UrlOne"));
        ReusableMethods.wait(2);
     }
 

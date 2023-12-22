@@ -14,8 +14,8 @@ public class US49_ArifEmre {
     AdminDashBoardPage adminDashBoardPage = new AdminDashBoardPage();
     Actions actions = new Actions(Driver.getDriver());
     @Given("Go to {string}")
-    public void go_to(String adminUrl) {
-        Driver.getDriver().get(ConfigReader.getProperty(adminUrl));
+    public void go_to(String adminUrlOne) {
+        Driver.getDriver().get(ConfigReader.getProperty(adminUrlOne));
     }
 
     @Given("The username box is clicked and the username is entered.")

@@ -2,8 +2,8 @@
 Feature: US36 : As an administrator, I want to be able to access the Loan Plans page and manage loan plans transactions
 
   Background:The user uses this step to log in to the site.
-    Given Go to "adminUrl"
-@Wip
+    Given Go to "adminUrlOne"
+
   Scenario: TC01: As an administrator, it is tested that you can access the Loan Plans page, manage loan plan transactions and add a new loan plan.
   * The username box is clicked and the username is entered.
   * The password box is clicked and the password is entered.
@@ -33,7 +33,7 @@ Feature: US36 : As an administrator, I want to be able to access the Loan Plans 
   * The page is closed.
 
 
-@Wip
+
   Scenario: TC02: As a manager, existing credit information can be updated and the accuracy of the added or updated information is tested.
   * The username box is clicked and the username is entered.
   * The password box is clicked and the password is entered.
@@ -49,7 +49,7 @@ Feature: US36 : As an administrator, I want to be able to access the Loan Plans 
   * The page is closed.
 
 
-@Wip
+
   Scenario: TC03: Available credit plan from the system test removed is done.
     * The username box is clicked and the username is entered.
     * The password box is clicked and the password is entered.
@@ -61,7 +61,7 @@ Feature: US36 : As an administrator, I want to be able to access the Loan Plans 
     * It is verified that the existing credit plan has been removed from the system.
     * The page is closed.
 
-  @Wip
+
   Scenario: TC04: When an error occurs in the system, a clear error message must be displayed to the user.
   In case of incorrect entries (negative interest rate, invalid maturity period, etc.), the user should be informed with appropriate error messages.
     * The username box is clicked and the username is entered.

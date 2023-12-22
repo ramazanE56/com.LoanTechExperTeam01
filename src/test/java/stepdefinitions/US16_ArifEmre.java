@@ -33,10 +33,10 @@ public class US16_ArifEmre {
     dashBoardPage.userPasswordElementi.click();
     dashBoardPage.userPasswordElementi.sendKeys(ConfigReader.getProperty("userPassword"));
     }
-    @Given("Click on the login button")
-    public void click_on_the_login_button() {
+    @Given("Click on the login buttonn")
+    public void click_on_the_login_buttonn() {
     actions.sendKeys(Keys.PAGE_DOWN).perform();
-    dashBoardPage.loginButtonElementi.click();
+    dashBoardPage.loginButtonEmre.click();
     }
     @Given("Click on the Deposit tab.")
     public void click_on_the_deposit_tab() {

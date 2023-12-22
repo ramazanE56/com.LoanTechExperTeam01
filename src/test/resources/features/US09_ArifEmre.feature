@@ -1,7 +1,7 @@
 
 Feature: US09 : As a visitor, I want the site to have a Contact page with contact information so that I can contact the company.
   Background: Users use these steps to log in to the site.
-    Given The user enters the site with the given "Url"
+    Given The user enters the site with the given "UrlOne"
 
     Scenario: TC01 :It must be possible to verify that the contact information on the Contact Us page is active.
       Given click cookies
