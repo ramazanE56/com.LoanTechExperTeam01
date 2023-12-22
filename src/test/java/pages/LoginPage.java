@@ -13,6 +13,7 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
     @FindBy(id = "username")
     public WebElement userNameBoxElement;
 
@@ -34,6 +35,8 @@ public class LoginPage {
     @FindBy(xpath = "//li[@data-value='France']")
     public WebElement countryDropDownSelectedElement;
 
+    @FindBy(xpath = "//button[@class='btn btn--base btn--xxl w-100 text-capitalize xl-text']")
+    public WebElement userLoginButtonElement2;
 
     @FindBy(xpath = "//input[@name='username']")
     public WebElement userNameElement;

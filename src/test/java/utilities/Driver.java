@@ -20,7 +20,7 @@ public class Driver {
      driver olusturma ve kapatma islemlerini yapmayi tercih etmistir
      */
 
-    private Driver(){
+    public Driver(){
         // Bu constructor default constructor ile ayni islevi yapan parametresiz constructor'dir
         // buna erisimi kontrol edebilecegimiz icin bu constructor'i olusturduk
     }

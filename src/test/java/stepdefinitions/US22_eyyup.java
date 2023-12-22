@@ -25,8 +25,8 @@ public class US22_eyyup {
 
     }
 
-    @Then("Click on the Login button.")
-    public void click_on_the_login_button() {
+    @Then("Click on Login button.")
+    public void click_on_login_button() {
 
        //JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
        //ReusableMethods.wait(2);
@@ -40,8 +40,8 @@ public class US22_eyyup {
 
     }
 
-    @Then("Fill in user information.")
-    public void fill_in_user_information() {
+    @Then("Fill in userinformation.")
+    public void fill_in_userinformation() {
 
 
         homePage.userName.sendKeys(ConfigReader.getProperty("Usernameeyyup"));

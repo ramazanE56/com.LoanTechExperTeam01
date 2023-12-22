@@ -1,11 +1,175 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.818">
-    <testcase classname="I would like to have a page to register as a visitor" name="TC01 : It must be verified that the Get Started Button Link is visible and active on the Home Page." time="17.639">
-        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
-* Verify that the Get Started Button Link is Visible on the Home Page.......passed
-* Click on the Get Started Button Link on the Home Page.....................passed
-* Verify that the register text is visible on the register page.............passed
-* Close the page............................................................passed
-]]></system-out>
+<testsuite errors="0" failures="7" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="42.701">
+    <testcase classname="US07: I would like to have a page where I, as a visitor, can access and select Loan Plans" name="TC02:  The visitor should be able to see the 'Loan Plans' link under the Important Link heading" time="0.276">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[* The visitor enter site given "Url"........................................undefined
+* Go to the end of the homepage.............................................skipped
+* Click on the Loan Plans link under the Important Link heading and confirm that you are on the Loan Plans page.skipped
+* Close the page............................................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="US07: I would like to have a page where I, as a visitor, can access and select Loan Plans" name="TC04: When you click on the Home \ Loan Plans links on the Loan Plans Page, you can go to the relevant pages." time="0.015">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[* The visitor enter site given "Url"........................................undefined
+* Click on the Plans link in the menu header................................skipped
+* On the Loan Plans page, click on the Home link from the Home - Loan Plans options and go to the Home page.skipped
+* Close the page............................................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="I would like to have a page to register as a visitor" name="TC01 : It must be verified that the Get Started Button Link is visible and active on the Home Page." time="0.12">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[* The visitor enter site given "Url"........................................undefined
+* Verify that the Get Started Button link is Visible on the Home Page.......skipped
+* Click on the Get Started Button on the Home Page..........................skipped
+* Verify that the register text is visible on register page.................skipped
+* Close the page............................................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="US34: As an administrator, I want to be able to access and update my profile information." name="TC01: After logging in to the admin dashboard, the admin icon should appear in the upper right corner." time="33.985">
+        <failure message="Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;utilities.Driver.driver&quot; is null" type="java.lang.NullPointerException"><![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the admin icon in the upper right corner of the admin dashboard page.passed
+* Close the page............................................................failed
+
+StackTrace:
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "utilities.Driver.driver" is null
+	at utilities.Driver.closeDriver(Driver.java:66)
+	at stepdefinitions.US01_Ismail.Close_the_page(US01_Ismail.java:31)
+	at ✽.Close the page(file:///C:/Users/asus/IdeaProjects/com.LoanTechExperTeam01/src/test/resources/features/US34_Suphi.feature:12)
+]]></failure>
+    </testcase>
+    <testcase classname="As an Administrator, I want to have a page on the site where I can see active users and manage balance" name="TC_01 The 'Active Users' link should appear and be active under the 'Manage Users'" time="27.453">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@name='password']&quot;}&#10;  (Session info: chrome=120.0.6099.130)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [6750cb57a2efb7a38f238b8097f1ee6d, findElement {using=xpath, value=//*[@name='password']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55870/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 6750cb57a2efb7a38f238b8097f1ee6d" type="org.openqa.selenium.NoSuchElementException"><![CDATA[* The administrator goes to the web page with the given "adminUrl"..........passed
+* The administrator enters a valid "usernameHalit" in the username box......passed
+* The administrator enters a valid "passwordAdmin" in the password box......failed
+* The administrator clicks on the login button..............................skipped
+* The administrator clicks the manage users button under the Dashboard......skipped
+* Verify that the Active Users button is visible and active.................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@name='password']"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6750cb57a2efb7a38f238b8097f1ee6d, findElement {using=xpath, value=//*[@name='password']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55870/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6750cb57a2efb7a38f238b8097f1ee6d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at stepdefinitions.US37_Halit.the_administrator_enters_a_valid_in_the_password_box(US37_Halit.java:36)
+	at ✽.The administrator enters a valid "passwordAdmin" in the password box.(file:///C:/Users/asus/IdeaProjects/com.LoanTechExperTeam01/src/test/resources/features/US37_Halit.feature:10)
+]]></failure>
+    </testcase>
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC06: When an unexpected error occurs in the system, a clear error message should be displayed to the user." time="40.22">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@*='username']&quot;}&#10;  (Session info: chrome=120.0.6099.130)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c80cf909e3626c9c80076a996c3f6cd3, findElement {using=xpath, value=//input[@*='username']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55868}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55868/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c80cf909e3626c9c80076a996c3f6cd3" type="org.openqa.selenium.NoSuchElementException"><![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".failed
+* Click on the Manage Users link............................................skipped
+* Click on Active Users link under Manage Users link and go to Active Users page.skipped
+* User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed.skipped
+* Click on the Details link under the Action information of an Active User..skipped
+* Go to User Details page...................................................skipped
+* An attempt is made to enter missing - incorrect address information to the "e_mail" address.skipped
+* Please add an "@" sign to the email address. The "@" is missing in the "e_mail" address.' incorrect input notification is displayed.skipped
+* Close the page............................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@*='username']"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c80cf909e3626c9c80076a996c3f6cd3, findElement {using=xpath, value=//input[@*='username']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55868}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55868/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c80cf909e3626c9c80076a996c3f6cd3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:470)
+	at utilities.ReusableMethods.clickWithJS(ReusableMethods.java:350)
+	at stepdefinitions.US34_Suphi.the_admin_logs_in_to_the_admin_dashboard_page_with_admin_name_and_admin_password(US34_Suphi.java:28)
+	at ✽.The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin"(file:///C:/Users/asus/IdeaProjects/com.LoanTechExperTeam01/src/test/resources/features/US45_Suphi.feature:76)
+]]></failure>
+    </testcase>
+    <testcase classname="As an  admin, I want to have an Approved Deposit page to" name="TC_01:Admin accesses the admin/deposit/approved page by clicking on the" time="27.927">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@type='text']&quot;}&#10;  (Session info: chrome=120.0.6099.130)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c80cf909e3626c9c80076a996c3f6cd3, findElement {using=xpath, value=//input[@type='text']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55868}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55868/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c80cf909e3626c9c80076a996c3f6cd3" type="org.openqa.selenium.NoSuchElementException"><![CDATA[* As admin, go to "adminUrl" Adminpage......................................passed
+* Enter "adminNameUmit" and "passwordAdmin" and press the login button......failed
+* Display the Deposits item in the Dashboard menu and click on it...........skipped
+* Click on Approved Deposits button.........................................skipped
+* Displays and verifies the title...........................................skipped
+* Close the page............................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@type='text']"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c80cf909e3626c9c80076a996c3f6cd3, findElement {using=xpath, value=//input[@type='text']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55868}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55868/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c80cf909e3626c9c80076a996c3f6cd3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
+	at stepdefinitions.US27_Umit.enter_and_and_press_the_login_button(US27_Umit.java:36)
+	at ✽.Enter "adminNameUmit" and "passwordAdmin" and press the login button.(file:///C:/Users/asus/IdeaProjects/com.LoanTechExperTeam01/src/test/resources/features/US52_Umit.feature:6)
+]]></failure>
     </testcase>
 </testsuite>

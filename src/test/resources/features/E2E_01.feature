@@ -2,8 +2,8 @@
 Feature:The visitor must be able to register to the site and fill out his/her profile information.
 @e2e01
   Scenario: E2E01 : The visitor must be able to register to the site and fill out his/her profile information.
-    * The visitor enters the site with the given "Url"
-    * Click on the Get Started Button Link on the Home Page.
+    * The user enters site with the given "Url"
+    * Click on the Get Started Button on the Home Page.
     * A unique username with at least 6 characters is entered in the Username box.
     * Valid e-mail information containing the @ sign is entered into the e-mail text box
     * Country selection is made from the Country menu.

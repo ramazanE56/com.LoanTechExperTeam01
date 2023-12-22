@@ -25,21 +25,23 @@ public class US12_Ismail {
     Actions actions = new Actions(Driver.getDriver());
     String password = ReusableMethods.passwordUnique(6);
     DashBoardPage dashBoardPage = new DashBoardPage();
+    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-    @Given("Verify that the Get Started Button Link is Visible on the Home Page")
+    @Given("Verify that the Get Started Button link is Visible on the Home Page")
     public void verify_that_the_get_started_button_link_is_visible_on_the_home_page() {
         ReusableMethods.wait(2);
         assertTrue(homePage.getStartedButonElement.isDisplayed());
     }
 
-    @Given("Click on the Get Started Button Link on the Home Page.")
+    @Given("Click on the Get Started Button on the Home Page.")
     public void click_on_the_get_started_button_link_on_the_home_page() {
         ReusableMethods.wait(2);
         homePage.getStartedButonElement.click();
+        ReusableMethods.wait(2);
 
     }
 
-    @Given("Verify that the register text is visible on the register page.")
+    @Given("Verify that the register text is visible on register page.")
     public void verify_that_the_register_text_is_visible_on_the_register_page() {
         assertTrue(homePage.registerTextElement.isDisplayed());
 
@@ -86,6 +88,9 @@ public class US12_Ismail {
 
     @Given("A unique username with at least {int} characters is entered in the Username box.")
     public void a_unique_username_with_at_least_characters_is_entered_in_the_username_box(int x) {
+        ReusableMethods.wait(1);
+        js.executeScript("window.scrollBy(0,500)");
+        ReusableMethods.wait(1);
         String username = ReusableMethods.fakerUsernameMinValue(x);
         loginPage.userNameBoxElement.sendKeys(username);
         String enteredUsername = loginPage.userNameBoxElement.getAttribute("value");
@@ -236,12 +241,11 @@ public class US12_Ismail {
     }
     @Given("Name is entered in the firstname box")
     public void name_is_entered_in_the_firstname_box() {
-       // JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
-       // jse.executeScript("arguments[0].scrollIntoView(true)", loginPage.registerButtonElement);
-       // ReusableMethods.wait(2);
-       // jse.executeScript("arguments[0].click();",loginPage.registerButtonElement);
+        ReusableMethods.wait(1);
+        js.executeScript("window.scrollBy(0,500)");
+        ReusableMethods.wait(1);
 
-
+        loginPage.firstnameBoxElement.click();
         loginPage.firstnameBoxElement.sendKeys(faker.name().name().toUpperCase());
         ReusableMethods.wait(1);
 

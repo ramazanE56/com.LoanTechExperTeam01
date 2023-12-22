@@ -3,7 +3,7 @@ Feature: US18 : As a registered user, I want to have a page where I can see my C
 
   Background:Users use these steps to log in to the site.
 
-    * The visitor enters the site with the given "Url"
+    * The visitor enter site given "Url"
 
 
   Scenario: TC01 : In order to manage loan transactions on the Dashboard page,

@@ -1,5 +1,5 @@
 
-  @US_37
+
     Feature: As an Administrator, I want to have a page on the site where I can see active users and manage balance
       transactions.
 
@@ -10,7 +10,7 @@
         * The administrator enters a valid "passwordAdmin" in the password box.
         * The administrator clicks on the login button.
         * The administrator clicks the manage users button under the Dashboard.
-
+      @smoke
       Scenario: TC_01 The 'Active Users' link should appear and be active under the 'Manage Users'
             link in the Naw bar on the Dashboard page.
 
@@ -76,7 +76,7 @@
         * The administrator clicks Add Balance button.
         * Amount text box appears and it is verified that characters can be entered.
         * Remark text box appears and it is verified that characters can be entered.
-      @wip
+
       Scenario: The 'Submit Button' on the page must be visible and active. When clicked, the text
       '$x added successfully' should be displayed.
 

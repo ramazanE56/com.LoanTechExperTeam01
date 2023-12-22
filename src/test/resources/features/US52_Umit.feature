@@ -4,7 +4,7 @@ Feature: As an  admin, I want to have an Approved Deposit page to
   Background:Admin use these steps to log in to the site and Admindashboard.
     *  As admin, go to "adminUrl" Adminpage
     *  Enter "adminNameUmit" and "passwordAdmin" and press the login button.
-
+@smoke
 Scenario: TC_01:Admin accesses the admin/deposit/approved page by clicking on the
           Approved Deposits page link under the Admin Deposits menu title
   * Display the Deposits item in the Dashboard menu and click on it

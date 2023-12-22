@@ -1,7 +1,7 @@
 Feature: US_17 As a registered user, I would like to have a page to manage my payment transactions.
 
   Background: Users use these steps to log in to the site.
-    * The visitor enters the site with the given "Url"
+    * The user enters site with the given "Url"
     * Accept the cookies on page
     * Login with registered user information
 
@@ -72,7 +72,7 @@ Feature: US_17 As a registered user, I would like to have a page to manage my pa
        * Click the Submit button on withdraw method section
        * Click the Withdraw Money button on withdraw History page
        * Verify that Withdraw Money text is visible
-
+@e2e
      Scenario: TC_09 When you click on the "Withdraw Log" button on the "Withdraw Money" page, you should go to the Withdraw History page.
 
        * Click the withdraw button

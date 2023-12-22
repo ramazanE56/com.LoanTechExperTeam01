@@ -1,9 +1,9 @@
-@suphi
+
 Feature: US34: As an administrator, I want to be able to access and update my profile information.
 
   Background:Users use these steps to log in to the site.
 
-
+@smoke
   Scenario: TC01: After logging in to the admin dashboard, the admin icon should appear in the upper right corner.
 
     * The visitor enters the admin site with the given "adminUrl"

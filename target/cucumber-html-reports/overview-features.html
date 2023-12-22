@@ -50,11 +50,11 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                9,
+                11,
+                6,
+                53,
                 0,
-                0,
-                0,
-                0
+                4
             ],
             backgroundColor: [
                 "#00B000",
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 9) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 74) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
-                0
+                0,
+                10
             ],
             backgroundColor: [
                 "#00B000",
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 10) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   2,
-                   0
+                   0,
+                   9
                ],
                backgroundColor: [
                 "#00B000",
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 9) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>22 Ara 2023, 22:16</td>
+      <td>23 Ara 2023, 02:39</td>
     </tr>
   </tbody>
 </table>
@@ -325,71 +325,190 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_1024321620.html">I would like to have a page to register as a visitor</a></td>
+        <td class="tagname"><a href="report-feature_2876625744.html">US07: I would like to have a page where I, as a visitor, can access and select Loan Plans</a></td>
 
-        <td      class="passed"    >5</td>
         <td >0</td>
         <td >0</td>
+        <td     class="skipped"   >6</td>
         <td >0</td>
-        <td >0</td>
-        <td class="total">5</td>
+        <td   class="undefined" >2</td>
+        <td class="total">8</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
-        <td class="total">1</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
 
-        <td class="duration" data-value="17441070800">17.441</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="5984600">0.005</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_1_1024321620.html">I would like to have a page to register as a visitor</a></td>
 
-        <td      class="passed"    >4</td>
         <td >0</td>
+        <td >0</td>
+        <td     class="skipped"   >4</td>
+        <td >0</td>
+        <td   class="undefined" >1</td>
+        <td class="total">5</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2991700">0.002</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_2_1117335082.html">US34: As an administrator, I want to be able to access and update my profile information.</a></td>
+
+        <td      class="passed"    >3</td>
+        <td      class="failed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td class="total">4</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
+        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="14615331500">14.615</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="28547287100">28.547</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_3_1984996636.html">As an Administrator, I want to have a page on the site where I can see active users and manage balance</a></td>
+
+        <td      class="passed"    >2</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="23070203600">23.070</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_4_2114352714.html">US45: As an administrator, I want to be able to edit the profile information of a user I choose.</a></td>
+
+        <td      class="passed"    >1</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >8</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="34922684200">34.922</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_5_3276153402.html">As an  admin, I want to have an Approved Deposit page to</a></td>
+
+        <td      class="passed"    >1</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >4</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="21170993200">21.170</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_6_1024321620.html">I would like to have a page to register as a visitor</a></td>
+
+        <td >0</td>
+        <td >0</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td   class="undefined" >1</td>
+        <td class="total">4</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="5512900">0.005</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_7_2639586969.html">US_17 As a registered user, I would like to have a page to manage my payment transactions.</a></td>
+
+        <td      class="passed"    >4</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">11</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="18337274800">18.337</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_8_2040154551.html">US_21 As a User, I must be able to access the Home Page</a></td>
+
+        <td >0</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >19</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">20</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="11641334200">11.641</td>
+        <td class="fa&#305;led">Fa&#305;led</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>9</td>
+      <td>11</td>
+      <td>6</td>
+      <td>53</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>9</td>
+      <td>4</td>
+      <td>74</td>
 
-      <td>2</td>
       <td>0</td>
-      <td>2</td>
+      <td>10</td>
+      <td>10</td>
 
-      <td class="duration">32.056</td>
-      <td>2</td>
+      <td class="duration">2:17.704</td>
+      <td>9</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
+      <td>14.86%</td>
+      <td>8.11%</td>
+      <td>71.62%</td>
       <td>0.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
+      <td>5.41%</td>
       <td></td>
-      <td>100.00%</td>
       <td>0.00%</td>
-      <td></td>
-      <td></td>
       <td>100.00%</td>
+      <td></td>
+      <td></td>
+      <td>0.00%</td>
     </tr>
   </tfoot>
 </table>

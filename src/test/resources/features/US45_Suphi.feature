@@ -1,4 +1,4 @@
-@suphi
+
 Feature: US45: As an administrator, I want to be able to edit the profile information of a user I choose.
 
   Background:Users use these steps to log in to the site.
@@ -67,7 +67,7 @@ Feature: US45: As an administrator, I want to be able to edit the profile inform
     * The information under the Information of heading is rearranged and saved by clicking Submit button
     * Changes are confirmed by the 'User details updated successfully' notification in the upper right corner of the page
     * Close the page
-
+@smoke
   Scenario: TC06: When an unexpected error occurs in the system, a clear error message should be displayed to the user.
                   In case of incorrect entries (invalid e-mail, missing mandatory fields, etc.), the user should be informed
                   with appropriate error messages.
