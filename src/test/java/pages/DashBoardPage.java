@@ -331,6 +331,52 @@ public class DashBoardPage {
         return element;
     }
 
+    @FindBy (xpath = "//div[@id='dashboard-sidebar']//li[5]")
+    public WebElement withdrawButton;
+
+    @FindBy (xpath = "//h3[@class='mb-2']")
+    public WebElement withdrawMoneyText;
+
+    @FindBy (xpath = "//label[@for='method_code']")
+    public WebElement methodText;
+
+    @FindBy (xpath = "//*[@name='method_code']")
+    public WebElement dropDownSelector;
+
+    @FindBy (xpath = "//input[@name='amount']")
+    public WebElement amountTextBox;
+
+    @FindBy (xpath = "//ul[@class='list-group text-center']")
+    public WebElement limitTable;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement withdrawSubmitButton;
+
+    @FindBy (xpath = "//h5[normalize-space()='Withdraw Via Method 5 Updated']")
+    public WebElement method5UpdatedText;
+
+    @FindBy (xpath = "//button[normalize-space()='Submit']")
+    public WebElement methodUpdatedSubmitButton;
+
+    @FindBy (xpath = "//div[@class='iziToast-wrapper iziToast-wrapper-topRight']")
+    public WebElement withdrawSuccesAlertMessage;
+
+    @FindBy (xpath = "//a[@class='btn btn--base btn--smd']")
+    public WebElement withdrawMoneyButton;
+
+    @FindBy (xpath = "//div[@id='transactionAccordion']")
+    public WebElement historyTable;
+
+    @FindBy (xpath = "//h3[normalize-space()='Withdraw History']")
+    public WebElement withdrawHistoryText;
+
+    @FindBy (xpath = "//a[normalize-space()='Withdraw Log']")
+    public WebElement withdrawLogButton;
+
+    @FindBy (xpath = "//div[@class='accordion-collapse collapse show']")
+    public WebElement transactionTable;
+
+
 
 
 
