@@ -63,11 +63,7 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.6</version>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -84,13 +80,6 @@
             <version>4.13.0</version>
         </dependency>
 
-        <!-- SLF4J -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.32</version>
-        </dependency>
-
         <!-- Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -103,9 +92,19 @@
             <artifactId>allure-cucumber7-jvm</artifactId>
             <version>2.19.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>7.15.0</version>
+            <type>pom</type>
+        </dependency>
+
+
 
 
     </dependencies>
+
 
 
 
@@ -131,9 +130,10 @@
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
                                 <param>**/json-reports/*.json</param>
-                            </jsonFiles><classificationFiles>->
+                            </jsonFiles><classificationFiles>
                             <param>sample.properties</param>
                             <param>other.properties</param>
+                            <param>cucumber.properties</param>
                         </classificationFiles>
                         </configuration>
                     </execution>
@@ -144,14 +144,17 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <testFailureIgnore>true</testFailureIgnore>  <!-- senaryo fail olursa çalışmaya devam et -->
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
+
                         <include>**/runners/*Paralel*.java</include>
+
                     </includes>
                 </configuration>
             </plugin>
+
+            <!-- parale test için -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -175,19 +178,15 @@
                 </dependencies>
                 <configuration>
                     <parallel>classes</parallel>
-                    <forkMode>perthread</forkMode>
-                    <threadCount>3</threadCount>
-                    <reuseForks>false</reuseForks>
+                    <threadCount>2</threadCount>    <!-- aynıanda 2 browser çalıştırılacağı anlamına gelir -->
+                    <reuseForks>true</reuseForks>
                     <argLine>-Duser.language=en</argLine>
-                    <argLine>-Xmx1024m</argLine>
-                    <argLine>-XX:MaxPermSize=256m</argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <forkCount>0</forkCount>
-
+                    <forkCount>2</forkCount>
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
                         <include>**/runners/*Paralel*.java</include>
+
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -216,5 +215,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>

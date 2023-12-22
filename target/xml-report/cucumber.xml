@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="1.679">
+    <testcase classname="US18 : As a registered user, I want to have a page where I can see my Credit plans and get Credit." name="TC16 : To move from the My Loans page to the Take Loan page," time="0.278">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[* The visitor enters the site with the given "Url"..........................passed
+* Click on the login button.................................................passed
+* The registered "usernameIsmail" is entered in the Username Or Email box...passed
+* Registered user "password" is entered in the Your Password box............passed
+* Click on the login button to log in.......................................passed
+* Click on the Take Loan button.............................................passed
+* Click on the basic loan button............................................passed
+* Click on the Test Loan Apply Now button...................................passed
+* A number between "5000" and "15000" is entered in the Enter An Amount box.passed
+* Click on the Confirm button...............................................passed
+* Click on the Apply button under the Application Form Text.................passed
+* Verify that the Take Loan tab is visible..................................passed
+* Click on the Take Loan button.............................................passed
+* Verify that Loan Plans appears on the page that opens.....................undefined
+* Close the page............................................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="As an Administrator, I want to have a page on the site where I can see active users and manage balance" name="TC_07 The 'Add Balance' Button should be visible and active on the Active Users Page. When" time="0.03">
+        <system-out>
+            <![CDATA[* The administrator goes to the web page with the given "adminUrl"..........passed
+* The administrator enters a valid "usernameHalit" in the username box......passed
+* The administrator enters a valid "passwordAdmin" in the password box......passed
+* The administrator clicks on the login button..............................passed
+* The administrator clicks the manage users button under the Dashboard......passed
+* The administrator clicks Active Users button..............................passed
+* The administrator clicks  the Details button..............................passed
+* The Add Balance button appears and confirms that it is active.............passed
+* The administrator clicks Add Balance button...............................passed
+* It is verified that the Add Balance page is opened........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As an Administrator, I want to have a page on the site where I can see active users and manage balance" name="TC_08 The Amount and Remark text boxes on the Add Balance page should be visible and" time="0.02">
+        <system-out>
+            <![CDATA[* The administrator goes to the web page with the given "adminUrl"..........passed
+* The administrator enters a valid "usernameHalit" in the username box......passed
+* The administrator enters a valid "passwordAdmin" in the password box......passed
+* The administrator clicks on the login button..............................passed
+* The administrator clicks the manage users button under the Dashboard......passed
+* The administrator clicks Active Users button..............................passed
+* The administrator clicks  the Details button..............................passed
+* The administrator clicks Add Balance button...............................passed
+* Amount text box appears and it is verified that characters can be entered..passed
+* Remark text box appears and it is verified that characters can be entered..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As an Administrator, I want to have a page on the site where I can see active users and manage balance" name="The 'Submit Button' on the page must be visible and active. When clicked, the text" time="0.022">
+        <system-out>
+            <![CDATA[* The administrator goes to the web page with the given "adminUrl"..........passed
+* The administrator enters a valid "usernameHalit" in the username box......passed
+* The administrator enters a valid "passwordAdmin" in the password box......passed
+* The administrator clicks on the login button..............................passed
+* The administrator clicks the manage users button under the Dashboard......passed
+* The administrator clicks Active Users button..............................passed
+* The administrator clicks  the Details button..............................passed
+* The administrator clicks Add Balance button...............................passed
+* The amount is entered in the Amount text box..............................passed
+* A description is entered in the Remark text box...........................passed
+* The Submit button appears and confirms that it is active..................passed
+* The administrator clicks Submit button....................................passed
+* It is verified that the text $ 1 added successfully is seen...............passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
