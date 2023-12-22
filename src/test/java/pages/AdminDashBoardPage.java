@@ -928,6 +928,34 @@ public class AdminDashBoardPage {
     @FindBy(xpath = "(//*[@class='btn btn-sm btn-outline--primary ms-1'])[1]")
     public WebElement successfulDepositsDetailsButton;
 
+
+    @FindBy (xpath = "(//li[@class='sidebar-menu-item sidebar-dropdown'])[5]")
+    public WebElement withdrawalsButton;
+
+    @FindBy (xpath = "//a[normalize-space()='']")
+    public WebElement withdrawalMethodsButton;
+
+    @FindBy (xpath = "//th[normalize-space()='Method']")
+    public WebElement withdrawalMethodsMethod;
+
+    @FindBy (xpath = "//th[normalize-space()='Currency']")
+    public WebElement withdrawalMethodsCurrencyText;
+
+    @FindBy (xpath = "//th[normalize-space()='Charge']")
+    public WebElement withdrawalMethodsCharge;
+
+    @FindBy (xpath = "//th[normalize-space()='Withdraw Limit']")
+    public WebElement withdrawalMethodsWithdrawLimit;
+
+    @FindBy (xpath = "//th[normalize-space()='Status']")
+    public WebElement withdrawalMethodsStatus;
+
+    @FindBy (xpath = "//th[normalize-space()='Action']")
+    public WebElement  withdrawalMethodsActions;
+
+    @FindBy (xpath = "//a[@href='https://qa.loantechexper.com/admin/withdraw/method/edit/31']")
+    public WebElement editButton;
+
  @FindBy(xpath = "(//*[@class='menu-title'])[33]")
  public WebElement pendingWithdrawals;
 
@@ -994,6 +1022,7 @@ public class AdminDashBoardPage {
 
  @FindBy(xpath = "//*[@class='btn btn--primary h-45 w-100']")
  public WebElement uploadSubmit;
+
 
 
 
