@@ -21,8 +21,8 @@ import org.junit.runner.RunWith;
 //"cucumber-report-generator:target/cucumber-report.xlsx"
 
 
-        tags = "@wip",
-        dryRun =true
+        tags = "@wip3",
+        dryRun =false
 
 
 )

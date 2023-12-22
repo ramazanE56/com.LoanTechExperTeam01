@@ -758,7 +758,7 @@ public class AdminDashBoardPage {
 
  @FindBy(xpath = "//*[@class='form-control']")
  public WebElement subjectMessage;
- @FindBy(xpath = "/html/body/div/div[2]/div/div[2]/div/div/form/div[1]/div/div[2]/div[2]")
+ @FindBy(xpath = "//*[@contenteditable='true']")
  public WebElement bodyMessage;
 
  @FindBy(xpath = "//*[@class='btn w-100 h-45 btn--primary']")
@@ -772,6 +772,15 @@ public class AdminDashBoardPage {
 
  @FindBy(xpath = "(//*[@class='form-control'])[1]")
  public WebElement superAdmin;
+
+ @FindBy(xpath = " //*[@for='profilePicUpload1']")
+ public WebElement photoUpload;
+
+
+
+
+ @FindBy(xpath = "//*[@class='btn btn--primary h-45 w-100']")
+ public WebElement uploadSubmit;
 
 
 

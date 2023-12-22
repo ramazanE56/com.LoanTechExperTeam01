@@ -1,4 +1,4 @@
-@wip2
+@wip3
 Feature: E2E_02 E2E testing is performed by following the steps below
   Scenario: Registered user creates and submits a new withdrawal value from the withdrawal tab
     * The user enters the site with the given "Url"
@@ -12,7 +12,7 @@ Feature: E2E_02 E2E testing is performed by following the steps below
     * Send 100 to the box
     * Click on Sumit under the Withdraw Via IT text that appears.
     * Close the page
-  Scenario:
+  Scenario: Admin approves pending withdrawal and manage an active users and send message and change some information about profile
     * Navigate to Admin page "adminUrl"
     * send adminUserName to username textbox
     * send adminPasword to password textbox

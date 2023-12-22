@@ -1,12 +1,11 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import org.apache.poi.ss.formula.functions.T;
-import org.checkerframework.checker.units.qual.K;
+
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.AdminDashBoardPage;
@@ -16,6 +15,15 @@ import pages.LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import java.awt.*;
+import java.awt.event.InputEvent;
+
+
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
 
 
 public class E2E_03 {
@@ -206,10 +214,12 @@ public class E2E_03 {
 
     }
     @Given("admin writes Merhaba İsmail ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %{int} indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz in the Messagebox")
-    public void admin_writes_merhaba_i̇smail_ben_loan_tech_experden_yetiş_loan_tech_exper_yönetim_ekibi_olarak_bu_ayın_en_çok_aktif_kullanıcısı_olarak_sizi_seçtik_bundan_dolayı_size_bir_sürprizimiz_var_sizin_tüm_loan_planlarınıza_indirim_uyguladık_hayırlı_olsun_loan_tech_exper_olarak_bizi_tercih_ettiğiniz_için_çok_teşekkür_ederiz_in_the_messagebox(Integer int1) {
+    public void admin_writes_merhaba_i̇smail_ben_loan_tech_experden_yetiş_loan_tech_exper_yönetim_ekibi_olarak_bu_ayın_en_çok_aktif_kullanıcısı_olarak_sizi_seçtik_bundan_dolayı_size_bir_sürprizimiz_var_sizin_tüm_loan_planlarınıza_indirim_uyguladık_hayırlı_olsun_loan_tech_exper_olarak_bizi_tercih_ettiğiniz_için_çok_teşekkür_ederiz_in_the_messagebox(Integer int1) throws InterruptedException {
+        //actions.sendKeys((Keys.TAB)).perform();
+        adminDashBoardPage.bodyMessage.click();
 
-        //adminDashBoardPage.bodyMessage.click();
-        //adminDashBoardPage.bodyMessage.sendKeys("Merhaba İsmail, ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %1 indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz");
+        adminDashBoardPage.bodyMessage.sendKeys("Merhaba İsmail, ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %1 indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz");
+        Thread.sleep(3000);
 
     }
     @Given("Click on the submit button on message page")
@@ -237,7 +247,62 @@ public class E2E_03 {
 
     }
     @Given("Click the Upload File button and upload a profile photo.")
-    public void click_the_upload_file_button_and_upload_a_profile_photo() {
+    public void click_the_upload_file_button_and_upload_a_profile_photo() throws InterruptedException, AWTException {
+       adminDashBoardPage.photoUpload.click();
+        Point point1 = new Point(466,59);// C: araba çubuğu koordinatı
+        Robot robot = new Robot();
+        robot.mouseMove(point1.x, point1.y); // Farenin konumunu ayarla
+        ReusableMethods.wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        ReusableMethods.wait(1);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        ReusableMethods.wait(1);
+
+
+        // Ctrl+V tuş kombinasyonunu kullanarak dosya yolunu yapıştır
+        StringSelection stringSelection = new StringSelection("C:\\Users\\KAHRAMAN\\IdeaProjects\\com.LoanTechExperTeam01\\src\\test\\java\\utilities");
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+
+        // adres satırının yanındaki enter işlemi gören yandaki oka tıkla
+        Point point2 = new Point(558,58);// aç butonu koordinatı
+        robot.mouseMove(point2.x, point2.y); // Farenin konumunu ayarla
+        ReusableMethods.wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        ReusableMethods.wait(1);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        ReusableMethods.wait(1);
+
+        //gelen logoya tıklama işlemi
+        Point point3 = new Point(213,170);// aç butonu koordinatı
+        robot.mouseMove(point3.x, point3.y); // Farenin konumunu ayarla
+        ReusableMethods.wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        ReusableMethods.wait(1);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        ReusableMethods.wait(1);
+
+        //aç butanuna tıklama işlemi
+
+        Point point4 = new Point(672,565);// aç butonu koordinatı
+        robot.mouseMove(point4.x, point4.y); // Farenin konumunu ayarla
+        ReusableMethods.wait(1);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
+        ReusableMethods.wait(1);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama bırak
+        ReusableMethods.wait(1);
+
+
+
+
+
+
+        adminDashBoardPage.uploadSubmit.click();
+        Thread.sleep(2000);
 
     }
 
