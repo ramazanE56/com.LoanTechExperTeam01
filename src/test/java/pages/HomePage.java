@@ -221,4 +221,17 @@ public WebElement getStartedButonElement;
     //eyyup
 
 
+    @FindBy(xpath = "//a[@class='btn btn--dark btn--smd']")
+    public WebElement withDrow;
+
+    @FindBy(xpath = "//select[@class='form-select form--control']")
+    public WebElement selecGetAway;
+
+    @FindBy(xpath = "//input[@type='number']")
+    public WebElement amountBoxElement;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement SubmitElement;
+
+
 }

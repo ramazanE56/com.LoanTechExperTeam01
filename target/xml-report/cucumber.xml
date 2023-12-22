@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="89.5">
+    <testcase classname="E2E_02 E2E testing is performed by following the steps below" name="Registered user creates and submits a new withdrawal value from the withdrawal tab" time="25.255">
+=======
 <testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="49.902">
     <testcase classname="US18 : As a registered user, I want to have a page where I can see my Credit plans and get Credit." name="TC16 : To move from the My Loans page to the Take Loan page," time="16.36">
         <failure message="element click intercepted: Element is not clickable at point (953, 955)&#10;  (Session info: chrome=120.0.6099.111)&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [304782836e2e9a6e0d59b642a6f99446, clickElement {id=AC4DAA1805478F8E2E962FC259DDC4DB_element_50}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.111, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49584}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49584/devtoo..., se:cdpVersion: 120.0.6099.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (304782836e2e9a6e0d59b642a6f99446)] -&gt; xpath: (//button[@type='submit'])[1]]&#10;Session ID: 304782836e2e9a6e0d59b642a6f99446" type="org.openqa.selenium.ElementClickInterceptedException">
@@ -53,20 +57,52 @@ Session ID: 304782836e2e9a6e0d59b642a6f99446
         </failure>
     </testcase>
     <testcase classname="As an Administrator, I want to have a page on the site where I can see active users and manage balance" name="TC_07 The 'Add Balance' Button should be visible and active on the Active Users Page. When" time="20.942">
+>>>>>>> main
         <system-out>
-            <![CDATA[* The administrator goes to the web page with the given "adminUrl"..........passed
-* The administrator enters a valid "usernameHalit" in the username box......passed
-* The administrator enters a valid "passwordAdmin" in the password box......passed
-* The administrator clicks on the login button..............................passed
-* The administrator clicks the manage users button under the Dashboard......passed
-* The administrator clicks Active Users button..............................passed
-* The administrator clicks  the Details button..............................passed
-* The Add Balance button appears and confirms that it is active.............passed
-* The administrator clicks Add Balance button...............................passed
-* It is verified that the Add Balance page is opened........................passed
+            <![CDATA[* The user enters the site with the given "Url".............................passed
+* Click on login button.....................................................passed
+* send registered "username" to username text box...........................passed
+* send registered "sifre" to password text box..............................passed
+* Click on submit button....................................................passed
+* registered user clicks on the withdraw tab................................passed
+* Click the select GetAway..................................................passed
+* Click on the amounth......................................................passed
+* Send 100 to the box.......................................................passed
+* Click on Sumit under the Withdraw Via IT text that appears................passed
+* Close the page............................................................passed
 ]]>
         </system-out>
     </testcase>
+<<<<<<< HEAD
+    <testcase classname="E2E_02 E2E testing is performed by following the steps below" name="Admin approves pending withdrawal and manage an active users and send message and change some information about profile" time="63.646">
+        <system-out>
+            <![CDATA[* Navigate to Admin page "adminUrl".........................................passed
+* send adminUserName to username textbox....................................passed
+* send adminPasword to password textbox.....................................passed
+* click on the login button.................................................passed
+* Admin clicks on the withdrawals tab.......................................passed
+* Admin selects the pending withdrawals tab.................................passed
+* Admin clicks on the details button of user ismail.........................passed
+* admin copies ismails Trx Number...........................................passed
+* Admin clicks on the approve button........................................passed
+* admin writes ismails Trx Number in the Approve Withdrawal Confirmation box.passed
+* Click on the submit button................................................passed
+* Click on the Approved Withdrawals tab.....................................passed
+* admin verifies that ismails withraw is approved...........................passed
+* admin clicks on the manages users tab.....................................passed
+* admin clicks on the active users tab......................................passed
+* admin writes ismailtemiz in the usernameEmail box and clicks the search button..passed
+* admin clicks on the details button........................................passed
+* admin clicks the Notifications button.....................................passed
+* admin clicks the Send  Notifications button...............................passed
+* admin writes subject in the Subject box...................................passed
+* admin writes Merhaba İsmail ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %1 indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz in the Messagebox.passed
+* Click on the submit button on message page................................passed
+* admin clicks on his name at the top right and clicks on profile...........passed
+* By updating the admin profile name it writes its own name instead of Super Admins.passed
+* Click the Upload File button and upload a profile photo...................passed
+* Close the page............................................................passed
+=======
     <testcase classname="As an Administrator, I want to have a page on the site where I can see active users and manage balance" name="TC_08 The Amount and Remark text boxes on the Add Balance page should be visible and" time="9.01">
         <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=120.0.6099.111)&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [498a85275f9fdb9b77d5817603a0341d, findElement {using=xpath, value=//span[text()='Manage Users']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.111, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49649}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49649/devtoo..., se:cdpVersion: 120.0.6099.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 498a85275f9fdb9b77d5817603a0341d" type="org.openqa.selenium.NoSuchWindowException">
             <![CDATA[* The administrator goes to the web page with the given "adminUrl"..........passed
@@ -153,6 +189,7 @@ Session ID: 498a85275f9fdb9b77d5817603a0341d
 	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
 	at stepdefinitions.US37_Halit.the_administrator_goes_to_the_web_page_with_the_given(US37_Halit.java:27)
 	at ✽.The administrator goes to the web page with the given "adminUrl".(file:///C:/Users/user/IdeaProjects/com.LoanTechExperTeam01/src/test/resources/features/US37_Halit.feature:8)
+>>>>>>> main
 ]]>
         </failure>
     </testcase>
