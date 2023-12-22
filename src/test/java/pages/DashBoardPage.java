@@ -446,6 +446,52 @@ public class DashBoardPage {
     @FindBy(xpath = "//select[@name='status']")
     public WebElement loanStatusArrowElement;
 
+    @FindBy(xpath = "(//span[@class='badge badge--primary'])[1]")
+    public WebElement runningbuttonElement;
+
+    @FindBy(xpath = "(//a[@class='btn btn--outline-primary btn--sm '])[1]")
+    public WebElement installmentstxtElement;
+
+    @FindBy(tagName = "h3")
+    public WebElement loaninstallmentstxtElement;
+
+    @FindBy(xpath= "//*[text()='Loan Number']")
+    public WebElement loanNumbertxtElement;
+
+    @FindBy(xpath= "//*[text()='Loan Amount']")
+    public WebElement loanAmounttxtElement;
+
+    @FindBy(xpath= "//*[text()='Plan']")
+    public WebElement plantxtElement;
+
+    @FindBy(xpath= "//*[text()='Per Installment']")
+    public WebElement perInstallmentElement;
+
+    @FindBy(xpath= "//*[text()='Needs to Pay']")
+    public WebElement needstoPayTxtElement;
+
+
+    @FindBy(xpath= "//*[text()='Delay Charge']")
+    public WebElement delayChargeTxtElement;
+
+
+    @FindBy(xpath= "//tbody]")
+    public WebElement allListElements;
+
+    @FindBy(xpath= "//tr/th[1]")
+    public WebElement snTxtElement;
+
+
+    @FindBy(xpath= "//tr/th[2]")
+    public WebElement installmentDateTxtElement;
+
+    @FindBy(xpath= "//tr/th[3]")
+    public WebElement givenOnTxtElement;
+
+    @FindBy(xpath= "//tr/th[4]")
+    public WebElement delayTxtElement;
+
+
 
 
 }
