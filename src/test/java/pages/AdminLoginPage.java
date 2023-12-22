@@ -13,6 +13,9 @@ public class AdminLoginPage {
 
     // AdminLoginPage (Samet)
 
+    @FindBy (xpath = "//p[@class='text-white']")
+    public WebElement AdminDashboardyazielementi;
+
     @FindBy (xpath = "//input[@type=\"text\"]")
     public WebElement Usernametextbox;
 

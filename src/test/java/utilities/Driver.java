@@ -20,7 +20,7 @@ public class Driver {
      driver olusturma ve kapatma islemlerini yapmayi tercih etmistir
      */
 
-    private Driver(){
+    public Driver(){
         // Bu constructor default constructor ile ayni islevi yapan parametresiz constructor'dir
         // buna erisimi kontrol edebilecegimiz icin bu constructor'i olusturduk
     }
@@ -62,6 +62,7 @@ public class Driver {
 
     public static void closeDriver(){
         if (driver != null){
+            ReusableMethods.wait(2);
             driver.close();
             driver=null;
         }
@@ -69,6 +70,7 @@ public class Driver {
 
     public static void quitDriver(){
         if (driver != null){
+            ReusableMethods.wait(2);
             driver.quit();
             driver=null;
         }
