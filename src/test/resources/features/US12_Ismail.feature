@@ -15,7 +15,8 @@ Feature: I would like to have a page to register as a visitor
     * Verify that the Welcome To Loantech Expert form title is visible on the Register page
     * Close the page
 
-  Scenario: TC03 : It must be verified that the Username, Email Address, Country DropDown, Mobile Number, Password, Confirm Password text boxes are visible in the form.
+  Scenario: TC03 : It must be verified that the Username, Email Address, Country DropDown,
+  Mobile Number, Password, Confirm Password text boxes are visible in the form.
     * Click on the Get Started Button Link on the Home Page.
     * Verify that the username text box is visible
     * Verify that the Email Address text box is visible
@@ -31,7 +32,8 @@ Feature: I would like to have a page to register as a visitor
     * A unique username with at least 6 characters is entered in the Username box.
     * Close the page
 
-  Scenario: TC05 : It must be verified that valid e-mail information containing the @ sign can be entered in the e-mail text box.
+  Scenario: TC05 : It must be verified that valid e-mail information containing
+  the @ sign can be entered in the e-mail text box.
     * Click on the Get Started Button Link on the Home Page.
     * A unique username with at least 6 characters is entered in the Username box.
     * It is verified that valid e-mail information containing the @ sign can be entered in the e-mail text box
@@ -54,7 +56,8 @@ Feature: I would like to have a page to register as a visitor
     * It is verified that a unique phone number of up to 14 digits can be entered in the phone textbox.
     * Close the page
 
-  Scenario: TC08 : It must be verified that a 6-digit password containing at least one uppercase letter, one number, lowercase letter and character can be entered in the Password textbox and that the entered password can be hidden or unlocked.
+  Scenario: TC08 : It must be verified that a 6-digit password containing at least
+  one uppercase letter, one number, lowercase letter and character can be entered in the Password textbox and that the entered password can be hidden or unlocked.
     * Click on the Get Started Button Link on the Home Page.
     * A unique username with at least 6 characters is entered in the Username box.
     * Valid e-mail information containing the @ sign is entered into the e-mail text box
@@ -80,7 +83,8 @@ Feature: I would like to have a page to register as a visitor
     * Close the page
 
 
-  Scenario: TC11 : By clicking on the Register button, the user registration form must be submitted and it must be verified that it can be directed to the User Data page to complete the registration.
+  Scenario: TC11 : By clicking on the Register button, the user registration form must
+  be submitted and it must be verified that it can be directed to the User Data page to complete the registration.
     * Click on the Get Started Button Link on the Home Page.
     * A unique username with at least 6 characters is entered in the Username box.
     * Valid e-mail information containing the @ sign is entered into the e-mail text box
@@ -94,7 +98,8 @@ Feature: I would like to have a page to register as a visitor
     * Close the page
 
 
-    Scenario: TC12 : It appears in the form opened on the User Data page (firstname, lastname, address, State, Zip, city, Submit Button) and must be verified as active.
+    Scenario: TC12 : It appears in the form opened on the User Data page
+    (firstname, lastname, address, State, Zip, city, Submit Button) and must be verified as active.
       * Click on the Get Started Button Link on the Home Page.
       * A unique username with at least 6 characters is entered in the Username box.
       * Valid e-mail information containing the @ sign is entered into the e-mail text box
@@ -114,7 +119,8 @@ Feature: I would like to have a page to register as a visitor
       * Submit Button must be clickable
       * Close the page
   @e2e
-    Scenario: TC13 : It must be verified that the registration process can be completed by filling in the mandatory fields in the form (firstname/lastname/address textboxes).
+    Scenario: TC13 : It must be verified that the registration process
+  can be completed by filling in the mandatory fields in the form (firstname/lastname/address textboxes).
       * Click on the Get Started Button Link on the Home Page.
       * A unique username with at least 6 characters is entered in the Username box.
       * Valid e-mail information containing the @ sign is entered into the e-mail text box

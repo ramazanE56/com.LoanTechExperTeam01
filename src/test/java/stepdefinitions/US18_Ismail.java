@@ -51,7 +51,6 @@ public class US18_Ismail {
 
     @Given("Click on the Take Loan button")
     public void click_on_the_take_loan_button() {
-        ReusableMethods.wait(3);
         //dashBoardPage.allowTextElement.click();
         ReusableMethods.wait(3);
         dashBoardPage.takeLoanTabElement.click();
@@ -306,23 +305,73 @@ assertFalse(dashBoardPage.secondSeachByLoanNumberElement.isDisplayed());
     }
     @Given("Click on the running button")
     public void click_on_the_running_button() {
-
+dashBoardPage.runningbuttonElement.click();
     }
     @Given("Verify that the Installment box is visible in the bar that opens")
     public void verify_that_the_installment_box_is_visible_in_the_bar_that_opens() {
-
+assertTrue(dashBoardPage.installmentstxtElement.isDisplayed());
     }
     @Given("Verify that the Installment box is clickable")
     public void verify_that_the_installment_box_is_clickable() {
-
+assertTrue(dashBoardPage.installmentstxtElement.isEnabled());
     }
     @Given("Click on the Installment box")
     public void click_on_the_installment_box() {
-
+dashBoardPage.installmentstxtElement.click();
+ReusableMethods.wait(3);
     }
     @Given("Verify that Loan Installments is displayed on the page that opens")
     public void verify_that_loan_installments_is_displayed_on_the_page_that_opens() {
-       
+       assertTrue(dashBoardPage.loaninstallmentstxtElement.isDisplayed());
+    }
+
+    @Given("Verify that the Loan Number value appears")
+    public void verify_that_the_loan_number_value_appears() {
+assertTrue(dashBoardPage.loanNumbertxtElement.isDisplayed());
+    }
+    @Given("Verify that the Loan Amount value appears")
+    public void verify_that_the_loan_amount_value_appears() {
+assertTrue(dashBoardPage.loanAmounttxtElement.isDisplayed());
+    }
+    @Given("Verify that the Plan value appears")
+    public void verify_that_the_plan_value_appears() {
+assertTrue(dashBoardPage.plantxtElement.isDisplayed());
+    }
+    @Given("Verify that the value Per Installment appears")
+    public void verify_that_the_value_per_installment_appears() {
+assertTrue(dashBoardPage.perInstallmentElement.isDisplayed());
+    }
+    @Given("Verify that the Needs to Pay value appears")
+    public void verify_that_the_needs_to_pay_value_appears() {
+assertTrue(dashBoardPage.needstoPayTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Delay Charge value appears")
+    public void verify_that_the_delay_charge_value_appears() {
+assertTrue(dashBoardPage.delayChargeTxtElement.isDisplayed());
+    }
+    @Given("The installment plan list should be displayed.")
+    public void the_installment_plan_list_should_be_displayed() {
+assertTrue(dashBoardPage.allListElements.isDisplayed());
+    }
+    @Given("Verify that the S.N. Header is displayed")
+    public void verify_that_the_s_n_header_is_displayed() {
+assertTrue(dashBoardPage.snTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Installment Date Header is displayed")
+    public void verify_that_the_installment_date_header_is_displayed() {
+assertTrue(dashBoardPage.installmentDateTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Given On Header is displayed")
+    public void verify_that_the_given_on_header_is_displayed() {
+assertTrue(dashBoardPage.givenOnTxtElement.isDisplayed());
+    }
+    @Given("Verify that the Delay Header is displayed")
+    public void verify_that_the_delay_header_is_displayed() {
+assertTrue(dashBoardPage.delayTxtElement.isDisplayed());
+    }
+    @Given("Verify that Loan Plans appears on the page that opens")
+    public void verify_that_loan_plans_appears_on_the_page_that_opens() {
+        assertTrue(dashBoardPage.loanPlansTextElement.isDisplayed());
     }
 
 

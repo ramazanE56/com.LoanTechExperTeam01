@@ -9,7 +9,7 @@ Feature: US24: As an administrator, I should be able to manage the withdrawal me
                   accessible and the titles should be displayed in the list
     * Click on the Withdrawals link
     * Click on Withdrawal Methods link under Withdrawals link and go to Withdrawal Methods page
-    * Close page
+    * Close the page
 
   Scenario: TC_02:To add a new withdrawal method, the 'Add New' button should be visible and active.
                   The information of the withdrawal method to be added should be entered
@@ -17,14 +17,14 @@ Feature: US24: As an administrator, I should be able to manage the withdrawal me
     * Click on Withdrawal Methods link under Withdrawals link and go to Withdrawal Methods page
     * Click on the Add New button on the page that opens
     * Click submit button after information entry
-    * Close page
+    * Close the page
 
   Scenario: TC_03:The added capture method should be viewable in the List.
     * Click on the Withdrawals link
     * Click on Withdrawal Methods link under Withdrawals link and go to Withdrawal Methods page
     * Type the method name added in the search box
     * Verify that the new method added on the opened page is displayed in the list
-    * Close page
+    * Close the page
 
   Scenario: TC_04:The administrator should be able to update the information of available
                   withdrawal methods and check the validity of the updated information
@@ -34,7 +34,7 @@ Feature: US24: As an administrator, I should be able to manage the withdrawal me
     * Admin click the edit button to update the new method added
     * Admin enters the value for the update and clicks submit
     * Verifies that the Withdraw method uptaded succesfully warning text is displayed
-    * Close page
+    * Close the page
 
   Scenario: TC_05:The administrator confirms a withdrawal method with the Disable operation confirmation screen
     * Click on the Withdrawals link
@@ -42,7 +42,7 @@ Feature: US24: As an administrator, I should be able to manage the withdrawal me
     * Admin clicks the disable button to disable the new added method
     * Admin confirms method disable
     * Admin method verifies that it is disabled
-    * Close page
+    * Close the page
 
   Scenario: TC_06:Admin Checks the validity of added or updated withdrawal methods
     * Click on the Withdrawals link
@@ -50,12 +50,12 @@ Feature: US24: As an administrator, I should be able to manage the withdrawal me
     * Click on the Add New button on the page that opens
     * Admin After entering the information except the method name, clicks the submit button
     * Confirms that it is still on the New Withdrawal Method page due to missing information
-    * Close page
+    * Close the page
 
   Scenario: TC_07:Added, updated, or disabled capture methods should be recorded in the system log.
     * Click on the Withdrawals link
     * Click on Withdrawal Methods link under Withdrawals link and go to Withdrawal Methods page
     * Type the method name added in the search box
     * Admin confirms that the added, edited, disabled method is displayed
-    * Close page
+    * Close the page
 
