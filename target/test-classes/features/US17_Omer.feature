@@ -72,7 +72,7 @@ Feature: US_17 As a registered user, I would like to have a page to manage my pa
        * Click the Submit button on withdraw method section
        * Click the Withdraw Money button on withdraw History page
        * Verify that Withdraw Money text is visible
-@e2e
+
      Scenario: TC_09 When you click on the "Withdraw Log" button on the "Withdraw Money" page, you should go to the Withdraw History page.
 
        * Click the withdraw button

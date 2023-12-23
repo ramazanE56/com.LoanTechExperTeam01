@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.15.0</version>
+            <version>4.16.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -153,12 +153,10 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
-                    <compilerArgs>
-                        <arg>--module-path</arg>
-                        <arg>C:\Program Files\Java\jdk-11.0.21\jmods</arg>
-                    </compilerArgs>
+
                 </configuration>
             </plugin>
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -174,13 +172,13 @@
                 <configuration>
                     <parallel>methods</parallel>
 
-                    <threadCount>2</threadCount>
+                    <threadCount>3</threadCount>
                     <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
                     <argLine>-XX:MaxPermSize=256m</argLine>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <forkCount>2</forkCount>
+                    <forkCount>1</forkCount>
 
                     <useFile>false</useFile>
                     <includes>

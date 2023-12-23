@@ -15,8 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepdefinitions",
 
-       // tags = "@e2e01 or @e2e02 and not @regression",
-        tags = "@nnn",
+        tags = "@e2e01 or @e2e02 and not @regression",
         dryRun =true
 
 

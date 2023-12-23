@@ -27,7 +27,6 @@ public class US01_Ismail {
     }
     @Then("Close the page")
     public void Close_the_page() {
-        ReusableMethods.wait(1);
         Driver.closeDriver();
     }
 }

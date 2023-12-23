@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="com.LoanTechExperTeam01" options="--module-path &quot;C:\Program Files\Java\jdk-11.0.21\jmods&quot;" />
+      <module name="com.LoanTechExperTeam01" options="" />
     </option>
   </component>
 </project>

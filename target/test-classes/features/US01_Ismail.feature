@@ -1,9 +1,9 @@
-@nnn
+
 Feature: US01: As a visitor, I want to be able to access the website in order to use it.
 
   Background:Users use these steps to log in to the site.
 
-    * The visitor enter site given "Url"
+    * The user enters site with the given "Url"
 
 
   Scenario: TC01: Website Accessibility from Given URL in Browser

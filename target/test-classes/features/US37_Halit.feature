@@ -10,7 +10,7 @@
         * The administrator enters a valid "passwordAdmin" in the password box.
         * The administrator clicks on the login button.
         * The administrator clicks the manage users button under the Dashboard.
-      @smoke
+
       Scenario: TC_01 The 'Active Users' link should appear and be active under the 'Manage Users'
             link in the Naw bar on the Dashboard page.
 

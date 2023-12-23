@@ -37,7 +37,7 @@ public class US12_Ismail {
     public void click_on_the_get_started_button_link_on_the_home_page() {
         ReusableMethods.wait(2);
         homePage.getStartedButonElement.click();
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(4);
 
     }
 

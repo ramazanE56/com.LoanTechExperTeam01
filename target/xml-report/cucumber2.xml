@@ -1,108 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="24.595">
-    <testcase classname="I would like to have a page to register as a visitor" name="TC02 : Verify that the registration form is visible on the registration page" time="0.223">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[* The visitor enter site given "Url"........................................undefined
-* Click on the Get Started Button on the Home Page..........................skipped
-* Verify that the Welcome To Loantech Expert form title is visible on the Register page.skipped
-* Close the page............................................................skipped
-]]></failure>
-    </testcase>
-    <testcase classname="US_17 As a registered user, I would like to have a page to manage my payment transactions." name="TC_09 When you click on the &quot;Withdraw Log&quot; button on the &quot;Withdraw Money&quot; page, you should go to the Withdraw History page." time="23.575">
-        <failure message="invalid session id&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [56aaf14c9490090cb3f4e40fa91d8bd0, isElementEnabled {id=CC4C26FE16C7CD533996A4B30533043D_element_119}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55883}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55883/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (56aaf14c9490090cb3f4e40fa91d8bd0)] -&gt; xpath: //*[@name='method_code']]&#10;Session ID: 56aaf14c9490090cb3f4e40fa91d8bd0" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[* The user enters site with the given "Url".................................passed
-* Accept the cookies on page................................................passed
-* Login with registered user information....................................passed
-* Click the withdraw button.................................................passed
-* Select the Method5 Updated on Method Dropdown menu........................failed
-* Write the 350 USD On Amount textbox,......................................skipped
-* Click the Submit button on withdraw section...............................skipped
-* Click the Submit button on withdraw method section........................skipped
-* Click the Withdraw Money button on withdraw History page..................skipped
-* Click the Withdraw Log button on withdraw Money page......................skipped
-* Verify that Withdraw History text is visible..............................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [56aaf14c9490090cb3f4e40fa91d8bd0, isElementEnabled {id=CC4C26FE16C7CD533996A4B30533043D_element_119}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55883}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55883/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (56aaf14c9490090cb3f4e40fa91d8bd0)] -> xpath: //*[@name='method_code']]
-Session ID: 56aaf14c9490090cb3f4e40fa91d8bd0
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.isEnabled(RemoteWebElement.java:182)
-	at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:326)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:193)
-	at stepdefinitions.US17_Omer.select_the_method5_updated_on_method_dropdown_menu(US17_Omer.java:71)
-	at ✽.Select the Method5 Updated on Method Dropdown menu(file:///C:/Users/asus/IdeaProjects/com.LoanTechExperTeam01/src/test/resources/features/US17_Omer.feature:79)
-]]></failure>
-    </testcase>
-    <testcase classname="US_21 As a User, I must be able to access the Home Page" name="_2" time="16.358">
-        <failure message="element click intercepted: Element is not clickable at point (275, 1374)&#10;  (Session info: chrome=120.0.6099.130)&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [56aaf14c9490090cb3f4e40fa91d8bd0, clickElement {id=86CAB9212B2C39C96292D25E7A4B45B4_element_47}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55883}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55883/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (56aaf14c9490090cb3f4e40fa91d8bd0)] -&gt; xpath: //a[@class='btn btn--base btn--xl w-100 policy']]&#10;Session ID: 56aaf14c9490090cb3f4e40fa91d8bd0" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given The given "Url" is entered into the browser and press enter...........failed
-And The user click on the login button......................................skipped
-And The user enters "usernameHalit" username................................skipped
-And The user enters "password" password.....................................skipped
-And The user clicks on the login button.....................................skipped
-And The user clicks on the home page logo...................................skipped
-Given Click on the Home button in the header section of the home page.......skipped
-And It is verified that the home page is opened.............................skipped
-And Click on the About button in the header section of the home page........skipped
-And It is verified that the About page is opened............................skipped
-And Click the Plans button in the header section of the home page...........skipped
-And It is verified that the Plans page is opened............................skipped
-And Click the Blogs button in the header section of the home page...........skipped
-And It is verified that the Blogs page is opened............................skipped
-And Click the Contact button in the header section of the home page.........skipped
-And It is verified that the Contact page is opened..........................skipped
-And Click on the Login icon in the header section of the home page..........skipped
-And It is verified that the Login page is opened............................skipped
-And Click on the Get Started icon in the header section of the home page....skipped
-And It is verified that the Get Started  page is opened.....................skipped
-
-StackTrace:
-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (275, 1374)
-  (Session info: chrome=120.0.6099.130)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [56aaf14c9490090cb3f4e40fa91d8bd0, clickElement {id=86CAB9212B2C39C96292D25E7A4B45B4_element_47}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\asus\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55883}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55883/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (56aaf14c9490090cb3f4e40fa91d8bd0)] -> xpath: //a[@class='btn btn--base btn--xl w-100 policy']]
-Session ID: 56aaf14c9490090cb3f4e40fa91d8bd0
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
-	at stepdefinitions.US21_Halit.the_given_url_is_entered_into_the_browser_and_press_enter(US21_Halit.java:22)
-	at ✽.The given "Url" is entered into the browser and press enter.(file:///C:/Users/asus/IdeaProjects/com.LoanTechExperTeam01/src/test/resources/features/US21_Halit.feature:7)
-]]></failure>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="11.51">
+    <testcase classname="As an administrator, I want to have a pending loans page so I can see and process pending loans." name="TC08: After going to the Installments page, you should be able to return to the loans page." time="11.004">
+        <system-out>
+            <![CDATA[Given Enter the  "UrlAdmin"  in the browser's address bar and press the Enter key..passed
+Then Fill in the admin credentials..........................................passed
+And Click the Login button..................................................passed
+Then Click to the Loans menu................................................passed
+And Click on the Pending Loans link.........................................passed
+And Click on the Installments link..........................................passed
+And Verify that you have returned to the Loans page.........................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
