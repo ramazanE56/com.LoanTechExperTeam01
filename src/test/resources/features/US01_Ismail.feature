@@ -3,7 +3,7 @@ Feature: US01: As a visitor, I want to be able to access the website in order to
 
   Background:Users use these steps to log in to the site.
 
-    * The visitor enters the site with the given "Url"
+    * The user enters site with the given "Url"
 
 
   Scenario: TC01: Website Accessibility from Given URL in Browser

@@ -2,7 +2,7 @@
 Feature: US_15 As a registered user, I want to be able to access my password information and change my current password.
 
   Background:   Background:Users use these steps to log in to the site.
-    * The visitor enters the site with the given "Url"
+    * The user enters site with the given "Url"
     * Accept the cookies on page
     * Login with registered user information
 

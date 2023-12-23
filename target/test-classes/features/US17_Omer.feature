@@ -1,7 +1,7 @@
 Feature: US_17 As a registered user, I would like to have a page to manage my payment transactions.
 
   Background: Users use these steps to log in to the site.
-    * The visitor enters the site with the given "Url"
+    * The user enters site with the given "Url"
     * Accept the cookies on page
     * Login with registered user information
 

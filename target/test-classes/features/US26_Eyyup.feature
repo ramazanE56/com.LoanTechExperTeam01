@@ -84,7 +84,7 @@ Feature: As an administrator, I want to have a pending loans page so I can see a
     And Click on the Installments link.
     And View the information under the Installments menu.
 
-
+@e2e
   Scenario: TC08: After going to the Installments page, you should be able to return to the loans page.
 
     Given Enter the  "UrlAdmin"  in the browser's address bar and press the Enter key.

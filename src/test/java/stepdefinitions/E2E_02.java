@@ -26,7 +26,7 @@ import java.awt.event.KeyEvent;
 
 
 
-public class E2E_03 {
+public class E2E_02 {
     AdminDashBoardPage adminDashBoardPage = new AdminDashBoardPage();
     AdminLoginPage adminLoginPage=new AdminLoginPage();
     Actions actions = new Actions(Driver.getDriver());
@@ -214,12 +214,12 @@ public class E2E_03 {
 
     }
     @Given("admin writes Merhaba İsmail ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %{int} indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz in the Messagebox")
-    public void admin_writes_merhaba_i̇smail_ben_loan_tech_experden_yetiş_loan_tech_exper_yönetim_ekibi_olarak_bu_ayın_en_çok_aktif_kullanıcısı_olarak_sizi_seçtik_bundan_dolayı_size_bir_sürprizimiz_var_sizin_tüm_loan_planlarınıza_indirim_uyguladık_hayırlı_olsun_loan_tech_exper_olarak_bizi_tercih_ettiğiniz_için_çok_teşekkür_ederiz_in_the_messagebox(Integer int1) throws InterruptedException {
+    public void admin_writes_merhaba_i̇smail_ben_loan_tech_experden_yetiş_loan_tech_exper_yönetim_ekibi_olarak_bu_ayın_en_çok_aktif_kullanıcısı_olarak_sizi_seçtik_bundan_dolayı_size_bir_sürprizimiz_var_sizin_tüm_loan_planlarınıza_indirim_uyguladık_hayırlı_olsun_loan_tech_exper_olarak_bizi_tercih_ettiğiniz_için_çok_teşekkür_ederiz_in_the_messagebox(Integer int1) {
         //actions.sendKeys((Keys.TAB)).perform();
         adminDashBoardPage.bodyMessage.click();
 
         adminDashBoardPage.bodyMessage.sendKeys("Merhaba İsmail, ben LoanTechExperden Yetiş LoanTechExper yönetim ekibi olarak bu ayın en çok aktif kullanıcısı olarak sizi seçtik Bundan dolayı size bir sürprizimiz var Sizin tüm loan planlarınıza %1 indirim uyguladık. Hayırlı olsun LoanTechExper olarak bizi tercih ettiğiniz için çok teşekkür ederiz");
-        Thread.sleep(3000);
+        ReusableMethods.wait(10);
 
     }
     @Given("Click on the submit button on message page")
@@ -260,7 +260,7 @@ public class E2E_03 {
 
 
         // Ctrl+V tuş kombinasyonunu kullanarak dosya yolunu yapıştır
-        StringSelection stringSelection = new StringSelection("C:\\Users\\KAHRAMAN\\IdeaProjects\\com.LoanTechExperTeam01\\src\\test\\java\\utilities");
+        StringSelection stringSelection = new StringSelection("C:\\Users\\asus\\IdeaProjects\\com.LoanTechExperTeam01\\src\\test\\java\\utilities");
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
         robot.keyPress(KeyEvent.VK_CONTROL);
@@ -269,7 +269,7 @@ public class E2E_03 {
         robot.keyRelease(KeyEvent.VK_CONTROL);
 
         // adres satırının yanındaki enter işlemi gören yandaki oka tıkla
-        Point point2 = new Point(558,58);// aç butonu koordinatı
+        Point point2 = new Point(709,51);// aç butonu koordinatı
         robot.mouseMove(point2.x, point2.y); // Farenin konumunu ayarla
         ReusableMethods.wait(1);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
@@ -278,7 +278,7 @@ public class E2E_03 {
         ReusableMethods.wait(1);
 
         //gelen logoya tıklama işlemi
-        Point point3 = new Point(213,170);// aç butonu koordinatı
+        Point point3 = new Point(430,165);// aç butonu koordinatı
         robot.mouseMove(point3.x, point3.y); // Farenin konumunu ayarla
         ReusableMethods.wait(1);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap
@@ -288,7 +288,7 @@ public class E2E_03 {
 
         //aç butanuna tıklama işlemi
 
-        Point point4 = new Point(672,565);// aç butonu koordinatı
+        Point point4 = new Point(788,506);// aç butonu koordinatı
         robot.mouseMove(point4.x, point4.y); // Farenin konumunu ayarla
         ReusableMethods.wait(1);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // Sol tıklama yap

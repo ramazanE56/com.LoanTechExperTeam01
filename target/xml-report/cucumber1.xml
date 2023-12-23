@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.818">
-    <testcase classname="I would like to have a page to register as a visitor" name="TC01 : It must be verified that the Get Started Button Link is visible and active on the Home Page." time="17.639">
-        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
-* Verify that the Get Started Button Link is Visible on the Home Page.......passed
-* Click on the Get Started Button Link on the Home Page.....................passed
-* Verify that the register text is visible on the register page.............passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="19.842">
+    <testcase classname="US45: As an administrator, I want to be able to edit the profile information of a user I choose." name="TC06: When an unexpected error occurs in the system, a clear error message should be displayed to the user." time="19.302">
+        <system-out>
+            <![CDATA[* The visitor enters the admin site with the given "adminUrl"...............passed
+* The admin logs in to the admin dashboard page with "adminNameSuphi" and "passwordAdmin".passed
+* Click on the Manage Users link............................................passed
+* Click on Active Users link under Manage Users link and go to Active Users page.passed
+* User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed.passed
+* Click on the Details link under the Action information of an Active User..passed
+* Go to User Details page...................................................passed
+* An attempt is made to enter missing - incorrect address information to the "e_mail" address.passed
+* Please add an "@" sign to the email address. The "@" is missing in the "e_mail" address.' incorrect input notification is displayed.passed
 * Close the page............................................................passed
-]]></system-out>
+]]>
+        </system-out>
     </testcase>
 </testsuite>

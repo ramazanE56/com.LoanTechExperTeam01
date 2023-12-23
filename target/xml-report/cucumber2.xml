@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.206">
-    <testcase classname="I would like to have a page to register as a visitor" name="TC02 : Verify that the registration form is visible on the registration page" time="14.753">
-        <system-out><![CDATA[* The visitor enters the site with the given "Url"..........................passed
-* Click on the Get Started Button Link on the Home Page.....................passed
-* Verify that the Welcome To Loantech Expert form title is visible on the Register page.passed
-* Close the page............................................................passed
-]]></system-out>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="11.51">
+    <testcase classname="As an administrator, I want to have a pending loans page so I can see and process pending loans." name="TC08: After going to the Installments page, you should be able to return to the loans page." time="11.004">
+        <system-out>
+            <![CDATA[Given Enter the  "UrlAdmin"  in the browser's address bar and press the Enter key..passed
+Then Fill in the admin credentials..........................................passed
+And Click the Login button..................................................passed
+Then Click to the Loans menu................................................passed
+And Click on the Pending Loans link.........................................passed
+And Click on the Installments link..........................................passed
+And Verify that you have returned to the Loans page.........................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>

@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1) - Feature: I would like to have a page to register as a visitor</title>
+<title>Cucumber Reports (no 1) - Feature: US45: As an administrator, I want to be able to edit the profile information of a user I choose.</title>
 
 </head>
 <body>
@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>22 Ara 2023, 22:16</td>
+      <td>23 Ara 2023, 04:52</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">I would like to have a page to register as a visitor</td>
-          <td      class="passed"    >4</td>
+          <td class="tagname">US45: As an administrator, I want to be able to edit the profile information of a user I choose.</td>
+          <td      class="passed"    >10</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">4</td>
+          <td class="total">10</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="14615331500">14.615</td>
+          <td class="duration" data-value="19222174700">19.222</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -175,7 +175,7 @@ $(document).ready(function() {
 
 <div class="brief passed">
   <span class="keyword indention">Feature</span>
-  <span class="name">I would like to have a page to register as a visitor</span>
+  <span class="name">US45: As an administrator, I want to be able to edit the profile information of a user I choose.</span>
 
 
 </div>
@@ -191,7 +191,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">7.958</span>
+  <span class="lead-duration duration">0.000</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -227,33 +227,6 @@ $(document).ready(function() {
   </div>
 
   <div id="steps-2" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">The visitor enters the site with the given <span class="argument">&quot;Url&quot;</span></span>
-
-  <span class="lead-duration duration">7.958</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
   </div>
 </div>
 
@@ -270,25 +243,26 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2149488983.html">@e2e</a>
+       <a href="report-tag_4089311534.html">@smoke</a>
 </div>
 
 
-  <span class="lead-duration duration">6.656</span>
+  <span class="lead-duration duration">19.222</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">TC02 : Verify that the registration form is visible on the registration page</span>
+  <span class="name">TC06: When an unexpected error occurs in the system, a clear error message should be displayed to the user.</span>
 
 
      <i class="chevron fa fa-fw"></i>
 </div>
 
   </span>
-  <div class="description indention"></div>
+  <div class="description indention">                  In case of incorrect entries (invalid e-mail, missing mandatory fields, etc.), the user should be informed
+                  with appropriate error messages.</div>
 
   <div id="element-3" class="collapse collapsable-details ">
 
@@ -315,9 +289,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">Click on the Get Started Button Link on the Home Page.</span>
+  <span class="name">The visitor enters the admin site with the given <span class="argument">&quot;adminUrl&quot;</span></span>
 
-  <span class="lead-duration duration">2.485</span>
+  <span class="lead-duration duration">3.186</span>
 
 </div>
 
@@ -342,9 +316,198 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">Verify that the Welcome To Loantech Expert form title is visible on the Register page</span>
+  <span class="name">The admin logs in to the admin dashboard page with <span class="argument">&quot;adminNameSuphi&quot;</span> and <span class="argument">&quot;passwordAdmin&quot;</span></span>
 
-  <span class="lead-duration duration">0.060</span>
+  <span class="lead-duration duration">2.661</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">Click on the Manage Users link</span>
+
+  <span class="lead-duration duration">0.074</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">Click on Active Users link under Manage Users link and go to Active Users page</span>
+
+  <span class="lead-duration duration">0.395</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">User, Email-Phone, Country, Joined At, Balance, Action information of Active Users are displayed</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">Click on the Details link under the Action information of an Active User</span>
+
+  <span class="lead-duration duration">2.354</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">Go to User Details page</span>
+
+  <span class="lead-duration duration">0.298</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">An attempt is made to enter missing - incorrect address information to the <span class="argument">&quot;e_mail&quot;</span> address</span>
+
+  <span class="lead-duration duration">3.187</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">Please add an &quot;@&quot; sign to the email address. The &quot;@&quot; is missing in the <span class="argument">&quot;e_mail&quot;</span> address.' incorrect input notification is displayed</span>
+
+  <span class="lead-duration duration">3.940</span>
 
 </div>
 
@@ -371,7 +534,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">Close the page</span>
 
-  <span class="lead-duration duration">4.109</span>
+  <span class="lead-duration duration">3.120</span>
 
 </div>
 
@@ -416,7 +579,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.004</span>
 
           </div>
 

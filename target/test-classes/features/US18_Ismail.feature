@@ -3,7 +3,7 @@ Feature: US18 : As a registered user, I want to have a page where I can see my C
 
   Background:Users use these steps to log in to the site.
 
-    * The visitor enters the site with the given "Url"
+    * The user enters site with the given "Url"
 
 
   Scenario: TC01 : In order to manage loan transactions on the Dashboard page,
@@ -204,15 +204,11 @@ Feature: US18 : As a registered user, I want to have a page where I can see my C
     * It is verified that pending status codes are displayed filtered in the table.
     * Close the page
 
-<<<<<<< HEAD
-    Scenario: TC12 : The "Installments" button must be visible and active for the running process on the My loans page. Clicking the button verifies that the "Loan Installments" page is accessible
-=======
 
     Scenario: TC12 : The "Installments" button must be visible and active for
               the running process on the My loans page. Clicking
               the button verifies that the "Loan Installments" page is accessible
 
->>>>>>> main
       * Click on the login button
       * The registered "usernameIsmail" is entered in the Username Or Email box.
       * Registered user "password" is entered in the Your Password box.

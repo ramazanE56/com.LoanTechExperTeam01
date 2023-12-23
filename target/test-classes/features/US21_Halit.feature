@@ -33,7 +33,7 @@
       And Get Started icon is active and visible in the home page header section.
 
 
-    @TC_03
+
     Scenario:
       Given Click on the Home button in the header section of the home page.
       And It is verified that the home page is opened.

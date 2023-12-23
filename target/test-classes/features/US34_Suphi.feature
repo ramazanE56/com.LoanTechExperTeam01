@@ -1,4 +1,4 @@
-@suphi
+
 Feature: US34: As an administrator, I want to be able to access and update my profile information.
 
   Background:Users use these steps to log in to the site.
